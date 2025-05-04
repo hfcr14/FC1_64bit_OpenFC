@@ -1,0 +1,810 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "XTResource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Hungarian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_HUN)
+#ifdef _WIN32
+LANGUAGE LANG_HUNGARIAN, SUBLANG_DEFAULT
+#pragma code_page(1250)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+XT_IDR_TBAR_HDR         BITMAP  DISCARDABLE     "res\\tbar_hdr.bmp"
+XT_IDR_TBAR_OUT         BITMAP  MOVEABLE PURE   "res\\tbar_out.bmp"
+XT_IDR_TBAR_BLANK       BITMAP  DISCARDABLE     "res\\tbar_blank.bmp"
+XT_IDR_TBAR_HEXEDIT     BITMAP  DISCARDABLE     "res\\tbar_hex.bmp"
+XT_IDR_PREVIEW_TOOLBAR  BITMAP  DISCARDABLE     "res\\tbar_preview.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+XT_IDR_TBAR_HDR TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      XT_IDC_SORTASC
+    BUTTON      XT_IDC_SORTDSC
+    SEPARATOR
+    BUTTON      XT_IDC_ALIGNLEFT
+    BUTTON      XT_IDC_ALIGNCENTER
+    BUTTON      XT_IDC_ALIGNRIGHT
+END
+
+XT_IDR_TBAR_OUT TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      XT_IDC_LARGEICON
+    BUTTON      XT_IDC_SMALLICON
+END
+
+XT_IDR_TBAR_BLANK TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      XT_IDC_BLANK
+END
+
+XT_IDR_TBAR_HEXEDIT TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_EDIT_UNDO
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_EDIT_CLEAR
+END
+
+XT_IDR_PREVIEW_TOOLBAR TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      AFX_ID_PREVIEW_PRINT
+    BUTTON      AFX_ID_PREVIEW_NEXT
+    BUTTON      AFX_ID_PREVIEW_PREV
+    BUTTON      AFX_ID_PREVIEW_NUMPAGE
+    BUTTON      AFX_ID_PREVIEW_ZOOMIN
+    BUTTON      AFX_ID_PREVIEW_ZOOMOUT
+    BUTTON      AFX_ID_PREVIEW_CLOSE
+    BUTTON      XT_IDC_BLANK
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+XT_IDD_TIPOFTHEDAY DIALOGEX 0, 0, 279, 157
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "A nap tanácsa"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "&Bezárás",IDOK,221,136,50,14
+    CONTROL         "&Tanácsok megjelenítése indításkor",
+                    XT_IDC_CHK_DAYTIP_SHOW,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,140,91,10
+    PUSHBUTTON      "&Következo tanács",XT_IDC_BTN_DAYTIP_NEXT,150,136,62,14
+    CONTROL         "",XT_IDC_BTN_DAYTIP_BORDER,"Static",SS_GRAYFRAME | NOT 
+                    WS_VISIBLE,8,7,263,123
+END
+
+XT_IDD_NEWTOOLBAR DIALOG DISCARDABLE  0, 0, 186, 60
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Új eszköztár"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,73,39,50,14
+    PUSHBUTTON      "Mégse",IDCANCEL,129,39,50,14
+    EDITTEXT        XT_IDC_EDIT_TOOLBAR,7,18,172,14,ES_AUTOHSCROLL
+    LTEXT           "&Eszköztár neve:",IDC_STATIC,7,7,48,8
+END
+
+XT_IDD_CUSTPAGE1 DIALOG DISCARDABLE  0, 0, 230, 150
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "&Eszköztárak"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "E&szköztárak:",XT_IDC_TXT_TOOLBARS,4,5,40,8
+    LISTBOX         XT_IDC_LBOX_CHECK,4,15,150,131,LBS_SORT | 
+                    LBS_OWNERDRAWVARIABLE | LBS_HASSTRINGS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Ú&j...",XT_IDC_BTN_NEW,158,15,70,14,BS_CENTER | 
+                    BS_VCENTER
+    PUSHBUTTON      "Átnevezés...",XT_IDC_BTN_RENAME,158,33,70,14,BS_CENTER | 
+                    BS_VCENTER | WS_DISABLED
+    PUSHBUTTON      "Törlés",XT_IDC_BTN_DELETE,158,51,70,14,BS_CENTER | 
+                    BS_VCENTER | WS_DISABLED
+    PUSHBUTTON      "&Visszaállítás",XT_IDC_BTN_RESET,158,69,70,14,BS_CENTER | 
+                    BS_VCENTER
+END
+
+XT_IDD_CUSTPAGE2 DIALOG DISCARDABLE  0, 0, 230, 150
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "&Parancsok"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         XT_IDC_LBOX_CATEGORIES,2,14,81,84,LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LISTBOX         XT_IDC_LBOX_COMMANDS,88,14,140,84,LBS_OWNERDRAWVARIABLE | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "&Kategóriák:",XT_IDC_TXT_CATEGORIES,3,5,38,8
+    LTEXT           "P&arancsok:",XT_IDC_TXT_COMMANDS,89,5,38,8,WS_TABSTOP
+    LTEXT           "Kiválasztott parancsok:",XT_IDC_TXT_SELECTED,3,103,75,8
+    PUSHBUTTON      "Leírás",XT_IDC_BTN_DESCRIPTION,11,115,81,14,BS_CENTER | 
+                    BS_VCENTER
+END
+
+XT_IDD_CUSTPAGE5 DIALOG DISCARDABLE  0, 0, 230, 150
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "&Beállítások"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Személyre szabott menük és eszköztárak",
+                    XT_IDC_TXT_PERSONALIZED,7,5,132,8
+    CONTROL         "",XT_IDC_SEP_PERSONALIZED,"Static",SS_ETCHEDHORZ,140,9,
+                    83,1
+    CONTROL         "Menük megjelenítése árnyékkal.",XT_IDC_CHK_MENUSHADOWS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,20,115,10
+    CONTROL         "&Eloször csak a legutóbb használt parancsok megjelenítése.",
+                    XT_IDC_CHK_RECENTMENU,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,32,198,10
+    CONTROL         "Kis késleltetéssel a &teljes menü megjelenítése.",
+                    XT_IDC_CHK_SHOWFULL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,25,44,156,10
+    PUSHBUTTON      "P&arancsmegjelenítés visszaállítása",XT_IDC_BTN_RESET,7,
+                    61,115,14,BS_CENTER | BS_VCENTER
+    LTEXT           "Egyéb",XT_IDC_TXT_OTHER,7,81,20,8
+    CONTROL         "",XT_IDC_SEP_OTHER,"Static",SS_ETCHEDHORZ,30,85,193,1
+    CONTROL         "Az ablaktartalom megjelenítése húzásnál.",
+                    XT_IDC_CHK_VISUALIZE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,95,142,10
+    CONTROL         "&Képernyofeliratok megjelenítése az eszköztárakon.",
+                    XT_IDC_CHK_SCREENTIPS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,107,174,10
+    CONTROL         "&Billenty?parancsok megjelenítése a képerny?feliratokon.",
+                    XT_IDC_CHK_SHOWSHORTCUTKEYS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,25,119,189,10
+    LTEXT           "&Menu Animation",IDC_STATIC,7,134,52,8
+    COMBOBOX        XT_IDC_COMBO_ANIMATION,65,131,79,65,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+XT_IDD_PREVIEW_TOOLBAR DIALOG DISCARDABLE  0, 0, 406, 20
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "&Nyomtatás...",AFX_ID_PREVIEW_PRINT,"Button",
+                    BS_OWNERDRAW | WS_TABSTOP,3,3,55,14
+    CONTROL         "&Következo",AFX_ID_PREVIEW_NEXT,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,60,3,55,14
+    CONTROL         "&Elozo oldal",AFX_ID_PREVIEW_PREV,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,117,3,55,14
+    CONTROL         "Ké&toldalas",AFX_ID_PREVIEW_NUMPAGE,"Button",
+                    BS_OWNERDRAW | WS_TABSTOP,174,3,55,14
+    CONTROL         "N&agyítás",AFX_ID_PREVIEW_ZOOMIN,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,231,3,55,14
+    CONTROL         "K&icsinyítés",AFX_ID_PREVIEW_ZOOMOUT,"Button",
+                    BS_OWNERDRAW | WS_TABSTOP,288,3,55,14
+    CONTROL         "&Bezárás",AFX_ID_PREVIEW_CLOSE,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,345,3,55,14
+END
+
+XT_IDD_COLORCUSTOM DIALOG DISCARDABLE  0, 0, 147, 161
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Egyéni"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Színek:",XT_IDC_TXT_COLORS,2,4,43,10
+    CONTROL         "",XT_IDC_CLR_WND,"Static",SS_BLACKFRAME | WS_TABSTOP,3,
+                    15,119,86
+    CONTROL         "",XT_IDC_CLR_LUM,"Static",SS_BLACKFRAME | WS_TABSTOP,
+                    126,15,20,86
+    LTEXT           "Á&rny.:",XT_IDC_TXT_HUE,5,108,18,8
+    EDITTEXT        XT_IDC_EDIT_HUE,25,106,33,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",XT_IDC_SPIN_HUE,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,49,105,
+                    10,14
+    LTEXT           "&Telít.:",XT_IDC_TXT_SAT,5,125,18,8
+    EDITTEXT        XT_IDC_EDIT_SAT,25,122,33,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin2",XT_IDC_SPIN_SAT,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,49,122,
+                    10,14
+    LTEXT           "&Fény.:",XT_IDC_TXT_LUM,5,140,19,8
+    EDITTEXT        XT_IDC_EDIT_LUM,25,138,33,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin3",XT_IDC_SPIN_LUM,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,49,137,
+                    10,14
+    LTEXT           "&Vörös:",XT_IDC_TXT_RED,65,108,23,8
+    EDITTEXT        XT_IDC_EDIT_RED,89,106,33,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",XT_IDC_SPIN_RED,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,113,105,
+                    11,14
+    LTEXT           "&Zöld:",XT_IDC_TXT_GREEN,65,125,23,8
+    EDITTEXT        XT_IDC_EDIT_GREEN,89,122,33,13,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin2",XT_IDC_SPIN_GREEN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,113,122,
+                    11,14
+    LTEXT           "&Kék:",XT_IDC_TXT_BLUE,65,140,23,8
+    EDITTEXT        XT_IDC_EDIT_BLUE,89,138,33,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin3",XT_IDC_SPIN_BLUE,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,113,137,
+                    11,14
+END
+
+XT_IDD_COLORSTANDARD DIALOG DISCARDABLE  0, 0, 147, 161
+STYLE WS_CHILD | WS_DISABLED | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | 
+    WS_CAPTION
+CAPTION "Szabvány"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Színek:",XT_IDC_TXT_COLORS,2,4,43,10
+    CONTROL         "",XT_IDC_CLR_HEX,"Static",SS_BLACKFRAME | WS_TABSTOP,0,
+                    15,147,145
+END
+
+XT_IDD_WINDOWLIST DIALOG DISCARDABLE  0, 0, 301, 164
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Ablakok"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Ablak kiválasztása:",IDC_STATIC,7,7,147,8
+    LISTBOX         XT_IDC_LBOX_WINDOWS,7,17,216,140,LBS_SORT | 
+                    LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | 
+                    LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | 
+                    WS_HSCROLL | WS_TABSTOP
+    PUSHBUTTON      "A&ktívvá tétel",XT_IDC_BTN_ACTIVATE,230,7,68,14
+    PUSHBUTTON      "&OK",IDOK,230,24,68,14
+    PUSHBUTTON      "&Mentés",XT_IDC_BTN_SAVE,230,41,68,14
+    PUSHBUTTON      "Ablak &bezárása",XT_IDC_BTN_CLOSEWINDOWS,230,58,68,14
+    PUSHBUTTON      "&Lépcsozetes elr.",XT_IDC_BTN_CASCADE,230,75,68,14
+    PUSHBUTTON      "Mozaikszeru - &Vízsz.",XT_IDC_BTN_TILEHORZ,230,92,68,14
+    PUSHBUTTON      "Mozaikszeru - &Függ.",XT_IDC_BTN_TILEVERT,230,109,68,14
+    PUSHBUTTON      "&Kis méret",XT_IDC_BTN_MINIMIZE,230,126,68,14
+END
+
+XT_IDD_CUSTPAGE3 DIALOGEX 0, 0, 230, 150
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Billentyuzet"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "&Parancsok:",XT_IDC_TXT_COMMANDS,2,28,38,8
+    LISTBOX         XT_IDC_LBOX_ACCEL_COMMANDS,2,39,93,74,LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Aktuális hozzárendelések:",XT_IDC_TXT_ASSIGNMENTS,100,
+                    28,67,8
+    LISTBOX         XT_IDC_LBOX_KEYS,100,38,75,49,LBS_SORT | 
+                    LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Új billentyuparancs:",XT_IDC_TXT_NEWKEY,100,91,76,8
+    EDITTEXT        XT_IDC_EDIT_SHORTCUTKEY,100,101,75,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Hozzárendelés",XT_IDC_BTN_ASSIGN,179,39,49,14
+    PUSHBUTTON      "&Eltávolítás",XT_IDC_BTN_REMOVE,179,56,49,14
+    PUSHBUTTON      "&Alapállapot",XT_IDC_BTN_ACCEL_RESET,179,73,49,14
+    LTEXT           "Leírás:",XT_IDC_TXT_DESC_TITLE,2,119,38,8
+    LTEXT           "",XT_IDC_TXT_DESC_OVERVIEW,2,129,173,19,0,
+                    WS_EX_STATICEDGE
+    LTEXT           "Kategória:",IDC_STATIC,2,5,31,8
+    COMBOBOX        XT_IDC_COMBO_CATEGORY,2,15,93,147,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "",XT_IDC_TXT_FRAMETITLE,100,15,128,12
+END
+
+XT_IDD_CUSTPAGE4 DIALOG DISCARDABLE  0, 0, 230, 150
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Eszközök"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         XT_IDC_LBOX_TOOLSLIST,2,5,226,93,LBS_OWNERDRAWVARIABLE | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "&Parancs:",XT_IDC_TXT_TOOLSCMD,2,104,60,8
+    RTEXT           "&Argumentumok:",XT_IDC_TXT_TOOLSARG,2,119,60,8
+    RTEXT           "&Indítási útvonal:",XT_IDC_TXT_TOOLSDIR,2,134,60,8
+    EDITTEXT        XT_IDC_EDIT_TOOLSCMD,73,101,155,14,ES_AUTOHSCROLL
+    EDITTEXT        XT_IDC_EDIT_TOOLSARG,73,116,155,14,ES_AUTOHSCROLL
+    EDITTEXT        XT_IDC_EDIT_TOOLSDIR,73,131,155,14,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+XT_IDM_POPUP MENU DISCARDABLE 
+BEGIN
+    POPUP "RClickOutlookBar"
+    BEGIN
+        MENUITEM "&Kis ikonok",                 XT_IDC_SMALLICON
+        MENUITEM "&Nagy ikonok",                XT_IDC_LARGEICON
+    END
+    POPUP "RClickHexEdit"
+    BEGIN
+        MENUITEM "&Vissza",                     ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "&Kivágás",                    ID_EDIT_CUT
+        MENUITEM "&Másolás",                    ID_EDIT_COPY
+        MENUITEM "&Beillesztés",                ID_EDIT_PASTE
+        MENUITEM "&Törlés",                     ID_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Mindet kijelöli",            ID_EDIT_SELECT_ALL
+    END
+    POPUP "RClickHeader"
+    BEGIN
+        MENUITEM "Rendezés növekvo sorrendbe",  XT_IDC_SORTASC
+        MENUITEM "Rendezés csökkeno sorrendbe", XT_IDC_SORTDSC
+        MENUITEM SEPARATOR
+        POPUP "Igazítás"
+        BEGIN
+            MENUITEM "Igazítás balra",              XT_IDC_ALIGNLEFT
+            MENUITEM "Igazítás középre",            XT_IDC_ALIGNCENTER
+            MENUITEM "Igazítás jobbra",             XT_IDC_ALIGNRIGHT
+        END
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    XT_IDD_NEWTOOLBAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 53
+    END
+
+    XT_IDD_CUSTPAGE1, DIALOG
+    BEGIN
+        TOPMARGIN, 5
+    END
+
+    XT_IDD_CUSTPAGE2, DIALOG
+    BEGIN
+        RIGHTMARGIN, 228
+        VERTGUIDE, 2
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 142
+    END
+
+    XT_IDD_CUSTPAGE5, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 223
+        VERTGUIDE, 25
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 142
+        HORZGUIDE, 25
+        HORZGUIDE, 37
+        HORZGUIDE, 49
+        HORZGUIDE, 100
+        HORZGUIDE, 112
+        HORZGUIDE, 124
+    END
+
+    XT_IDD_PREVIEW_TOOLBAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 403
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 17
+    END
+
+    XT_IDD_COLORCUSTOM, DIALOG
+    BEGIN
+        VERTGUIDE, 25
+        VERTGUIDE, 58
+        VERTGUIDE, 65
+        VERTGUIDE, 89
+        VERTGUIDE, 122
+        VERTGUIDE, 127
+    END
+
+    XT_IDD_WINDOWLIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 295
+        VERTGUIDE, 223
+        VERTGUIDE, 233
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 157
+        HORZGUIDE, 82
+        HORZGUIDE, 99
+        HORZGUIDE, 116
+        HORZGUIDE, 133
+    END
+
+    XT_IDD_CUSTPAGE3, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 228
+        VERTGUIDE, 85
+        VERTGUIDE, 95
+        VERTGUIDE, 100
+        VERTGUIDE, 175
+        VERTGUIDE, 179
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 148
+        HORZGUIDE, 39
+        HORZGUIDE, 87
+        HORZGUIDE, 113
+    END
+
+    XT_IDD_CUSTPAGE4, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 228
+        VERTGUIDE, 73
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 145
+        HORZGUIDE, 98
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDC_BTN_CLOSE        "Rögzített ablak elrejtése"
+    XT_IDC_BTN_EXPAND       "Rögzített ablak kiterjesztése"
+    XT_IDC_BTN_NEW          "Új (Insert)"
+    XT_IDC_BTN_DELETE       "Törlés (Delete)"
+    XT_IDC_BTN_UP           "Elem felfelé mozgatása (Alt+Felfelé nyíl)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_REG_KEY          "Szoftver\\%s\\%s\\Beállítások"
+    XT_IDS_REG_WINPOS       "%u,%u,%d,%d,%d,%d,%d,%d,%d,%d"
+    XT_IDS_REG_BARID        "TárID"
+    XT_IDS_REG_SETTINGS     "Beállítások"
+    XT_IDS_REG_BARPOS       "Tár elhelyezkedése"
+    XT_IDS_REG_WNDPOS       "Ablak elhelyezkedése"
+    XT_IDS_REG_RECENTLIST   "Legutóbbi elemlista"
+    XT_IDS_REG_ITEMID       "Elem%d"
+    XT_IDS_REG_CBARID       "%s-Tár%d"
+    XT_IDS_REG_COLINFO      "Oszlop információ"
+    XT_IDS_NAME             "Név"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_SIZE             "Méret"
+    XT_IDS_CONTRACT         "Rögzített ablak összehúzása"
+    XT_IDS_TYPE             "Típus"
+    XT_IDS_MODIFIED         "Módosítva"
+    XT_IDS_INVALID_VER      "Figyelmeztetés: Ehhez a programhoz a comctl32.dll 4.72 vagy újabb verziója szükséges."
+    XT_IDS_COLOR_AUTO       "Automatikus"
+    XT_IDS_COLOR_CUST       "Testreszabás..."
+    XT_IDS_SELDIR           "Könyvtár kiválasztása"
+    XT_IDS_DOCKWND          "Ablak rögzítése"
+    XT_IDS_RES_ASSERT       "HIBA: Nem minden, az Xtreme Toolkit használatához szükséges eroforrás lett megfeleloen inicializálva.\n\nAmennyiben az Ön projektje egy CDialog alapú alkalmazás, vagy a CMainFrame osztálya nem CXTFrameWnd vagy CXTMDIFrameWnd eredetu, az eroforrások inicializálásához és a hibát követo üzenetek elkerüléséhez használja a következot: ""xtAfxData.InitResources();"" ,\n\n""xtAfxData.InitResources();"" elhelyezheto a CMainFrame vagy CDialog osztály szerkesztojében.."
+    XT_IDS_TOOLBAR          "Eszköztár"
+    XT_IDS_ERROR_BLANK      "Az eszköztár neve nem lehet üres. Adjon meg egy nevet."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_STATUSBAR        "Állapotsor"
+    XT_IDS_ERROR_EXISTS     "A(z) '%s' eszköztárnév már létezik.  Adjon meg egy másik nevet."
+    XT_IDS_ERROR_LIMIT      "Sajnos elérte a korlátot."
+    XT_IDS_CUSTOM_BAR       "Felhasználói %d"
+    XT_IDS_CUSTOM_CONFIRM   "Biztos benne, hogy törölni kívánja a(z) '%s' eszköztárat?"
+    XT_IDS_DOT              "..."
+    XT_IDS_NOHELPTOPIC      "Ehhez az elemhez nincs súgó témakör.\nParancs ID %d"
+    XT_IDS_DEFEXT           "*.*"
+    XT_IDS_DEFFILT          "Minden fájl (*.*)|*.*||"
+    XT_IDS_DEFTITLE         "Mappa nevének kiválasztása:"
+    XT_IDS_CLICKKEEPOPEN    "Kattintson a rajzszegre a megnyitva tartáshoz"
+    XT_IDS_SE_0             "Az operációs rendszernek nincs elegendo memóriája vagy eroforrása."
+    XT_IDS_SE_ERR_FNF       "A megadott fájl nem található"
+    XT_IDS_SE_ERR_PNF       "A megadott elérési út nem található."
+    XT_IDS_SE_ERR_ACCESSDENIED 
+                            "Az operációs rendszer megtagadta a hozzáférést a megadott fájlhoz."
+    XT_IDS_SE_ERR_OOM       "Nincs elegendo memória a muvelet végrehajtásához."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_SE_ERR_BAD_FORMAT 
+                            "Az .exe fájl érvénytelen (nem Win32® alapú vagy hibás .exe fájl)."
+    XT_IDS_SE_ERR_SHARE     "Megosztási hiba lépett fel."
+    XT_IDS_SE_ERR_ASSOCINCOMPLETE 
+                            "A megadott fájlnév nem teljes vagy érvénytelen."
+    XT_IDS_SE_ERR_DDETIMEOUT 
+                            "A DDE átvitel idon túli kérelem miatt nem fejezodhetett be."
+    XT_IDS_SE_ERR_DDEFAIL   "A DDE átvitel meghiúsult."
+    XT_IDS_SE_ERR_DDEBUSY   "A DDE átvitel nem fejezodhetett be, mert másik DDE átvitelek voltak folyamatban"
+    XT_IDS_SE_ERR_NOASSOC   "A megadott kiterjesztéshez nincs alkalmazás társítva."
+    XT_IDS_SE_ERR_DLLNOTFOUND 
+                            "A megadott dinamikus csatolású könyvtár (DLL) nem található."
+    XT_IDS_SE_ERR_UNKOWN    "Ismeretlen hiba lépett fel - %d."
+    XT_IDS_CLOSE            "Bezárás"
+    XT_IDS_CLR_BLACK        "Fekete"
+    XT_IDS_CLR_BROWN        "Barna"
+    XT_IDS_CLR_OLIVE_GREEN  "Olívazöld"
+    XT_IDS_CLR_DARK_GREEN   "Sötétzöld"
+    XT_IDS_CLR_DARK_TEAL    "Sötétszürke"
+    XT_IDS_CLR_DARK_BLUE    "Sötétkék"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDC_SORTASC          "A kiválasztott oszlopok növekvo sorrendbe való rendezése\nRendezés növekvo sorrendbe"
+    XT_IDC_SORTDSC          "A kiválasztott oszlopok csökkeno sorrendbe való rendezése\nRendezés csökkeno sorrendbe"
+    XT_IDC_ALIGNLEFT        "A kiválasztott oszlop tartalmát balra igazítja\nIgazítás balra"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDC_ALIGNCENTER      "A kiválasztott oszlop tartalmát középre igazítja\nIgazítás középre"
+    XT_IDC_ALIGNRIGHT       "A kiválasztott oszlop tartalmát jobbra igazítja\nIgazítás jobbra"
+    XT_IDC_LARGEICON        "Elemek megjelenítése nagy ikonokkal\nNagy ikonok"
+    XT_IDC_SMALLICON        "Elemek megjelenítése kis ikonokkal\nKis ikonok"
+    XT_IDC_REMOVEITEM       "Levétel az Outlook pultról"
+    XT_IDC_RENAMEITEM       "Parancsikon átnevezése"
+    XT_IDC_CUSTOMIZE        "Eszköztár testreszabásának engedélyezése\nEszköztár testreszabása"
+    XT_IDC_CHEVRON          "Teljes menük megjelenítése"
+    XT_IDC_REMOVEGROUP      "Csoport eltávolítása"
+    XT_IDC_RENAMEGROUP      "Csoport átnevezése"
+    XT_IDC_SORT_CATEGORIZED "Kategóriák szerint\nKategóriák szerint"
+    XT_IDC_SORT_ALPHABETIC  "Beturend szerint\nBeturend szerint"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_TIPTEXT          "Tipp szövege"
+    XT_IDS_DIDYOUKNOW       "Tudta Ön, hogy..."
+    XT_IDS_FILE_ABSENT      "Tippfájl nem létezik az eloírt könyvtárban"
+    XT_IDS_FILE_CORRUPT     "Probléma a tippfájl olvasásakor"
+    XT_IDS_MENUBAR          "Menüsor"
+    XT_IDS_CONTROLBAR       "Vezérlosor"
+    XT_IDS_CUSTOMIZE        "Testreszabás"
+    XT_IDS_COLOR_CAPTION    "Színek"
+    XT_IDS_NEW              "Új"
+    XT_IDS_CURRENT          "Aktuális"
+    XT_IDS_DIRECTORIES      "  Alkönyvtárak:"
+    XT_IDS_FILES            " Fájlok:"
+    XT_IDS_RESTORE          "Ezzel visszaállítja az eszköztár eredeti állaptát. Kívánja folytatni?"
+    XT_IDS_WINDOWS          "További ablakok..."
+    XT_IDS_MANAGEKEYBRD     "Billentyuparancsok kezelése"
+    XT_IDS_COMMAND          "Parancs"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_CLR_INDIGO       "Indigó"
+    XT_IDS_CLR_GRAY80       "Szürke-80%"
+    XT_IDS_CLR_DARK_RED     "Sötétvörös"
+    XT_IDS_CLR_ORANGE       "Narancs"
+    XT_IDS_CLR_DARK_YELLOW  "Sötétsárga"
+    XT_IDS_CLR_GREEN        "Zöld"
+    XT_IDS_CLR_TEAL         "Galambszürke"
+    XT_IDS_CLR_BLUE         "Kék"
+    XT_IDS_CLR_BLUEGRAY     "Kékesszürke"
+    XT_IDS_CLR_GRAY50       "Szürke-50%"
+    XT_IDS_CLR_RED          "Vörös"
+    XT_IDS_CLR_LIGHTORANGE  "Világos narancs"
+    XT_IDS_CLR_LIME         "Borostyán"
+    XT_IDS_CLR_SEA_GREEN    "Tengerzöld"
+    XT_IDS_CLR_AQUA         "Világoskék"
+    XT_IDS_CLR_LIGHT_BLUE   "Világoskék"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_CLR_VIOLET       "Ibolya"
+    XT_IDS_CLR_GRAY40       "Szürke-40%"
+    XT_IDS_CLR_PINK         "Rózsaszín"
+    XT_IDS_CLR_GOLD         "Arany"
+    XT_IDS_CLR_YELLOW       "Sárga"
+    XT_IDS_CLR_BRIGHT_GREEN "Élénkzöld"
+    XT_IDS_CLR_TURQUOISE    "Türkiz"
+    XT_IDS_CLR_SKY_BLUE     "Égkék"
+    XT_IDS_CLR_PLUM         "Szilva"
+    XT_IDS_CLR_GRAY25       "Szürke-25%"
+    XT_IDS_CLR_ROSE         "Rózsa"
+    XT_IDS_CLR_TAN          "Sárgásbarna"
+    XT_IDS_CLR_LIGHT_YELLOW "Világossága"
+    XT_IDS_CLR_LIGHT_GREEN  "Világoszöld"
+    XT_IDS_CLR_LIGHT_TURQUOISE "Világos türkiz"
+    XT_IDS_CLR_PALE_BLUE    "Sápadtkék"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_CLR_LAVENDER     "Levendula"
+    XT_IDS_CLR_WHITE        "Fehér"
+    XT_IDS_CLR_GRAY         "Szürke"
+    XT_IDS_CLR_MAROON       "Barna"
+    XT_IDS_CLR_OLIVE        "Olívazöld"
+    XT_IDS_CLR_NAVY         "Tengerkék"
+    XT_IDS_CLR_PURPLE       "Lila"
+    XT_IDS_CLR_SILVER       "Ezüst"
+    XT_IDS_CLR_FUCHSIA      "Sötétvörös"
+    XT_IDS_CLR_NOFILL       "Nincs kitöltés"
+    XT_IDS_CLR_NOFILL_TIP   "Nincs szín"
+    XT_IDS_AUTOMATIC        "Automatikus"
+    XT_IDS_AUTOMATIC_TIP    "Automatikus szín"
+    XT_IDS_MORE_COLORS      "Még színek..."
+    XT_IDS_MORE_COLORS_TIP  "Még színek"
+    XT_IDS_STD_COLORS       "Alapszínek"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDC_BTN_DOWN         "Elem mozgatása lefelé (Alt+Lefelé nyíl)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_ID_PREVIEW_CLOSE    "Elonézeti kép bezárása\nElonézeti kép bezárása"
+    AFX_ID_PREVIEW_NUMPAGE  "Egyoldalas vagy kétoldalas megjelenítés\nEgyoldalas / Kétoldalas"
+    AFX_ID_PREVIEW_NEXT     "Ugrás a következo oldalra\nKövetkezo oldal"
+    AFX_ID_PREVIEW_PREV     "Ugrás az elozo oldalra\nElozo oldal"
+    AFX_ID_PREVIEW_PRINT    "Megtekintett elem nyomtatása\nNyomtatás"
+    AFX_ID_PREVIEW_ZOOMIN   "Elonézeti kép nagyításának növelése\nNagyítás"
+    AFX_ID_PREVIEW_ZOOMOUT  "Elonézeti kép nagyításának csökkentése\nKicsinyítés"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_KEYS             "Billentyuk"
+    XT_IDS_DESCRIPTION      "Leírás"
+    XT_IDS_ALLCOMMANDS      "[Minden parancs]"
+    XT_IDS_REASSIGN         "A parancsikon jelenleg a(z) %s parancshoz van rendelve.\n\nMeg kívánja változtatni a parancsikon hozzárendelését?"
+    XT_IDS_WIND_MINIMIZE    "Ablak kis méretuvé tétele"
+    XT_IDS_WIND_RESTORE     "Ablak visszaállítása"
+    XT_IDS_WIND_CLOSE       "Ablak bezárása"
+    XT_IDS_TOOLBAR_OPTS     "Eszköztár beállítások"
+    XT_IDS_TOOLS            "&Eszközök"
+    XT_IDS_PATH_INVALID     "Az elérési út érvénytelen."
+    XT_IDS_AREYOUSURE       "Biztos benne, hogy vissza akarja állítani alapértelmezettre a billentyuparancsokat?  Ez a muvelet minden szövegszintu felhasználói billentyu-hozzárendelést eltávolít. "
+    XT_IDS_AREYOUSURE_2     "Ezzel törli az alkalmazásban eddig használt parancsok nyilvántartását, és visszaállítja a menük és eszköztárak alapértelmezésben látható parancsait. A testreszabással végrehajtott változtatások megmaradnak. Biztos, hogy ezt szeretné?"
+    XT_IDS_BROWSE           "Tallózás"
+    XT_IDS_BROWSE_FILTER    "Futtatható (*.exe)|*.exe|Parancs (*.com)|*.com|Információs (*.pif)|*.pif|Batch (*.bat;*.cmd)|*.bat; *.cmd|Minden fájl (*.*)|*.*||"
+    XT_IDS_MENU_CONTENTS    " &Menü tartalma: "
+    XT_IDS_HEX              "Hex"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_ANIM_SYSDEF      "(System default)"
+    XT_IDS_ANIM_RANDOM      "Random"
+    XT_IDS_ANIM_UNFOLD      "Unfold"
+    XT_IDS_ANIM_SLIDE       "Slide"
+    XT_IDS_ANIM_FADE        "Fade"
+    XT_IDS_ANIM_NONE        "None"
+END
+
+#endif    // Hungarian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+XT_IDB_BTN_BAR          BITMAP  DISCARDABLE     "res\\btn_bar.bmp"
+XT_IDB_BTN_OUT          BITMAP  DISCARDABLE     "res\\btn_out.bmp"
+XT_IDB_LIGHTBULB        BITMAP  FIXED IMPURE    "res\\lightbulb.bmp"
+XT_IDB_LISTEDIT         BITMAP  DISCARDABLE     "res\\btn_listedit.bmp"
+XT_IDB_FONTTYPE         BITMAP  DISCARDABLE     "res\\font.bmp"
+XT_IDB_SCROLL_ARW       BITMAP  DISCARDABLE     "res\\scroll.bmp"
+XT_IDB_BTN_PRINT        BITMAP  DISCARDABLE     "res\\btn_print.bmp"
+XT_IDB_CHECKLISTBOX     BITMAP  FIXED IMPURE    "res\\checklist.bmp"
+XT_IDB_BTN_FRAME        BITMAP  DISCARDABLE     "res\\btn_frame.bmp"
+XT_IDB_CHECKLISTBOX_3D  BITMAP  FIXED IMPURE    "res\\checklist_3d.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+XT_IDC_DRAGMOVE         CURSOR  DISCARDABLE     "res\\dragmove.cur"
+XT_IDC_HAND             CURSOR  DISCARDABLE     "res\\hand.cur"
+XT_IDC_HSPLITBAR        CURSOR  DISCARDABLE     "res\\splith.cur"
+XT_IDC_DRAGNONE         CURSOR  DISCARDABLE     "res\\dragnone.cur"
+XT_IDC_HANDNONE         CURSOR  DISCARDABLE     "res\\handnone.cur"
+XT_IDC_VSPLITBAR        CURSOR  DISCARDABLE     "res\\splitv.cur"
+XT_IDC_DRAGCOPY         CURSOR  DISCARDABLE     "res\\dragcopy.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+XT_IDI_XTREME           ICON    DISCARDABLE     "res\\xtreme.ico"
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "XTResource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

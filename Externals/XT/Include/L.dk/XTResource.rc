@@ -1,0 +1,808 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "XTResource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+XT_IDC_DRAGMOVE         CURSOR  DISCARDABLE     "res\\dragmove.cur"
+XT_IDC_HAND             CURSOR  DISCARDABLE     "res\\hand.cur"
+XT_IDC_HSPLITBAR        CURSOR  DISCARDABLE     "res\\splith.cur"
+XT_IDC_DRAGNONE         CURSOR  DISCARDABLE     "res\\dragnone.cur"
+XT_IDC_HANDNONE         CURSOR  DISCARDABLE     "res\\handnone.cur"
+XT_IDC_VSPLITBAR        CURSOR  DISCARDABLE     "res\\splitv.cur"
+XT_IDC_DRAGCOPY         CURSOR  DISCARDABLE     "res\\dragcopy.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+XT_IDB_BTN_BAR          BITMAP  DISCARDABLE     "res\\btn_bar.bmp"
+XT_IDB_BTN_OUT          BITMAP  DISCARDABLE     "res\\btn_out.bmp"
+XT_IDB_LIGHTBULB        BITMAP  FIXED IMPURE    "res\\lightbulb.bmp"
+XT_IDB_LISTEDIT         BITMAP  DISCARDABLE     "res\\btn_listedit.bmp"
+XT_IDB_FONTTYPE         BITMAP  DISCARDABLE     "res\\font.bmp"
+XT_IDB_SCROLL_ARW       BITMAP  DISCARDABLE     "res\\scroll.bmp"
+XT_IDB_BTN_PRINT        BITMAP  DISCARDABLE     "res\\btn_print.bmp"
+XT_IDB_CHECKLISTBOX     BITMAP  FIXED IMPURE    "res\\checklist.bmp"
+XT_IDB_BTN_FRAME        BITMAP  DISCARDABLE     "res\\btn_frame.bmp"
+XT_IDB_CHECKLISTBOX_3D  BITMAP  FIXED IMPURE    "res\\checklist_3d.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+XT_IDI_XTREME           ICON    DISCARDABLE     "res\\xtreme.ico"
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Danish resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DAN)
+#ifdef _WIN32
+LANGUAGE LANG_DANISH, SUBLANG_DEFAULT
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+XT_IDR_TBAR_HDR         BITMAP  DISCARDABLE     "res\\tbar_hdr.bmp"
+XT_IDR_TBAR_OUT         BITMAP  MOVEABLE PURE   "res\\tbar_out.bmp"
+XT_IDR_TBAR_BLANK       BITMAP  DISCARDABLE     "res\\tbar_blank.bmp"
+XT_IDR_TBAR_HEXEDIT     BITMAP  DISCARDABLE     "res\\tbar_hex.bmp"
+XT_IDR_PREVIEW_TOOLBAR  BITMAP  DISCARDABLE     "res\\tbar_preview.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+XT_IDR_TBAR_HDR TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      XT_IDC_SORTASC
+    BUTTON      XT_IDC_SORTDSC
+    SEPARATOR
+    BUTTON      XT_IDC_ALIGNLEFT
+    BUTTON      XT_IDC_ALIGNCENTER
+    BUTTON      XT_IDC_ALIGNRIGHT
+END
+
+XT_IDR_TBAR_OUT TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      XT_IDC_LARGEICON
+    BUTTON      XT_IDC_SMALLICON
+END
+
+XT_IDR_TBAR_BLANK TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      XT_IDC_BLANK
+END
+
+XT_IDR_TBAR_HEXEDIT TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_EDIT_UNDO
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_EDIT_CLEAR
+END
+
+XT_IDR_PREVIEW_TOOLBAR TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      AFX_ID_PREVIEW_PRINT
+    BUTTON      AFX_ID_PREVIEW_NEXT
+    BUTTON      AFX_ID_PREVIEW_PREV
+    BUTTON      AFX_ID_PREVIEW_NUMPAGE
+    BUTTON      AFX_ID_PREVIEW_ZOOMIN
+    BUTTON      AFX_ID_PREVIEW_ZOOMOUT
+    BUTTON      AFX_ID_PREVIEW_CLOSE
+    BUTTON      XT_IDC_BLANK
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+XT_IDD_TIPOFTHEDAY DIALOG DISCARDABLE  0, 0, 279, 157
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dagens tip"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Luk",IDOK,221,136,50,14
+    CONTROL         "&Vis dagens tip ved start",XT_IDC_CHK_DAYTIP_SHOW,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,140,89,10
+    PUSHBUTTON      "&Næste tip",XT_IDC_BTN_DAYTIP_NEXT,162,136,50,14
+    CONTROL         "",XT_IDC_BTN_DAYTIP_BORDER,"Static",SS_GRAYFRAME | NOT 
+                    WS_VISIBLE,8,7,263,123
+END
+
+XT_IDD_NEWTOOLBAR DIALOG DISCARDABLE  0, 0, 186, 60
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Ny værktøjslinie"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,73,39,50,14
+    PUSHBUTTON      "Annuller",IDCANCEL,129,39,50,14
+    EDITTEXT        XT_IDC_EDIT_TOOLBAR,7,18,172,14,ES_AUTOHSCROLL
+    LTEXT           "&Værktøjslinienavn:",IDC_STATIC,7,7,59,8
+END
+
+XT_IDD_CUSTPAGE1 DIALOG DISCARDABLE  0, 0, 230, 150
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Værktøjslinier"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Værktøjslinier:",XT_IDC_TXT_TOOLBARS,4,4,45,8
+    LISTBOX         XT_IDC_LBOX_CHECK,4,15,150,131,LBS_SORT | 
+                    LBS_OWNERDRAWVARIABLE | LBS_HASSTRINGS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Ny...",XT_IDC_BTN_NEW,158,15,70,14,BS_CENTER | 
+                    BS_VCENTER
+    PUSHBUTTON      "Skift navn...",XT_IDC_BTN_RENAME,158,33,70,14,BS_CENTER | 
+                    BS_VCENTER | WS_DISABLED
+    PUSHBUTTON      "Slet",XT_IDC_BTN_DELETE,158,51,70,14,BS_CENTER | 
+                    BS_VCENTER | WS_DISABLED
+    PUSHBUTTON      "&Nulstil...",XT_IDC_BTN_RESET,158,69,70,14,BS_CENTER | 
+                    BS_VCENTER
+END
+
+XT_IDD_CUSTPAGE2 DIALOG DISCARDABLE  0, 0, 230, 150
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Kommandoer"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         XT_IDC_LBOX_CATEGORIES,2,14,81,84,LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LISTBOX         XT_IDC_LBOX_COMMANDS,88,14,140,84,LBS_OWNERDRAWVARIABLE | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Kate&gorier:",XT_IDC_TXT_CATEGORIES,3,5,38,8
+    LTEXT           "Komman&doer:",XT_IDC_TXT_COMMANDS,89,5,44,8,WS_TABSTOP
+    LTEXT           "Valgt kommando:",XT_IDC_TXT_SELECTED,3,103,56,8
+    PUSHBUTTON      "Beskrivelse",XT_IDC_BTN_DESCRIPTION,11,115,81,14,
+                    BS_CENTER | BS_VCENTER
+END
+
+XT_IDD_CUSTPAGE5 DIALOG DISCARDABLE  0, 0, 230, 150
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "&Indstillinger"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Egne menuer og værktøjslinier ",XT_IDC_TXT_PERSONALIZED,
+                    7,5,98,8
+    CONTROL         "",XT_IDC_SEP_PERSONALIZED,"Static",SS_ETCHEDHORZ,122,9,
+                    101,1
+    CONTROL         "Vis menuer med skygger.",XT_IDC_CHK_MENUSHADOWS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,20,95,10
+    CONTROL         "Vis me&nuer med sidst anvendte kommandoer først.",
+                    XT_IDC_CHK_RECENTMENU,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,32,174,10
+    CONTROL         "Vis f&ulde menuer efter en kort pause.",
+                    XT_IDC_CHK_SHOWFULL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,25,44,131,10
+    PUSHBUTTON      "&Nulstil intern statistik",XT_IDC_BTN_RESET,7,61,80,14,
+                    BS_CENTER | BS_VCENTER
+    LTEXT           "Andet",XT_IDC_TXT_OTHER,7,81,20,8
+    CONTROL         "",XT_IDC_SEP_OTHER,"Static",SS_ETCHEDHORZ,30,85,193,1
+    CONTROL         "Vis indholdet af værktøjslinier under flytning.",
+                    XT_IDC_CHK_VISUALIZE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,95,153,10
+    CONTROL         "Vis skærm-&tips for værktøjslinier.",
+                    XT_IDC_CHK_SCREENTIPS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,107,117,10
+    CONTROL         "Vis &genvejstaster i skærm-tips.",
+                    XT_IDC_CHK_SHOWSHORTCUTKEYS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,25,119,111,10
+    LTEXT           "Animeret &menu",IDC_STATIC,7,134,48,8
+    COMBOBOX        XT_IDC_COMBO_ANIMATION,65,131,79,65,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+XT_IDD_PREVIEW_TOOLBAR DIALOG DISCARDABLE  0, 0, 406, 20
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "&Udskriv...",AFX_ID_PREVIEW_PRINT,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,3,3,55,14
+    CONTROL         "&Næste side",AFX_ID_PREVIEW_NEXT,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,60,3,55,14
+    CONTROL         "&Forrige side",AFX_ID_PREVIEW_PREV,"Button",
+                    BS_OWNERDRAW | WS_TABSTOP,117,3,55,14
+    CONTROL         "&To sider",AFX_ID_PREVIEW_NUMPAGE,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,174,3,55,14
+    CONTROL         "Zoom &ind",AFX_ID_PREVIEW_ZOOMIN,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,231,3,55,14
+    CONTROL         "Zoom u&d",AFX_ID_PREVIEW_ZOOMOUT,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,288,3,55,14
+    CONTROL         "&Luk",AFX_ID_PREVIEW_CLOSE,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,345,3,55,14
+END
+
+XT_IDD_COLORCUSTOM DIALOG DISCARDABLE  0, 0, 147, 161
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Bruger-defineret"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Farver:",XT_IDC_TXT_COLORS,2,4,43,10
+    CONTROL         "",XT_IDC_CLR_WND,"Static",SS_BLACKFRAME | WS_TABSTOP,3,
+                    15,119,86
+    CONTROL         "",XT_IDC_CLR_LUM,"Static",SS_BLACKFRAME | WS_TABSTOP,
+                    126,15,20,86
+    LTEXT           "&Lød:",XT_IDC_TXT_HUE,9,108,15,8
+    EDITTEXT        XT_IDC_EDIT_HUE,25,106,33,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",XT_IDC_SPIN_HUE,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,49,105,
+                    10,14
+    LTEXT           "&Mæt:",XT_IDC_TXT_SAT,6,125,18,8
+    EDITTEXT        XT_IDC_EDIT_SAT,25,122,33,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin2",XT_IDC_SPIN_SAT,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,49,122,
+                    10,14
+    LTEXT           "&Lys:",XT_IDC_TXT_LUM,10,140,14,8
+    EDITTEXT        XT_IDC_EDIT_LUM,25,138,33,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin3",XT_IDC_SPIN_LUM,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,49,137,
+                    10,14
+    LTEXT           "&Rød:",XT_IDC_TXT_RED,70,108,16,8
+    EDITTEXT        XT_IDC_EDIT_RED,89,106,33,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",XT_IDC_SPIN_RED,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,113,105,
+                    11,14
+    LTEXT           "&Grøn:",XT_IDC_TXT_GREEN,68,125,18,8
+    EDITTEXT        XT_IDC_EDIT_GREEN,89,122,33,13,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin2",XT_IDC_SPIN_GREEN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,113,122,
+                    11,14
+    LTEXT           "&Blå:",XT_IDC_TXT_BLUE,73,140,13,8
+    EDITTEXT        XT_IDC_EDIT_BLUE,89,138,33,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin3",XT_IDC_SPIN_BLUE,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,113,137,
+                    11,14
+END
+
+XT_IDD_COLORSTANDARD DIALOG DISCARDABLE  0, 0, 147, 161
+STYLE WS_CHILD | WS_DISABLED | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | 
+    WS_CAPTION
+CAPTION "Standard"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Farver:",XT_IDC_TXT_COLORS,2,4,43,10
+    CONTROL         "",XT_IDC_CLR_HEX,"Static",SS_BLACKFRAME | WS_TABSTOP,0,
+                    15,147,145
+END
+
+XT_IDD_WINDOWLIST DIALOG DISCARDABLE  0, 0, 301, 164
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Vinduer"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Vælg &vindue:",IDC_STATIC,7,7,147,8
+    LISTBOX         XT_IDC_LBOX_WINDOWS,7,17,216,140,LBS_SORT | 
+                    LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | 
+                    LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | 
+                    WS_HSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Aktiver",XT_IDC_BTN_ACTIVATE,233,7,62,14
+    PUSHBUTTON      "&OK",IDOK,233,24,62,14
+    PUSHBUTTON      "&Gem",XT_IDC_BTN_SAVE,233,41,62,14
+    PUSHBUTTON      "&Luk vindue(r)",XT_IDC_BTN_CLOSEWINDOWS,233,58,62,14
+    PUSHBUTTON      "Overlap",XT_IDC_BTN_CASCADE,233,75,62,14
+    PUSHBUTTON      "Læg &vandret",XT_IDC_BTN_TILEHORZ,233,92,62,14
+    PUSHBUTTON      "Læg &lodret",XT_IDC_BTN_TILEVERT,233,109,62,14
+    PUSHBUTTON      "Mi&nimer",XT_IDC_BTN_MINIMIZE,233,126,62,14
+END
+
+XT_IDD_CUSTPAGE3 DIALOGEX 0, 0, 230, 150
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Tastatur"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Kommandoer:",XT_IDC_TXT_COMMANDS,2,28,44,8
+    LISTBOX         XT_IDC_LBOX_ACCEL_COMMANDS,2,39,93,74,LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Aktuelle tildelinger:",XT_IDC_TXT_ASSIGNMENTS,100,28,60,
+                    8
+    LISTBOX         XT_IDC_LBOX_KEYS,100,38,75,49,LBS_SORT | 
+                    LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Tryk på ny genvejstast:",XT_IDC_TXT_NEWKEY,100,91,74,8
+    EDITTEXT        XT_IDC_EDIT_SHORTCUTKEY,100,101,75,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Tildel",XT_IDC_BTN_ASSIGN,179,39,49,14
+    PUSHBUTTON      "&Fjern",XT_IDC_BTN_REMOVE,179,56,49,14
+    PUSHBUTTON      "&Nulstil alle",XT_IDC_BTN_ACCEL_RESET,179,73,49,14
+    LTEXT           "Beskrivelse",XT_IDC_TXT_DESC_TITLE,2,119,37,8
+    LTEXT           "",XT_IDC_TXT_DESC_OVERVIEW,2,129,173,19,0,
+                    WS_EX_STATICEDGE
+    LTEXT           "Kategori:",IDC_STATIC,2,5,29,8
+    COMBOBOX        XT_IDC_COMBO_CATEGORY,2,15,93,147,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "",XT_IDC_TXT_FRAMETITLE,100,15,128,12
+END
+
+XT_IDD_CUSTPAGE4 DIALOG DISCARDABLE  0, 0, 230, 150
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Værktøjer"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         XT_IDC_LBOX_TOOLSLIST,2,5,226,93,LBS_OWNERDRAWVARIABLE | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "&Kommando:",XT_IDC_TXT_TOOLSCMD,2,104,60,8
+    RTEXT           "&Argumenter:",XT_IDC_TXT_TOOLSARG,2,119,60,8
+    RTEXT           "&Initielt katalog:",XT_IDC_TXT_TOOLSDIR,2,134,60,8
+    EDITTEXT        XT_IDC_EDIT_TOOLSCMD,73,101,155,14,ES_AUTOHSCROLL
+    EDITTEXT        XT_IDC_EDIT_TOOLSARG,73,116,155,14,ES_AUTOHSCROLL
+    EDITTEXT        XT_IDC_EDIT_TOOLSDIR,73,131,155,14,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+XT_IDM_POPUP MENU DISCARDABLE 
+BEGIN
+    POPUP "RClickOutlookBar"
+    BEGIN
+        MENUITEM "S&må ikoner",                 XT_IDC_SMALLICON
+        MENUITEM "Sto&re ikoner",               XT_IDC_LARGEICON
+    END
+    POPUP "RClickHexEdit"
+    BEGIN
+        MENUITEM "&Fortryd",                    ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Kli&p",                       ID_EDIT_CUT
+        MENUITEM "&Kopier",                     ID_EDIT_COPY
+        MENUITEM "&Indsæt",                     ID_EDIT_PASTE
+        MENUITEM "&Slet",                       ID_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "Vælg &alt",                   ID_EDIT_SELECT_ALL
+    END
+    POPUP "RClickHeader"
+    BEGIN
+        MENUITEM "Sorter i stigende orden",     XT_IDC_SORTASC
+        MENUITEM "Sorter i faldened orden",     XT_IDC_SORTDSC
+        MENUITEM SEPARATOR
+        POPUP "Justering"
+        BEGIN
+            MENUITEM "Ventrejustering",             XT_IDC_ALIGNLEFT
+            MENUITEM "Centreret",                   XT_IDC_ALIGNCENTER
+            MENUITEM "Højrejustering",              XT_IDC_ALIGNRIGHT
+        END
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    XT_IDD_NEWTOOLBAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 53
+    END
+
+    XT_IDD_CUSTPAGE1, DIALOG
+    BEGIN
+        TOPMARGIN, 4
+    END
+
+    XT_IDD_CUSTPAGE2, DIALOG
+    BEGIN
+        RIGHTMARGIN, 228
+        VERTGUIDE, 2
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 142
+    END
+
+    XT_IDD_CUSTPAGE5, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 223
+        VERTGUIDE, 25
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 142
+        HORZGUIDE, 25
+        HORZGUIDE, 37
+        HORZGUIDE, 49
+        HORZGUIDE, 100
+        HORZGUIDE, 112
+        HORZGUIDE, 124
+    END
+
+    XT_IDD_PREVIEW_TOOLBAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 403
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 17
+    END
+
+    XT_IDD_COLORCUSTOM, DIALOG
+    BEGIN
+        VERTGUIDE, 25
+        VERTGUIDE, 58
+        VERTGUIDE, 65
+        VERTGUIDE, 89
+        VERTGUIDE, 122
+        VERTGUIDE, 127
+    END
+
+    XT_IDD_WINDOWLIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 295
+        VERTGUIDE, 223
+        VERTGUIDE, 233
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 157
+        HORZGUIDE, 82
+        HORZGUIDE, 99
+        HORZGUIDE, 116
+        HORZGUIDE, 133
+    END
+
+    XT_IDD_CUSTPAGE3, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 228
+        VERTGUIDE, 85
+        VERTGUIDE, 95
+        VERTGUIDE, 100
+        VERTGUIDE, 175
+        VERTGUIDE, 179
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 148
+        HORZGUIDE, 39
+        HORZGUIDE, 87
+        HORZGUIDE, 113
+    END
+
+    XT_IDD_CUSTPAGE4, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 228
+        VERTGUIDE, 73
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 145
+        HORZGUIDE, 98
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_REG_KEY          "Software\\%s\\%s\\Settings"
+    XT_IDS_REG_WINPOS       "%u,%u,%d,%d,%d,%d,%d,%d,%d,%d"
+    XT_IDS_REG_BARID        "BarID"
+    XT_IDS_REG_SETTINGS     "Settings"
+    XT_IDS_REG_BARPOS       "Bar Position"
+    XT_IDS_REG_WNDPOS       "Window Position"
+    XT_IDS_REG_RECENTLIST   "Recent Item List"
+    XT_IDS_REG_ITEMID       "Item%d"
+    XT_IDS_REG_CBARID       "%s-Bar%d"
+    XT_IDS_REG_COLINFO      "Column Info"
+    XT_IDS_NAME             "Navn"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_CLR_VIOLET       "Violet"
+    XT_IDS_CLR_GRAY40       "Grå-40%"
+    XT_IDS_CLR_PINK         "Pink"
+    XT_IDS_CLR_GOLD         "Guld"
+    XT_IDS_CLR_YELLOW       "Gul"
+    XT_IDS_CLR_BRIGHT_GREEN "Stærk grøn"
+    XT_IDS_CLR_TURQUOISE    "Turkis"
+    XT_IDS_CLR_SKY_BLUE     "Himmelblå"
+    XT_IDS_CLR_PLUM         "Plum"
+    XT_IDS_CLR_GRAY25       "Grå-25%"
+    XT_IDS_CLR_ROSE         "Rosenrød"
+    XT_IDS_CLR_TAN          "Barkfarvet"
+    XT_IDS_CLR_LIGHT_YELLOW "Lys gul"
+    XT_IDS_CLR_LIGHT_GREEN  "Lys grøn"
+    XT_IDS_CLR_LIGHT_TURQUOISE "Lys turkis"
+    XT_IDS_CLR_PALE_BLUE    "Bleg blå"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_SIZE             "Størrelse"
+    XT_IDS_CONTRACT         "Sammentræk tilkoblet vindue"
+    XT_IDS_TYPE             "Type"
+    XT_IDS_MODIFIED         "Ændret"
+    XT_IDS_INVALID_VER      "Advarsel: Dette program kræver comctl32.dll version 4.72 eller senere."
+    XT_IDS_COLOR_AUTO       "Automatisk"
+    XT_IDS_COLOR_CUST       "Tilret..."
+    XT_IDS_SELDIR           "Vælg katalog:"
+    XT_IDS_DOCKWND          "Tilkobl vindue"
+    XT_IDS_RES_ASSERT       "FEJL: Ikke alle ressourcer, som kræves af Xtreme Toolkit, er blevet initialiseret korrekt.\n\nHvis projektet er baseret på CDialog, eller hvis CMainFrame klassen ikke er afledt fra CXTFrameWnd eller CXTMDIFrameWnd, er det nødvendigt at kalde ""xtAfxData.InitResources();"" for at initialiseret disse ressourcer og fjerne den afbrydelse, der følger denne meddelelse.\n\n""xtAfxData.InitResources();"" kan placeres i constructor'en af CMainFrame eller CDialog."
+    XT_IDS_TOOLBAR          "Værktøjslinie"
+    XT_IDS_ERROR_BLANK      "Navnet på værktøjslinien må ikke være blankt. Angiv et navn."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_STATUSBAR        "Statuslinie"
+    XT_IDS_ERROR_EXISTS     "Der findes allerede en værktøjslinie med navnet '%s'. Angiv et andet navn."
+    XT_IDS_ERROR_LIMIT      "Du har desværre nået grænsen"
+    XT_IDS_CUSTOM_BAR       "Tilrettet %d"
+    XT_IDS_CUSTOM_CONFIRM   "Er du sikker på, at du ønsker at slette værktøjslinien '%s' ?"
+    XT_IDS_DOT              "..."
+    XT_IDS_NOHELPTOPIC      "Der er ingen hjælp associeret med dette element.\nKommando nr.%d"
+    XT_IDS_DEFEXT           "*.*"
+    XT_IDS_DEFFILT          "Alle filer (*.*)|*.*||"
+    XT_IDS_DEFTITLE         "Vælg katalognavn:"
+    XT_IDS_CLICKKEEPOPEN    "Klik på nålen for at holde vinduet åbent"
+    XT_IDS_SE_0             "Operativsystemet er løbet tør for hukommelse eller ressourcer."
+    XT_IDS_SE_ERR_FNF       "Den angivne fil findes ikke."
+    XT_IDS_SE_ERR_PNF       "Den angivne sti findes ikke."
+    XT_IDS_SE_ERR_ACCESSDENIED 
+                            "Operativsystemet afviser adgang til den angivne fil."
+    XT_IDS_SE_ERR_OOM       "Der er ikke tilstrækkelig hukommelse til at udføre den ønskede aktion."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_SE_ERR_BAD_FORMAT 
+                            ".exe filen har ikke korrekt format (ikke-Win32® .exe eller fejl i .exe formatet)."
+    XT_IDS_SE_ERR_SHARE     "Der opstod en delingsfejl."
+    XT_IDS_SE_ERR_ASSOCINCOMPLETE 
+                            "Filnavnsassocieringen er ufuldstændig eller ikke korrekt."
+    XT_IDS_SE_ERR_DDETIMEOUT 
+                            "DDE transaktionen kunne ikke fuldføres, da en forespørgsel ikke blev besvaret."
+    XT_IDS_SE_ERR_DDEFAIL   "DDE transaktionen fejlede."
+    XT_IDS_SE_ERR_DDEBUSY   "DDE transaktionen kunne ikke fuldføres, da andre DDE transaktioner blev behandlet."
+    XT_IDS_SE_ERR_NOASSOC   "Der er ikke associeret noget program med filer af den givne type."
+    XT_IDS_SE_ERR_DLLNOTFOUND "Den angivne DLL kunne ikke findes."
+    XT_IDS_SE_ERR_UNKOWN    "Der opstod en ukendt fejl med nummeret %d."
+    XT_IDS_CLOSE            "Luk"
+    XT_IDS_CLR_BLACK        "Sort"
+    XT_IDS_CLR_BROWN        "Brun"
+    XT_IDS_CLR_OLIVE_GREEN  "Olivengrøn"
+    XT_IDS_CLR_DARK_GREEN   "Mørk grøn"
+    XT_IDS_CLR_DARK_TEAL    "Mørk blågrøn"
+    XT_IDS_CLR_DARK_BLUE    "Mørk blå"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_CLR_INDIGO       "Indigo"
+    XT_IDS_CLR_GRAY80       "Grå-80%"
+    XT_IDS_CLR_DARK_RED     "Mørk rød"
+    XT_IDS_CLR_ORANGE       "Orange"
+    XT_IDS_CLR_DARK_YELLOW  "Mørk gul"
+    XT_IDS_CLR_GREEN        "Grøn"
+    XT_IDS_CLR_TEAL         "Blågrøn"
+    XT_IDS_CLR_BLUE         "Blå"
+    XT_IDS_CLR_BLUEGRAY     "Blågrå"
+    XT_IDS_CLR_GRAY50       "Grå-50%"
+    XT_IDS_CLR_RED          "Rød"
+    XT_IDS_CLR_LIGHTORANGE  "Lys orange"
+    XT_IDS_CLR_LIME         "Lime"
+    XT_IDS_CLR_SEA_GREEN    "Søgrøn"
+    XT_IDS_CLR_AQUA         "Aqua"
+    XT_IDS_CLR_LIGHT_BLUE   "Lys blå"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_CLR_LAVENDER     "Lavendelblå"
+    XT_IDS_CLR_WHITE        "Hvid"
+    XT_IDS_CLR_GRAY         "Grå"
+    XT_IDS_CLR_MAROON       "Rødbrun"
+    XT_IDS_CLR_OLIVE        "Oliven"
+    XT_IDS_CLR_NAVY         "Navy"
+    XT_IDS_CLR_PURPLE       "Lilla"
+    XT_IDS_CLR_SILVER       "Sølv"
+    XT_IDS_CLR_FUCHSIA      "Blodrød"
+    XT_IDS_CLR_NOFILL       "Ingen udfyldning"
+    XT_IDS_CLR_NOFILL_TIP   "Ingen farve"
+    XT_IDS_AUTOMATIC        "Automatisk"
+    XT_IDS_AUTOMATIC_TIP    "Automatisk farve"
+    XT_IDS_MORE_COLORS      "Flere farver..."
+    XT_IDS_MORE_COLORS_TIP  "Flere farver"
+    XT_IDS_STD_COLORS       "Standardfarver"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_TIPTEXT          "Tiptekst"
+    XT_IDS_DIDYOUKNOW       "Vidste du..."
+    XT_IDS_FILE_ABSENT      "Tips filen findes ikke i det beskrevne katalog"
+    XT_IDS_FILE_CORRUPT     "Fejl i forbindelse med læsning af tipsfilen"
+    XT_IDS_MENUBAR          "Menulinie"
+    XT_IDS_CONTROLBAR       "Kontrollinie"
+    XT_IDS_CUSTOMIZE        "Tilret"
+    XT_IDS_COLOR_CAPTION    "Farver"
+    XT_IDS_NEW              "Ny"
+    XT_IDS_CURRENT          "Aktuel"
+    XT_IDS_DIRECTORIES      " Kataloger:"
+    XT_IDS_FILES            " Filer:"
+    XT_IDS_RESTORE          "Dette vil sætte værktøjslinien tilbage til dens oprindelige tilstand. Ønsker du at fortsætte?"
+    XT_IDS_WINDOWS          "Flere vinduer..."
+    XT_IDS_MANAGEKEYBRD     "Angivelse af tastaturgenveje"
+    XT_IDS_COMMAND          "Kommando"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDC_BTN_CLOSE        "Skjul tilkoblede vinduer"
+    XT_IDC_BTN_EXPAND       "Udvid tilkoblede vinduer"
+    XT_IDC_BTN_NEW          "Ny (Indsæt)"
+    XT_IDC_BTN_DELETE       "Slet (Slet)"
+    XT_IDC_BTN_UP           "Flyt element op (Alt+Pil op)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDC_BTN_DOWN         "Flyt element ned (Alt+Pil ned)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDC_SORTASC          "Sorter den valgte kolonne i stigende orden\nSorter i stigende orden"
+    XT_IDC_SORTDSC          "Sorter den valgte kolonne i faldende orden\nSorter i faldende orden"
+    XT_IDC_ALIGNLEFT        "Venstrejuster indholdet af den valgte kolonne\nVenstrejustering"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDC_ALIGNCENTER      "Centrer indholdet af den valgte kolonne\nCentrering"
+    XT_IDC_ALIGNRIGHT       "Højrejuster indholdet af den valgte kolonne\nHøjrejustering"
+    XT_IDC_LARGEICON        "Vis store ikoner\nStore ikoner"
+    XT_IDC_SMALLICON        "Vis små ikoner\nSmå ikoner"
+    XT_IDC_REMOVEITEM       "Slet fra Outlook bjælken"
+    XT_IDC_RENAMEITEM       "Skift navn på genvejen"
+    XT_IDC_CUSTOMIZE        "Tillad tilretning af værktøjslinie\nTilret værktøjslinie"
+    XT_IDC_CHEVRON          "Vis fulde menuer"
+    XT_IDC_REMOVEGROUP      "Slet gruppe"
+    XT_IDC_RENAMEGROUP      "Skift navn på gruppen"
+    XT_IDC_SORT_CATEGORIZED "Efter kategori\nEfter kategori"
+    XT_IDC_SORT_ALPHABETIC  "Alfabetisk\nAlfabetisk"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_ID_PREVIEW_CLOSE    "Luk\nLuk vis udskrift"
+    AFX_ID_PREVIEW_NUMPAGE  "Vis enkelt- eller dobbeltside\n1 side / 2 sider"
+    AFX_ID_PREVIEW_NEXT     "Gå til næste side\nNæste side"
+    AFX_ID_PREVIEW_PREV     "Gå til forrige side\nForrige side"
+    AFX_ID_PREVIEW_PRINT    "Udskriv den viste udskrift\nUdskriv"
+    AFX_ID_PREVIEW_ZOOMIN   "Forøg forstørrelsen af den viste side\nZoom ind"
+    AFX_ID_PREVIEW_ZOOMOUT  "Formindsk forstørrelsen af den viste side\nZoom ud"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_KEYS             "Taster"
+    XT_IDS_DESCRIPTION      "Beskrivelse"
+    XT_IDS_ALLCOMMANDS      "[Alle kommandoer]"
+    XT_IDS_REASSIGN         "Denne tastaturgenvej er i øjeblikket tildelt kommandoen: %s\n\nØnsker du at ændre tastaturgenvejen?"
+    XT_IDS_WIND_MINIMIZE    "Minimer vindue"
+    XT_IDS_WIND_RESTORE     "Gendan vindue"
+    XT_IDS_WIND_CLOSE       "Luk vindue"
+    XT_IDS_TOOLBAR_OPTS     "Værktøjslinieindstillinger"
+    XT_IDS_TOOLS            "&Værktøjer"
+    XT_IDS_PATH_INVALID     "Stien er ikke gyldig."
+    XT_IDS_AREYOUSURE       "Er du sikker på, at du vil nulstille alle tastaturgenveje?  Dette vil fjerne alle bruger-definerede tastaturgenveje på tekstniveau."
+    XT_IDS_AREYOUSURE_2     "Dette vil slette registreringen af de kommandoer, som du har anvendt i dette program og gendanne standardlisten af synlige kommandoer i menuer og værktøjslinier.  Eksplicitte brugerændringer vil ikke blive berørt.  Er du sikker på, at du ønsker dette?"
+    XT_IDS_BROWSE           "Se"
+    XT_IDS_BROWSE_FILTER    "Program (*.exe)|*.exe|Kommando (*.com)|*.com|Information (*.pif)|*.pif|Kommando-script (*.bat;*.cmd)|*.bat; *.cmd|Alle filer (*.*)|*.*||"
+    XT_IDS_MENU_CONTENTS    " &Menuindhold:"
+    XT_IDS_HEX              "Hex"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_ANIM_SYSDEF      "(Standard)"
+    XT_IDS_ANIM_RANDOM      "Tilfældig"
+    XT_IDS_ANIM_UNFOLD      "Udfoldning"
+    XT_IDS_ANIM_SLIDE       "Glidende"
+    XT_IDS_ANIM_FADE        "Aftagende"
+    XT_IDS_ANIM_NONE        "None"
+END
+
+#endif    // Danish resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "XTResource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,816 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "XTResource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+XT_IDC_DRAGMOVE         CURSOR                  "res\\dragmove.cur"
+XT_IDC_HAND             CURSOR                  "res\\hand.cur"
+XT_IDC_HSPLITBAR        CURSOR                  "res\\splith.cur"
+XT_IDC_DRAGNONE         CURSOR                  "res\\dragnone.cur"
+XT_IDC_HANDNONE         CURSOR                  "res\\handnone.cur"
+XT_IDC_VSPLITBAR        CURSOR                  "res\\splitv.cur"
+XT_IDC_DRAGCOPY         CURSOR                  "res\\dragcopy.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+XT_IDB_BTN_BAR          BITMAP                  "res\\btn_bar.bmp"
+XT_IDB_BTN_OUT          BITMAP                  "res\\btn_out.bmp"
+XT_IDB_LIGHTBULB        BITMAP                  "res\\lightbulb.bmp"
+XT_IDB_LISTEDIT         BITMAP                  "res\\btn_listedit.bmp"
+XT_IDB_FONTTYPE         BITMAP                  "res\\font.bmp"
+XT_IDB_SCROLL_ARW       BITMAP                  "res\\scroll.bmp"
+XT_IDB_BTN_PRINT        BITMAP                  "res\\btn_print.bmp"
+XT_IDB_CHECKLISTBOX     BITMAP                  "res\\checklist.bmp"
+XT_IDB_BTN_FRAME        BITMAP                  "res\\btn_frame.bmp"
+XT_IDB_CHECKLISTBOX_3D  BITMAP                  "res\\checklist_3d.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+XT_IDI_XTREME           ICON                    "res\\xtreme.ico"
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "XTResource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Dutch (Netherlands) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NLD)
+#ifdef _WIN32
+LANGUAGE LANG_DUTCH, SUBLANG_DUTCH
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+XT_IDR_TBAR_HDR         BITMAP                  "res\\tbar_hdr.bmp"
+XT_IDR_TBAR_OUT         BITMAP                  "res\\tbar_out.bmp"
+XT_IDR_TBAR_BLANK       BITMAP                  "res\\tbar_blank.bmp"
+XT_IDR_TBAR_HEXEDIT     BITMAP                  "res\\tbar_hex.bmp"
+XT_IDR_PREVIEW_TOOLBAR  BITMAP                  "res\\tbar_preview.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+XT_IDR_TBAR_HDR TOOLBAR  16, 15
+BEGIN
+    BUTTON      XT_IDC_SORTASC
+    BUTTON      XT_IDC_SORTDSC
+    SEPARATOR
+    BUTTON      XT_IDC_ALIGNLEFT
+    BUTTON      XT_IDC_ALIGNCENTER
+    BUTTON      XT_IDC_ALIGNRIGHT
+END
+
+XT_IDR_TBAR_OUT TOOLBAR  16, 15
+BEGIN
+    BUTTON      XT_IDC_LARGEICON
+    BUTTON      XT_IDC_SMALLICON
+END
+
+XT_IDR_TBAR_BLANK TOOLBAR  16, 15
+BEGIN
+    BUTTON      XT_IDC_BLANK
+END
+
+XT_IDR_TBAR_HEXEDIT TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_EDIT_UNDO
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_EDIT_CLEAR
+END
+
+XT_IDR_PREVIEW_TOOLBAR TOOLBAR  16, 15
+BEGIN
+    BUTTON      AFX_ID_PREVIEW_PRINT
+    BUTTON      AFX_ID_PREVIEW_NEXT
+    BUTTON      AFX_ID_PREVIEW_PREV
+    BUTTON      AFX_ID_PREVIEW_NUMPAGE
+    BUTTON      AFX_ID_PREVIEW_ZOOMIN
+    BUTTON      AFX_ID_PREVIEW_ZOOMOUT
+    BUTTON      AFX_ID_PREVIEW_CLOSE
+    BUTTON      XT_IDC_BLANK
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+XT_IDD_TIPOFTHEDAY DIALOG  0, 0, 279, 157
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Tip van de dag"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Sluiten",IDOK,221,136,50,14
+    CONTROL         "&Toon tips bij opstarten",XT_IDC_CHK_DAYTIP_SHOW,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,140,85,10
+    PUSHBUTTON      "&Volgende tip",XT_IDC_BTN_DAYTIP_NEXT,162,136,50,14
+    CONTROL         "",XT_IDC_BTN_DAYTIP_BORDER,"Static",SS_GRAYFRAME | NOT 
+                    WS_VISIBLE,8,7,263,123
+END
+
+XT_IDD_NEWTOOLBAR DIALOG  0, 0, 186, 60
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Nieuwe werkbalk"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,73,39,50,14
+    PUSHBUTTON      "Annuleren",IDCANCEL,129,39,50,14
+    EDITTEXT        XT_IDC_EDIT_TOOLBAR,7,18,172,14,ES_AUTOHSCROLL
+    LTEXT           "&Naam werkbalk:",IDC_STATIC,7,7,52,8
+END
+
+XT_IDD_CUSTPAGE1 DIALOGEX 0, 0, 230, 150
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Werkbalken"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "&Werkbalken:",XT_IDC_TXT_TOOLBARS,4,5,42,8
+    LISTBOX         XT_IDC_LBOX_CHECK,4,15,150,131,LBS_SORT | 
+                    LBS_OWNERDRAWVARIABLE | LBS_HASSTRINGS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Nieuw...",XT_IDC_BTN_NEW,158,15,70,14,BS_CENTER | 
+                    BS_VCENTER
+    PUSHBUTTON      "N&aam wijzigen",XT_IDC_BTN_RENAME,158,33,70,14,
+                    BS_CENTER | BS_VCENTER | WS_DISABLED
+    PUSHBUTTON      "&Verwijderen",XT_IDC_BTN_DELETE,158,51,70,14,BS_CENTER | 
+                    BS_VCENTER | WS_DISABLED
+    PUSHBUTTON      "&Beginwaarden...",XT_IDC_BTN_RESET,158,69,70,14,
+                    BS_CENTER | BS_VCENTER
+END
+
+XT_IDD_CUSTPAGE2 DIALOGEX 0, 0, 230, 150
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Opdrachten"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LISTBOX         XT_IDC_LBOX_CATEGORIES,2,14,81,84,LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LISTBOX         XT_IDC_LBOX_COMMANDS,88,14,140,84,LBS_OWNERDRAWVARIABLE | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "&Categorieën:",XT_IDC_TXT_CATEGORIES,3,5,41,8
+    LTEXT           "Op&drachten:",XT_IDC_TXT_COMMANDS,89,5,40,8,WS_TABSTOP
+    LTEXT           "Geselecteerde opdracht:",XT_IDC_TXT_SELECTED,3,103,79,8
+    PUSHBUTTON      "&Beschrijving",XT_IDC_BTN_DESCRIPTION,11,115,81,14,
+                    BS_CENTER | BS_VCENTER
+END
+
+XT_IDD_CUSTPAGE5 DIALOGEX 0, 0, 230, 150
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Opties"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Aangepaste menu's en werkbalken",
+                    XT_IDC_TXT_PERSONALIZED,7,5,112,8
+    CONTROL         "",XT_IDC_SEP_PERSONALIZED,"Static",SS_ETCHEDHORZ,122,9,
+                    101,1
+    CONTROL         "&Menu's hebben schaduw",XT_IDC_CHK_MENUSHADOWS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,20,95,10
+    CONTROL         "M&enu's tonen recent gebruikte opdrachten eerst",
+                    XT_IDC_CHK_RECENTMENU,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,32,167,10
+    CONTROL         "&Volledige menu's weergeven na een korte vertraging",
+                    XT_IDC_CHK_SHOWFULL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,25,44,181,10
+    PUSHBUTTON      "Gebruikersgegevens opnieuw &instellen",XT_IDC_BTN_RESET,
+                    7,61,130,14,BS_CENTER | BS_VCENTER
+    LTEXT           "Overig",XT_IDC_TXT_OTHER,7,81,22,8
+    CONTROL         "",XT_IDC_SEP_OTHER,"Static",SS_ETCHEDHORZ,32,85,191,1
+    CONTROL         "Toon inhoud &werkbalk tijdens slepen",
+                    XT_IDC_CHK_VISUALIZE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,95,131,10
+    CONTROL         "&Toon ScreenTips op werkbalken",XT_IDC_CHK_SCREENTIPS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,107,119,10
+    CONTROL         "Toon &sneltoetsen in ScreenTips.",
+                    XT_IDC_CHK_SHOWSHORTCUTKEYS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,25,119,118,10
+    LTEXT           "Menu &Animatie",IDC_STATIC,7,134,48,8
+    COMBOBOX        XT_IDC_COMBO_ANIMATION,65,131,79,65,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+XT_IDD_PREVIEW_TOOLBAR DIALOG  0, 0, 406, 20
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "&Afdrukken...",AFX_ID_PREVIEW_PRINT,"Button",
+                    BS_OWNERDRAW | WS_TABSTOP,3,3,55,14
+    CONTROL         "&Volgende",AFX_ID_PREVIEW_NEXT,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,60,3,55,14
+    CONTROL         "V&orige",AFX_ID_PREVIEW_PREV,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,117,3,55,14
+    CONTROL         "&Twee pagina's",AFX_ID_PREVIEW_NUMPAGE,"Button",
+                    BS_OWNERDRAW | WS_TABSTOP,174,3,55,14
+    CONTROL         "&Inzoomen",AFX_ID_PREVIEW_ZOOMIN,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,231,3,55,14
+    CONTROL         "&Uitzoomen",AFX_ID_PREVIEW_ZOOMOUT,"Button",
+                    BS_OWNERDRAW | WS_TABSTOP,288,3,55,14
+    CONTROL         "&Sluiten",AFX_ID_PREVIEW_CLOSE,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,345,3,55,14
+END
+
+XT_IDD_COLORCUSTOM DIALOG  0, 0, 147, 161
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Aangepaste instellingen"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Kleuren:",XT_IDC_TXT_COLORS,2,4,27,8
+    CONTROL         "",XT_IDC_CLR_WND,"Static",SS_BLACKFRAME | WS_TABSTOP,3,
+                    15,119,86
+    CONTROL         "",XT_IDC_CLR_LUM,"Static",SS_BLACKFRAME | WS_TABSTOP,
+                    126,15,20,86
+    LTEXT           "&Tint:",XT_IDC_TXT_HUE,29,108,15,8
+    EDITTEXT        XT_IDC_EDIT_HUE,45,106,33,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",XT_IDC_SPIN_HUE,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,69,105,
+                    11,14
+    LTEXT           "&Intensiteit:",XT_IDC_TXT_SAT,11,125,33,8
+    EDITTEXT        XT_IDC_EDIT_SAT,45,122,33,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin2",XT_IDC_SPIN_SAT,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,69,122,
+                    11,14
+    LTEXT           "&Helderheid:",XT_IDC_TXT_LUM,7,140,37,8
+    EDITTEXT        XT_IDC_EDIT_LUM,45,138,33,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin3",XT_IDC_SPIN_LUM,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,69,137,
+                    11,14
+    LTEXT           "&Rood:",XT_IDC_TXT_RED,87,108,20,8
+    EDITTEXT        XT_IDC_EDIT_RED,109,106,33,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",XT_IDC_SPIN_RED,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,133,105,
+                    11,14
+    LTEXT           "&Groen:",XT_IDC_TXT_GREEN,85,125,22,8
+    EDITTEXT        XT_IDC_EDIT_GREEN,109,122,33,13,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin2",XT_IDC_SPIN_GREEN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,133,122,
+                    11,14
+    LTEXT           "&Blauw:",XT_IDC_TXT_BLUE,85,140,22,8
+    EDITTEXT        XT_IDC_EDIT_BLUE,109,138,33,13,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin3",XT_IDC_SPIN_BLUE,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,133,137,
+                    11,14
+END
+
+XT_IDD_COLORSTANDARD DIALOG  0, 0, 147, 161
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CLIPSIBLINGS | 
+    WS_CLIPCHILDREN | WS_CAPTION
+CAPTION "Standaard"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Kleuren:",XT_IDC_TXT_COLORS,2,4,27,8
+    CONTROL         "",XT_IDC_CLR_HEX,"Static",SS_BLACKFRAME | WS_TABSTOP,0,
+                    15,147,145
+END
+
+XT_IDD_WINDOWLIST DIALOG  0, 0, 301, 164
+STYLE DS_SETFONT | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
+CAPTION "Vensters"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Selecteer &venster:",IDC_STATIC,7,7,147,8
+    LISTBOX         XT_IDC_LBOX_WINDOWS,7,17,221,140,LBS_SORT | 
+                    LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | 
+                    LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | 
+                    WS_HSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Activeren",XT_IDC_BTN_ACTIVATE,233,7,62,14
+    PUSHBUTTON      "&OK",IDOK,233,24,62,14
+    PUSHBUTTON      "&Opslaan",XT_IDC_BTN_SAVE,233,41,62,14
+    PUSHBUTTON      "&Sluit venster(s)",XT_IDC_BTN_CLOSEWINDOWS,233,58,62,14
+    PUSHBUTTON      "&Trapsgewijs",XT_IDC_BTN_CASCADE,233,75,62,14
+    PUSHBUTTON      "&Onder elkaar",XT_IDC_BTN_TILEHORZ,233,92,62,14
+    PUSHBUTTON      "&Naast elkaar",XT_IDC_BTN_TILEVERT,233,109,62,14
+    PUSHBUTTON      "&Minimaliseren",XT_IDC_BTN_MINIMIZE,233,126,62,14
+END
+
+XT_IDD_CUSTPAGE3 DIALOGEX 0, 0, 230, 150
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Toetsenbord"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Opdrachten:",XT_IDC_TXT_COMMANDS,2,28,40,8
+    LISTBOX         XT_IDC_LBOX_ACCEL_COMMANDS,2,39,93,74,LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Gebruikte toetsen:",XT_IDC_TXT_ASSIGNMENTS,100,28,59,8
+    LISTBOX         XT_IDC_LBOX_KEYS,100,38,75,49,LBS_SORT | 
+                    LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Druk op een nieuwe sneltoets:",XT_IDC_TXT_NEWKEY,100,91,
+                    97,8
+    EDITTEXT        XT_IDC_EDIT_SHORTCUTKEY,100,101,75,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Toewijzen",XT_IDC_BTN_ASSIGN,179,39,49,14
+    PUSHBUTTON      "&Verwijderen",XT_IDC_BTN_REMOVE,179,56,49,14
+    PUSHBUTTON      "&Beginwaarden",XT_IDC_BTN_ACCEL_RESET,179,73,49,14
+    LTEXT           "Omschrijving:",XT_IDC_TXT_DESC_TITLE,2,119,43,8
+    LTEXT           "",XT_IDC_TXT_DESC_OVERVIEW,2,129,173,19,0,
+                    WS_EX_STATICEDGE
+    LTEXT           "Categorie:",IDC_STATIC,2,5,33,8
+    COMBOBOX        XT_IDC_COMBO_CATEGORY,2,15,93,147,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "",XT_IDC_TXT_FRAMETITLE,100,15,128,12
+END
+
+XT_IDD_CUSTPAGE4 DIALOG  0, 0, 230, 150
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Hulpmiddelen"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         XT_IDC_LBOX_TOOLSLIST,2,5,226,93,LBS_OWNERDRAWVARIABLE | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "&Opdracht:",XT_IDC_TXT_TOOLSCMD,2,104,60,8
+    RTEXT           "&Argumenten:",XT_IDC_TXT_TOOLSARG,2,119,60,8
+    RTEXT           "&Beginnen in:",XT_IDC_TXT_TOOLSDIR,2,134,60,8
+    EDITTEXT        XT_IDC_EDIT_TOOLSCMD,73,101,155,14,ES_AUTOHSCROLL
+    EDITTEXT        XT_IDC_EDIT_TOOLSARG,73,116,155,14,ES_AUTOHSCROLL
+    EDITTEXT        XT_IDC_EDIT_TOOLSDIR,73,131,155,14,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+XT_IDM_POPUP MENU 
+BEGIN
+    POPUP "RClickOutlookBar"
+    BEGIN
+        MENUITEM "&Kleine pictogrammen",        XT_IDC_SMALLICON
+        MENUITEM "&Grote pictogrammen",         XT_IDC_LARGEICON
+    END
+    POPUP "RClickHexEdit"
+    BEGIN
+        MENUITEM "&Ongedaan maken",             ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "K&nippen",                    ID_EDIT_CUT
+        MENUITEM "&Kopiëren",                   ID_EDIT_COPY
+        MENUITEM "&Plakken",                    ID_EDIT_PASTE
+        MENUITEM "&Verwijderen",                ID_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Alles selecteren",           ID_EDIT_SELECT_ALL
+    END
+    POPUP "RClickHeader"
+    BEGIN
+        MENUITEM "Oplopend sorteren",           XT_IDC_SORTASC
+        MENUITEM "Aflopend sorteren",           XT_IDC_SORTDSC
+        MENUITEM SEPARATOR
+        POPUP "Uitlijnen"
+        BEGIN
+            MENUITEM "Links uitlijnen",             XT_IDC_ALIGNLEFT
+            MENUITEM "Centreren",                   XT_IDC_ALIGNCENTER
+            MENUITEM "Rechts uitlijnen",            XT_IDC_ALIGNRIGHT
+        END
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    XT_IDD_NEWTOOLBAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 53
+    END
+
+    XT_IDD_CUSTPAGE1, DIALOG
+    BEGIN
+        TOPMARGIN, 5
+    END
+
+    XT_IDD_CUSTPAGE2, DIALOG
+    BEGIN
+        RIGHTMARGIN, 228
+        VERTGUIDE, 2
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 142
+    END
+
+    XT_IDD_CUSTPAGE5, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 223
+        VERTGUIDE, 25
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 142
+        HORZGUIDE, 25
+        HORZGUIDE, 37
+        HORZGUIDE, 49
+        HORZGUIDE, 100
+        HORZGUIDE, 112
+        HORZGUIDE, 124
+    END
+
+    XT_IDD_PREVIEW_TOOLBAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 403
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 17
+    END
+
+    XT_IDD_COLORCUSTOM, DIALOG
+    BEGIN
+        VERTGUIDE, 25
+        VERTGUIDE, 58
+        VERTGUIDE, 65
+        VERTGUIDE, 89
+        VERTGUIDE, 122
+        VERTGUIDE, 127
+    END
+
+    XT_IDD_WINDOWLIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 295
+        VERTGUIDE, 228
+        VERTGUIDE, 233
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 157
+        HORZGUIDE, 82
+        HORZGUIDE, 99
+        HORZGUIDE, 116
+        HORZGUIDE, 133
+    END
+
+    XT_IDD_CUSTPAGE3, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 228
+        VERTGUIDE, 85
+        VERTGUIDE, 95
+        VERTGUIDE, 100
+        VERTGUIDE, 175
+        VERTGUIDE, 179
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 148
+        HORZGUIDE, 39
+        HORZGUIDE, 87
+        HORZGUIDE, 113
+    END
+
+    XT_IDD_CUSTPAGE4, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 228
+        VERTGUIDE, 73
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 145
+        HORZGUIDE, 98
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    XT_IDC_BTN_CLOSE        "Sluiten"
+    XT_IDC_BTN_EXPAND       "Maximaliseren"
+    XT_IDC_BTN_NEW          "Nieuw (Insert)"
+    XT_IDC_BTN_DELETE       "Verwijderen (Delete)"
+    XT_IDC_BTN_UP           "Verplaats item omhoog (Alt+Pijl Omhoog)"
+END
+
+STRINGTABLE 
+BEGIN
+    XT_IDS_REG_KEY          "Software\\%s\\%s\\Settings"
+    XT_IDS_REG_WINPOS       "%u,%u,%d,%d,%d,%d,%d,%d,%d,%d"
+    XT_IDS_REG_BARID        "BarID"
+    XT_IDS_REG_SETTINGS     "Settings"
+    XT_IDS_REG_BARPOS       "Bar Position"
+    XT_IDS_REG_WNDPOS       "Window Position"
+    XT_IDS_REG_RECENTLIST   "Recent Item List"
+    XT_IDS_REG_ITEMID       "Item%d"
+    XT_IDS_REG_CBARID       "%s-Bar%d"
+    XT_IDS_REG_COLINFO      "Column Info"
+    XT_IDS_NAME             "Naam"
+END
+
+STRINGTABLE 
+BEGIN
+    XT_IDS_SIZE             "Grootte"
+    XT_IDS_CONTRACT         "Vorig formaat"
+    XT_IDS_TYPE             "Type"
+    XT_IDS_MODIFIED         "Aangepast"
+    XT_IDS_INVALID_VER      "Waarschuwing: Dit programma vereist comctl32.dll versie 4.72 of hoger."
+    XT_IDS_COLOR_AUTO       "Automatisch"
+    XT_IDS_COLOR_CUST       "Aanpassen..."
+    XT_IDS_SELDIR           "Selecteer map:"
+    XT_IDS_DOCKWND          "Gedokt venster"
+    XT_IDS_RES_ASSERT       "FOUT: De resources die Xtreme Toolkit nodig heeft zijn niet allemaal correct geïnitialiseerd.\n\nAls je product een op CDialog gebaseerde applicatie is, of je CMainFrame class niet van CXTFrameWnd of CXTMDIFrameWnd afgeleid is moet je ""xtAfxData.InitResources();"" aanroepen om deze resources te initialiseren en de bijbehorende foutmelding te elimineren.\n\nPlaats ""xtAfxData.InitResources();"" in de constructor van je CMainFrame of CDialog class."
+    XT_IDS_TOOLBAR          "Werkbalk"
+    XT_IDS_ERROR_BLANK      "De werkbalk kan geen blanco naam hebben. Type een naam."
+END
+
+STRINGTABLE 
+BEGIN
+    XT_IDS_STATUSBAR        "Statusbalk"
+    XT_IDS_ERROR_EXISTS     "Er bestaat al een werkbalk met de naam '%s'. Type een andere naam."
+    XT_IDS_ERROR_LIMIT      "Sorry je hebt je limiet bereikt."
+    XT_IDS_CUSTOM_BAR       "Aangepast %d"
+    XT_IDS_CUSTOM_CONFIRM   "Weet je zeker dat je de werkbalk '%s' wilt verwijderen?"
+    XT_IDS_DOT              "..."
+    XT_IDS_NOHELPTOPIC      "Er is geen help onderwerp met dit item geassocieerd.\nCommand ID %d"
+    XT_IDS_DEFEXT           "*.*"
+    XT_IDS_DEFFILT          "Alle bestanden (*.*)|*.*||"
+    XT_IDS_DEFTITLE         "Kies een mapnaam:"
+    XT_IDS_CLICKKEEPOPEN    "Klik op de punaise om open te houden"
+    XT_IDS_SE_0             "Het besturingssysteem heeft te weinig geheugen of andere bronnen beschikbaar."
+    XT_IDS_SE_ERR_FNF       "Het opgegeven bestand is niet gevonden."
+    XT_IDS_SE_ERR_PNF       "Het opgegeven pad is niet gevonden."
+    XT_IDS_SE_ERR_ACCESSDENIED 
+                            "Het besturingssysteem weigert toegang tot het opgegeven bestand."
+    XT_IDS_SE_ERR_OOM       "Te weinig geheugen om de opdracht uit te voeren."
+END
+
+STRINGTABLE 
+BEGIN
+    XT_IDS_SE_ERR_BAD_FORMAT 
+                            "Het .exe bestand is ongeldig (niet-Win32® .exe of fout in uitvoerbaar bestand)."
+    XT_IDS_SE_ERR_SHARE     "Er is een fout bij het delen opgetreden."
+    XT_IDS_SE_ERR_ASSOCINCOMPLETE 
+                            "De bestandsnaam associatie is niet compleet of ongeldig."
+    XT_IDS_SE_ERR_DDETIMEOUT 
+                            "De DDE transactie kon niet voltooid worden vanwege een time-out."
+    XT_IDS_SE_ERR_DDEFAIL   "De DDE transactie is mislukt."
+    XT_IDS_SE_ERR_DDEBUSY   "De DDE transactie kon niet voltooid worden omdat andere DDE transacties in bewerking waren."
+    XT_IDS_SE_ERR_NOASSOC   "Er is geen uitvoerbaar programma aan deze bestandsextensie gekoppeld."
+    XT_IDS_SE_ERR_DLLNOTFOUND 
+                            "De opgegeven programmabibiliotheek (DLL) is niet gevonden."
+    XT_IDS_SE_ERR_UNKOWN    "Er is een onbekende fout nummer %d opgetreden."
+    XT_IDS_CLOSE            "Sluiten"
+    XT_IDS_CLR_BLACK        "Zwart"
+    XT_IDS_CLR_BROWN        "Bruin"
+    XT_IDS_CLR_OLIVE_GREEN  "Olijfgroen"
+    XT_IDS_CLR_DARK_GREEN   "Donkergroen"
+    XT_IDS_CLR_DARK_TEAL    "Smaragdgroen"
+    XT_IDS_CLR_DARK_BLUE    "Donkerblauw"
+END
+
+STRINGTABLE 
+BEGIN
+    XT_IDC_SORTASC          "Sorteert de geselecteerde kolom in oplopende volgorder\nOplopend sorteren"
+    XT_IDC_SORTDSC          "Sorteert de geselecteerde kolom in aflopende volgorder\nAflopend sorteren"
+    XT_IDC_ALIGNLEFT        "De inhoud van de geselecteerde kolom links uitlijnen\nLinks uitlijnen"
+END
+
+STRINGTABLE 
+BEGIN
+    XT_IDC_ALIGNCENTER      "De inhoud van de geselecteerde kolom centreren\nCentreren"
+    XT_IDC_ALIGNRIGHT       "De inhoud van de geselecteerde kolom rechts uitlijnen\nRechts uitlijnen"
+    XT_IDC_LARGEICON        "Items weergeven met grote pictogrammen\nGrote pictogrammen"
+    XT_IDC_SMALLICON        "Items weergeven met kleine pictogrammen\nKleine pictogrammen"
+    XT_IDC_REMOVEITEM       "Verwijder van de Outlookbalk"
+    XT_IDC_RENAMEITEM       "Hernoem snelkoppeling"
+    XT_IDC_CUSTOMIZE        "Staat aanpassingen van de werkbalk toe\nWerkbalk aanpassen"
+    XT_IDC_CHEVRON          "Toon volledige menu's"
+    XT_IDC_REMOVEGROUP      "Verwijder Groep"
+    XT_IDC_RENAMEGROUP      "Hernoem Groep"
+    XT_IDC_SORT_CATEGORIZED "Op categorie\nOp categorie"
+    XT_IDC_SORT_ALPHABETIC  "Alphabetisch\nAlphabetisch"
+END
+
+STRINGTABLE 
+BEGIN
+    XT_IDS_TIPTEXT          "Tip tekst"
+    XT_IDS_DIDYOUKNOW       "Wist je dat ..."
+    XT_IDS_FILE_ABSENT      "Het Tips bestand bestaat niet in de opgegeven map"
+    XT_IDS_FILE_CORRUPT     "Problemen bij lezen van het Tips bestand"
+    XT_IDS_MENUBAR          "Menubalk"
+    XT_IDS_CONTROLBAR       "Systeembalk"
+    XT_IDS_CUSTOMIZE        "Aanpassen"
+    XT_IDS_COLOR_CAPTION    "Kleuren"
+    XT_IDS_NEW              "Nieuw"
+    XT_IDS_CURRENT          "Huidige"
+    XT_IDS_DIRECTORIES      " Mappen:"
+    XT_IDS_FILES            " Bestanden:"
+    XT_IDS_RESTORE          "Dit herstelt de werkbalk in de oorspronkelijke staat, doorgaan?"
+    XT_IDS_WINDOWS          "Meer vensters..."
+    XT_IDS_MANAGEKEYBRD     "Toetsenbord aanpassen"
+    XT_IDS_COMMAND          "Opdracht"
+END
+
+STRINGTABLE 
+BEGIN
+    XT_IDS_CLR_INDIGO       "Indigo"
+    XT_IDS_CLR_GRAY80       "Grijs 80%"
+    XT_IDS_CLR_DARK_RED     "Donkerrood"
+    XT_IDS_CLR_ORANGE       "Donkeroranje"
+    XT_IDS_CLR_DARK_YELLOW  "Donkergeel"
+    XT_IDS_CLR_GREEN        "Groen"
+    XT_IDS_CLR_TEAL         "Groenblauw"
+    XT_IDS_CLR_BLUE         "Blauw"
+    XT_IDS_CLR_BLUEGRAY     "Blauwgrijs"
+    XT_IDS_CLR_GRAY50       "Grijs 50%"
+    XT_IDS_CLR_RED          "Rood"
+    XT_IDS_CLR_LIGHTORANGE  "Oranje"
+    XT_IDS_CLR_LIME         "Limoengroen"
+    XT_IDS_CLR_SEA_GREEN    "Zeegroen"
+    XT_IDS_CLR_AQUA         "Zeeblauw"
+    XT_IDS_CLR_LIGHT_BLUE   "Lichtblauw"
+END
+
+STRINGTABLE 
+BEGIN
+    XT_IDS_CLR_VIOLET       "Violet"
+    XT_IDS_CLR_GRAY40       "Grijs 40%"
+    XT_IDS_CLR_PINK         "Roze"
+    XT_IDS_CLR_GOLD         "Goud"
+    XT_IDS_CLR_YELLOW       "Geel"
+    XT_IDS_CLR_BRIGHT_GREEN "Heldergroen"
+    XT_IDS_CLR_TURQUOISE    "Turkoois"
+    XT_IDS_CLR_SKY_BLUE     "Hemelsblauw"
+    XT_IDS_CLR_PLUM         "Paars"
+    XT_IDS_CLR_GRAY25       "Grijs 25%"
+    XT_IDS_CLR_ROSE         "Rozerood"
+    XT_IDS_CLR_TAN          "Lichtoranje"
+    XT_IDS_CLR_LIGHT_YELLOW "Lichtgeel"
+    XT_IDS_CLR_LIGHT_GREEN  "Lichtgroen"
+    XT_IDS_CLR_LIGHT_TURQUOISE "Lichtturkoois"
+    XT_IDS_CLR_PALE_BLUE    "Pastelblauw"
+END
+
+STRINGTABLE 
+BEGIN
+    XT_IDS_CLR_LAVENDER     "Lavendel"
+    XT_IDS_CLR_WHITE        "Wit"
+    XT_IDS_CLR_GRAY         "Grijs"
+    XT_IDS_CLR_MAROON       "Kastanjebruin"
+    XT_IDS_CLR_OLIVE        "Olijfgroen"
+    XT_IDS_CLR_NAVY         "Marineblauw"
+    XT_IDS_CLR_PURPLE       "Paars"
+    XT_IDS_CLR_SILVER       "Zilver"
+    XT_IDS_CLR_FUCHSIA      "Lila"
+    XT_IDS_CLR_NOFILL       "Geen vulling"
+    XT_IDS_CLR_NOFILL_TIP   "Geen kleur"
+    XT_IDS_AUTOMATIC        "Automatisch"
+    XT_IDS_AUTOMATIC_TIP    "Automatische Kleur"
+    XT_IDS_MORE_COLORS      "Meer kleuren..."
+    XT_IDS_MORE_COLORS_TIP  "Meer kleuren"
+    XT_IDS_STD_COLORS       "Standaard kleuren"
+END
+
+STRINGTABLE 
+BEGIN
+    XT_IDC_BTN_DOWN         "Verplaats item omlaag (Alt+Pijl Omlaag)"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_ID_PREVIEW_CLOSE    "Sluit het voorbeeldvenster\nSluit voorbeeld"
+    AFX_ID_PREVIEW_NUMPAGE  "Toon een enkele of twee pagina's\n1 Pagina / 2 Pagina"
+    AFX_ID_PREVIEW_NEXT     "Naar de volgende pagina\nVolgende pagina"
+    AFX_ID_PREVIEW_PREV     "Naar de vorige pagina\nVorige pagina"
+    AFX_ID_PREVIEW_PRINT    "Druk het afdrukvoorbeeld af\nAfdrukken"
+    AFX_ID_PREVIEW_ZOOMIN   "Deze pagina groter weergeven\nInzoomen"
+    AFX_ID_PREVIEW_ZOOMOUT  "Deze pagina kleiner weergeven\nUitzoomen"
+END
+
+STRINGTABLE 
+BEGIN
+    XT_IDS_KEYS             "Toetsen"
+    XT_IDS_DESCRIPTION      "Omschrijving"
+    XT_IDS_ALLCOMMANDS      "[Alle Opdrachten]"
+    XT_IDS_REASSIGN         "Deze sneltoets is op dit moment toegewezen aan de opdracht: %s\n\nWil je deze sneltoets opnieuw toewijzen?"
+    XT_IDS_WIND_MINIMIZE    "Minimaliseren"
+    XT_IDS_WIND_RESTORE     "Vorig formaat"
+    XT_IDS_WIND_CLOSE       "Sluiten"
+    XT_IDS_TOOLBAR_OPTS     "Werkbalk instellingen"
+    XT_IDS_TOOLS            "&Tools"
+    XT_IDS_PATH_INVALID     "Het pad is ongeldig."
+    XT_IDS_AREYOUSURE       "Weet je zeker dat je alle toetstoewijzingen wilt resetten? Deze actie verwijdert alle eigen toetstoewijzingen op tekstniveau."
+    XT_IDS_AREYOUSURE_2     "Hierdoor wordt de opdrachthistorie van deze applicatie gewist en de standaardset van zichtbare commando's in menu's en werkbalken teruggezet. Specifieke aanpassingen worden niet ongedaan gemaakt. Weet je zeker dat je dit wilt doen?"
+    XT_IDS_BROWSE           "Bladeren"
+    XT_IDS_BROWSE_FILTER    "Uitvoerbaar bestand (*.exe)|*.exe|Opdracht (*.com)|*.com|Informatie (*.pif)|*.pif|Batch (*.bat;*.cmd)|*.bat; *.cmd|Alle bestanden (*.*)|*.*||"
+    XT_IDS_MENU_CONTENTS    " &Menu inhoud:"
+    XT_IDS_HEX              "Hex"
+END
+
+STRINGTABLE 
+BEGIN
+    XT_IDS_ANIM_SYSDEF      "(Systemwaarde)"
+    XT_IDS_ANIM_RANDOM      "Random"
+    XT_IDS_ANIM_UNFOLD      "Uitvouwen"
+    XT_IDS_ANIM_SLIDE       "Schuiven"
+    XT_IDS_ANIM_FADE        "Overvloeien"
+    XT_IDS_ANIM_NONE        "Geen"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_ONEPAGE         "&1 Pagina"
+    AFX_IDS_TWOPAGE         "&2 Pagina's"
+END
+
+#endif    // Dutch (Netherlands) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,7 @@
+; XTToolkit_Dll.def : Declares the module parameters for the DLL.
+
+;LIBRARY      "XTToolkit_Dll"
+;DESCRIPTION  'XTToolkit_Dll Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here

@@ -1,0 +1,815 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "XTResource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+XT_IDR_TBAR_HDR         BITMAP  DISCARDABLE     "res\\tbar_hdr.bmp"
+XT_IDR_TBAR_OUT         BITMAP  MOVEABLE PURE   "res\\tbar_out.bmp"
+XT_IDR_TBAR_BLANK       BITMAP  DISCARDABLE     "res\\tbar_blank.bmp"
+XT_IDR_TBAR_HEXEDIT     BITMAP  DISCARDABLE     "res\\tbar_hex.bmp"
+XT_IDR_PREVIEW_TOOLBAR  BITMAP  DISCARDABLE     "res\\tbar_preview.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+XT_IDR_TBAR_HDR TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      XT_IDC_SORTASC
+    BUTTON      XT_IDC_SORTDSC
+    SEPARATOR
+    BUTTON      XT_IDC_ALIGNLEFT
+    BUTTON      XT_IDC_ALIGNCENTER
+    BUTTON      XT_IDC_ALIGNRIGHT
+END
+
+XT_IDR_TBAR_OUT TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      XT_IDC_LARGEICON
+    BUTTON      XT_IDC_SMALLICON
+END
+
+XT_IDR_TBAR_BLANK TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      XT_IDC_BLANK
+END
+
+XT_IDR_TBAR_HEXEDIT TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_EDIT_UNDO
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_EDIT_CLEAR
+END
+
+XT_IDR_PREVIEW_TOOLBAR TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      AFX_ID_PREVIEW_PRINT
+    BUTTON      AFX_ID_PREVIEW_NEXT
+    BUTTON      AFX_ID_PREVIEW_PREV
+    BUTTON      AFX_ID_PREVIEW_NUMPAGE
+    BUTTON      AFX_ID_PREVIEW_ZOOMIN
+    BUTTON      AFX_ID_PREVIEW_ZOOMOUT
+    BUTTON      AFX_ID_PREVIEW_CLOSE
+    BUTTON      XT_IDC_BLANK
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+XT_IDD_TIPOFTHEDAY DIALOG DISCARDABLE  0, 0, 279, 157
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Подсказка..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Закрыть",IDOK,221,136,50,14
+    CONTROL         "&Показывать подсказки при запуске",
+                    XT_IDC_CHK_DAYTIP_SHOW,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,140,144,10
+    PUSHBUTTON      "&Следующая",XT_IDC_BTN_DAYTIP_NEXT,162,136,50,14
+    CONTROL         "",XT_IDC_BTN_DAYTIP_BORDER,"Static",SS_GRAYFRAME | NOT 
+                    WS_VISIBLE,8,7,263,123
+END
+
+XT_IDD_NEWTOOLBAR DIALOG DISCARDABLE  0, 0, 186, 60
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Создание панели инструментов"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,73,39,50,14
+    PUSHBUTTON      "Отмена",IDCANCEL,129,39,50,14
+    EDITTEXT        XT_IDC_EDIT_TOOLBAR,7,18,172,14,ES_AUTOHSCROLL
+    LTEXT           "Панель &инструментов",IDC_STATIC,7,7,85,8
+END
+
+XT_IDD_CUSTPAGE1 DIALOG DISCARDABLE  0, 0, 270, 150
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Панели &инструментов"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Па&нели инструментов",XT_IDC_TXT_TOOLBARS,4,5,76,8
+    LISTBOX         XT_IDC_LBOX_CHECK,4,15,187,131,LBS_SORT | 
+                    LBS_OWNERDRAWVARIABLE | LBS_HASSTRINGS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Со&здать...",XT_IDC_BTN_NEW,196,15,70,14,BS_CENTER | 
+                    BS_VCENTER
+    PUSHBUTTON      "Переименовать...",XT_IDC_BTN_RENAME,196,33,70,14,
+                    BS_CENTER | BS_VCENTER | WS_DISABLED
+    PUSHBUTTON      "Удалить",XT_IDC_BTN_DELETE,196,51,70,14,BS_CENTER | 
+                    BS_VCENTER | WS_DISABLED
+    PUSHBUTTON      "С&брос...",XT_IDC_BTN_RESET,196,69,70,14,BS_CENTER | 
+                    BS_VCENTER
+END
+
+XT_IDD_CUSTPAGE2 DIALOG DISCARDABLE  0, 0, 270, 150
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "&Команды"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         XT_IDC_LBOX_CATEGORIES,2,14,88,84,LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LISTBOX         XT_IDC_LBOX_COMMANDS,94,14,174,84,LBS_OWNERDRAWVARIABLE | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "К&атегории:",XT_IDC_TXT_CATEGORIES,3,5,38,8
+    LTEXT           "Ко&манды:",XT_IDC_TXT_COMMANDS,94,5,34,8,WS_TABSTOP
+    LTEXT           "Выделенная команда:",XT_IDC_TXT_SELECTED,3,103,76,8
+    PUSHBUTTON      "&Описание",XT_IDC_BTN_DESCRIPTION,9,115,81,14,BS_CENTER | 
+                    BS_VCENTER
+END
+
+XT_IDD_CUSTPAGE5 DIALOG DISCARDABLE  0, 0, 270, 150
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "&Параметры"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Настраиваемые меню и панели инструментов",
+                    XT_IDC_TXT_PERSONALIZED,7,5,158,8
+    CONTROL         "",XT_IDC_SEP_PERSONALIZED,"Static",SS_ETCHEDHORZ,180,9,
+                    83,1
+    CONTROL         "У меню есть &тени",XT_IDC_CHK_MENUSHADOWS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,20,77,10
+    CONTROL         "В &меню сначала отображаются последние использованные команды",
+                    XT_IDC_CHK_RECENTMENU,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,32,252,10
+    CONTROL         "П&оказывать полные меню после короткой задержки",
+                    XT_IDC_CHK_SHOWFULL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,25,44,197,10
+    PUSHBUTTON      "С&брос",XT_IDC_BTN_RESET,7,61,80,14,BS_CENTER | 
+                    BS_VCENTER
+    LTEXT           "Другие",XT_IDC_TXT_OTHER,7,81,26,8
+    CONTROL         "",XT_IDC_SEP_OTHER,"Static",SS_ETCHEDHORZ,48,85,215,1
+    CONTROL         "Пока&зывать содержимое панелей инструментов при перетаскивании",
+                    XT_IDC_CHK_VISUALIZE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,95,253,10
+    CONTROL         "Отоб&ражать подсказки для кнопок",XT_IDC_CHK_SCREENTIPS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,107,135,10
+    CONTROL         "Вклю&чить в подсказки сочетания клавиш",
+                    XT_IDC_CHK_SHOWSHORTCUTKEYS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,25,119,157,10
+    LTEXT           "&Эффект при выводе меню:",IDC_STATIC,7,134,92,8
+    COMBOBOX        XT_IDC_COMBO_ANIMATION,106,131,79,65,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+XT_IDD_PREVIEW_TOOLBAR DIALOG DISCARDABLE  0, 0, 445, 20
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "&Печать...",AFX_ID_PREVIEW_PRINT,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,3,3,55,14
+    CONTROL         "С&ледующая",AFX_ID_PREVIEW_NEXT,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,60,3,66,14
+    CONTROL         "Пр&едыдущая",AFX_ID_PREVIEW_PREV,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,127,3,69,14
+    CONTROL         "&Две страницы",AFX_ID_PREVIEW_NUMPAGE,"Button",
+                    BS_OWNERDRAW | WS_TABSTOP,198,3,73,14
+    CONTROL         "&Крупнее",AFX_ID_PREVIEW_ZOOMIN,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,273,3,55,14
+    CONTROL         "&Мельче",AFX_ID_PREVIEW_ZOOMOUT,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,330,3,55,14
+    CONTROL         "&Закрыть",AFX_ID_PREVIEW_CLOSE,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,387,3,55,14
+END
+
+XT_IDD_COLORCUSTOM DIALOG DISCARDABLE  0, 0, 147, 162
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Дополнительные"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Цвета:",XT_IDC_TXT_COLORS,2,4,24,8
+    CONTROL         "",XT_IDC_CLR_WND,"Static",SS_BLACKFRAME | WS_TABSTOP,3,
+                    15,119,86
+    CONTROL         "",XT_IDC_CLR_LUM,"Static",SS_BLACKFRAME | WS_TABSTOP,
+                    125,15,21,86
+    LTEXT           "О&ттенок:",XT_IDC_TXT_HUE,6,108,31,8
+    EDITTEXT        XT_IDC_EDIT_HUE,39,106,33,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",XT_IDC_SPIN_HUE,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,61,105,
+                    11,14
+    LTEXT           "Ко&нтраст:",XT_IDC_TXT_SAT,3,125,34,8
+    EDITTEXT        XT_IDC_EDIT_SAT,39,122,33,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin2",XT_IDC_SPIN_SAT,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,61,122,
+                    11,14
+    LTEXT           "&Яркость:",XT_IDC_TXT_LUM,5,140,32,8
+    EDITTEXT        XT_IDC_EDIT_LUM,39,138,33,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin3",XT_IDC_SPIN_LUM,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,61,137,
+                    11,14
+    LTEXT           "&Красный:",XT_IDC_TXT_RED,78,108,33,8
+    EDITTEXT        XT_IDC_EDIT_RED,113,106,33,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",XT_IDC_SPIN_RED,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,135,106,
+                    11,14
+    LTEXT           "&Зеленый:",XT_IDC_TXT_GREEN,78,125,33,8
+    EDITTEXT        XT_IDC_EDIT_GREEN,113,122,33,13,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin2",XT_IDC_SPIN_GREEN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,135,122,
+                    11,14
+    LTEXT           "С&иний:",XT_IDC_TXT_BLUE,87,140,24,8
+    EDITTEXT        XT_IDC_EDIT_BLUE,113,138,33,13,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin3",XT_IDC_SPIN_BLUE,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,135,137,
+                    11,14
+END
+
+XT_IDD_COLORSTANDARD DIALOG DISCARDABLE  0, 0, 147, 161
+STYLE WS_CHILD | WS_DISABLED | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | 
+    WS_CAPTION
+CAPTION "Основные"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Цвета:",XT_IDC_TXT_COLORS,2,4,24,8
+    CONTROL         "",XT_IDC_CLR_HEX,"Static",SS_BLACKFRAME | WS_TABSTOP,0,
+                    15,147,145
+END
+
+XT_IDD_WINDOWLIST DIALOG DISCARDABLE  0, 0, 301, 164
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Окна"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Выберите окно:",IDC_STATIC,7,6,147,8
+    LISTBOX         XT_IDC_LBOX_WINDOWS,7,17,211,140,LBS_SORT | 
+                    LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | 
+                    LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | 
+                    WS_HSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Активизировать",XT_IDC_BTN_ACTIVATE,226,6,69,14
+    PUSHBUTTON      "&OK",IDOK,226,24,69,14
+    PUSHBUTTON      "&Сохранить",XT_IDC_BTN_SAVE,226,41,69,14
+    PUSHBUTTON      "&Закрыть",XT_IDC_BTN_CLOSEWINDOWS,226,58,69,14
+    PUSHBUTTON      "&Каскадом",XT_IDC_BTN_CASCADE,226,75,69,14
+    PUSHBUTTON      "&Горизонтально",XT_IDC_BTN_TILEHORZ,226,92,69,14
+    PUSHBUTTON      "В&ертикально",XT_IDC_BTN_TILEVERT,226,109,69,14
+    PUSHBUTTON      "&Минимизировать",XT_IDC_BTN_MINIMIZE,226,126,69,14
+END
+
+XT_IDD_CUSTPAGE3 DIALOGEX 0, 0, 270, 150
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "К&лавиши быстрого вызова"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Ко&манды:",XT_IDC_TXT_COMMANDS,2,28,34,8
+    LISTBOX         XT_IDC_LBOX_ACCEL_COMMANDS,2,39,101,74,
+                    LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "У&же назначены:",XT_IDC_TXT_ASSIGNMENTS,107,28,56,8
+    LISTBOX         XT_IDC_LBOX_KEYS,107,38,93,49,LBS_SORT | 
+                    LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Новая клавиша:",XT_IDC_TXT_NEWKEY,107,91,56,8
+    EDITTEXT        XT_IDC_EDIT_SHORTCUTKEY,107,101,93,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Н&азначить",XT_IDC_BTN_ASSIGN,204,39,64,14
+    PUSHBUTTON      "&Удалить",XT_IDC_BTN_REMOVE,204,56,64,14
+    PUSHBUTTON      "С&брос",XT_IDC_BTN_ACCEL_RESET,204,73,64,14
+    LTEXT           "Описание:",XT_IDC_TXT_DESC_TITLE,2,119,36,8
+    LTEXT           "",XT_IDC_TXT_DESC_OVERVIEW,2,129,198,19,0,
+                    WS_EX_STATICEDGE
+    LTEXT           "Ка&тегория:",IDC_STATIC,2,5,38,8
+    COMBOBOX        XT_IDC_COMBO_CATEGORY,2,15,101,147,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "",XT_IDC_TXT_FRAMETITLE,107,15,161,12
+END
+
+XT_IDD_CUSTPAGE4 DIALOG DISCARDABLE  0, 0, 270, 150
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "&Сервисные программы"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         XT_IDC_LBOX_TOOLSLIST,2,5,266,93,LBS_OWNERDRAWVARIABLE | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "Ко&манда:",XT_IDC_TXT_TOOLSCMD,34,104,33,8
+    RTEXT           "&Аргументы:",XT_IDC_TXT_TOOLSARG,27,119,40,8
+    RTEXT           "С&тартовая папка:",XT_IDC_TXT_TOOLSDIR,7,134,60,8
+    EDITTEXT        XT_IDC_EDIT_TOOLSCMD,73,101,195,14,ES_AUTOHSCROLL
+    EDITTEXT        XT_IDC_EDIT_TOOLSARG,73,116,195,14,ES_AUTOHSCROLL
+    EDITTEXT        XT_IDC_EDIT_TOOLSDIR,73,131,195,14,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+XT_IDM_POPUP MENU DISCARDABLE 
+BEGIN
+    POPUP "RClickOutlookBar"
+    BEGIN
+        MENUITEM "&Мелкие значки",              XT_IDC_SMALLICON
+        MENUITEM "&Крупные значки",             XT_IDC_LARGEICON
+    END
+    POPUP "RClickHexEdit"
+    BEGIN
+        MENUITEM "&Отменить",                   ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "&Вырезать",                   ID_EDIT_CUT
+        MENUITEM "&Копировать",                 ID_EDIT_COPY
+        MENUITEM "Вст&авить",                   ID_EDIT_PASTE
+        MENUITEM "О&чистить",                   ID_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "В&ыделить все",               ID_EDIT_SELECT_ALL
+    END
+    POPUP "RClickHeader"
+    BEGIN
+        MENUITEM "Сортировать по &возростанию", XT_IDC_SORTASC
+        MENUITEM "Сортировать по &убыванию",    XT_IDC_SORTDSC
+        MENUITEM SEPARATOR
+        POPUP "В&ыравнивание"
+        BEGIN
+            MENUITEM "По &левому краю",             XT_IDC_ALIGNLEFT
+            MENUITEM "По &центру",                  XT_IDC_ALIGNCENTER
+            MENUITEM "По &правому краю",            XT_IDC_ALIGNRIGHT
+        END
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    XT_IDD_NEWTOOLBAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 53
+    END
+
+    XT_IDD_CUSTPAGE1, DIALOG
+    BEGIN
+        RIGHTMARGIN, 230
+        VERTGUIDE, 196
+        TOPMARGIN, 5
+    END
+
+    XT_IDD_CUSTPAGE2, DIALOG
+    BEGIN
+        RIGHTMARGIN, 268
+        VERTGUIDE, 2
+        VERTGUIDE, 90
+        VERTGUIDE, 94
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 142
+    END
+
+    XT_IDD_CUSTPAGE5, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 263
+        VERTGUIDE, 25
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 142
+        HORZGUIDE, 25
+        HORZGUIDE, 37
+        HORZGUIDE, 49
+        HORZGUIDE, 100
+        HORZGUIDE, 112
+        HORZGUIDE, 124
+    END
+
+    XT_IDD_PREVIEW_TOOLBAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 442
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 17
+    END
+
+    XT_IDD_COLORCUSTOM, DIALOG
+    BEGIN
+        RIGHTMARGIN, 146
+        VERTGUIDE, 39
+        VERTGUIDE, 72
+        VERTGUIDE, 78
+        VERTGUIDE, 113
+        VERTGUIDE, 122
+        VERTGUIDE, 125
+        BOTTOMMARGIN, 161
+    END
+
+    XT_IDD_WINDOWLIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 295
+        VERTGUIDE, 218
+        VERTGUIDE, 226
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 157
+        HORZGUIDE, 82
+        HORZGUIDE, 99
+        HORZGUIDE, 116
+        HORZGUIDE, 133
+    END
+
+    XT_IDD_CUSTPAGE3, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 268
+        VERTGUIDE, 85
+        VERTGUIDE, 103
+        VERTGUIDE, 107
+        VERTGUIDE, 200
+        VERTGUIDE, 204
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 148
+        HORZGUIDE, 39
+        HORZGUIDE, 87
+        HORZGUIDE, 113
+    END
+
+    XT_IDD_CUSTPAGE4, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 268
+        VERTGUIDE, 73
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 145
+        HORZGUIDE, 98
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_REG_KEY          "Software\\%s\\%s\\Settings"
+    XT_IDS_REG_WINPOS       "%u,%u,%d,%d,%d,%d,%d,%d,%d,%d"
+    XT_IDS_REG_BARID        "BarID"
+    XT_IDS_REG_SETTINGS     "Settings"
+    XT_IDS_REG_BARPOS       "Bar Position"
+    XT_IDS_REG_WNDPOS       "Window Position"
+    XT_IDS_REG_RECENTLIST   "Recent Item List"
+    XT_IDS_REG_ITEMID       "Item%d"
+    XT_IDS_REG_CBARID       "%s-Bar%d"
+    XT_IDS_REG_COLINFO      "Column Info"
+    XT_IDS_NAME             "Имя"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_STATUSBAR        "Строка состояния"
+    XT_IDS_ERROR_EXISTS     "Панель инструментов '%s' уже существует. Введите другое имя."
+    XT_IDS_ERROR_LIMIT      "Извините, ваш лимит исчерпан."
+    XT_IDS_CUSTOM_BAR       "Пользовательский %d"
+    XT_IDS_CUSTOM_CONFIRM   "Вы уверены, что хотите удалить панель инструментов '%s' ?"
+    XT_IDS_DOT              "..."
+    XT_IDS_NOHELPTOPIC      "В справочной системе нет статьи, связанной с этим элементом.\nID команды %d"
+    XT_IDS_DEFEXT           "*.*"
+    XT_IDS_DEFFILT          "Все файлы (*.*)|*.*||"
+    XT_IDS_DEFTITLE         "Выберите имя папки:"
+    XT_IDS_CLICKKEEPOPEN    "Нажмите, чтобы оставить открытым"
+    XT_IDS_SE_0             "В операционной системе недостаточно памяти либо ресурсов."
+    XT_IDS_SE_ERR_FNF       "Указанный файл не найден."
+    XT_IDS_SE_ERR_PNF       "Указанный путь не верен."
+    XT_IDS_SE_ERR_ACCESSDENIED 
+                            "Операционная система запрещает доступ к указанному файлу."
+    XT_IDS_SE_ERR_OOM       "Не хватает памяти для завершения операции."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_CLR_INDIGO       "Индиго"
+    XT_IDS_CLR_GRAY80       "Серый-80%"
+    XT_IDS_CLR_DARK_RED     "Темно-красный"
+    XT_IDS_CLR_ORANGE       "Оранжевый"
+    XT_IDS_CLR_DARK_YELLOW  "Темно-желтый"
+    XT_IDS_CLR_GREEN        "Зеленый"
+    XT_IDS_CLR_TEAL         "Чайный"
+    XT_IDS_CLR_BLUE         "Синий"
+    XT_IDS_CLR_BLUEGRAY     "Сине-серый"
+    XT_IDS_CLR_GRAY50       "Серый-50%"
+    XT_IDS_CLR_RED          "Красный"
+    XT_IDS_CLR_LIGHTORANGE  "Светло-оранжевый"
+    XT_IDS_CLR_LIME         "Ярко-зеленый"
+    XT_IDS_CLR_SEA_GREEN    "Морской волны"
+    XT_IDS_CLR_AQUA         "Голубой"
+    XT_IDS_CLR_LIGHT_BLUE   "Светло-голубой"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_CLR_LAVENDER     "Бледно-лиловый"
+    XT_IDS_CLR_WHITE        "Белый"
+    XT_IDS_CLR_GRAY         "Серый"
+    XT_IDS_CLR_MAROON       "Тёмно-бордовый"
+    XT_IDS_CLR_OLIVE        "Оливковый"
+    XT_IDS_CLR_NAVY         "Темно-синий"
+    XT_IDS_CLR_PURPLE       "Пурпурный"
+    XT_IDS_CLR_SILVER       "Серебряный"
+    XT_IDS_CLR_FUCHSIA      "Фуксин"
+    XT_IDS_CLR_NOFILL       "Без заливки"
+    XT_IDS_CLR_NOFILL_TIP   "Без цвета"
+    XT_IDS_AUTOMATIC        "По умолчанию"
+    XT_IDS_AUTOMATIC_TIP    "Цвет по умолчанию"
+    XT_IDS_MORE_COLORS      "Другие цвета..."
+    XT_IDS_MORE_COLORS_TIP  "Другие цвета"
+    XT_IDS_STD_COLORS       "Основные цвета"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_KEYS             "Клавиши"
+    XT_IDS_DESCRIPTION      "Описание"
+    XT_IDS_ALLCOMMANDS      "[Все команды]"
+    XT_IDS_REASSIGN         "Эта комбинация клавиш уже используется командой: %s\n\nНазначать новою команду для этой комбинации клавиш?"
+    XT_IDS_WIND_MINIMIZE    "Минимизировать окно"
+    XT_IDS_WIND_RESTORE     "Восстановить окно"
+    XT_IDS_WIND_CLOSE       "Закрыть окно"
+    XT_IDS_TOOLBAR_OPTS     "Опции панели инструментов"
+    XT_IDS_TOOLS            "&Сервис"
+    XT_IDS_PATH_INVALID     "Неправильный путь."
+    XT_IDS_AREYOUSURE       "Вы действительно хотите сбросить назначения клавиш? Это действие удалит все индивидуальные назначения клавиш на текстовом уровне."
+    XT_IDS_AREYOUSURE_2     "По этому действию будет удален список команд, ранее использованных в данном приложении, и восстановлен набор команд, видимых в меню и панелях инструментов по умолчанию. Произведенные настройки интерфейса не будут отменены. Вы действительно хотите выполнить это действие?"
+    XT_IDS_BROWSE           "Обзор"
+    XT_IDS_BROWSE_FILTER    "Исполняемые (*.exe)|*.exe|Исполняемые (*.com)|*.com|Информационные (*.pif)|*.pif|Командные (*.bat;*.cmd)|*.bat; *.cmd|All Files (*.*)|*.*||"
+    XT_IDS_MENU_CONTENTS    " Содержимое &меню:"
+    XT_IDS_HEX              "Hex"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_ANIM_SYSDEF      "(По умолчанию)"
+    XT_IDS_ANIM_RANDOM      "Случайный выбор"
+    XT_IDS_ANIM_UNFOLD      "Развертывание"
+    XT_IDS_ANIM_SLIDE       "Соскальзывание"
+    XT_IDS_ANIM_FADE        "Угасание"
+    XT_IDS_ANIM_NONE        "None"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_SIZE             "Размер"
+    XT_IDS_CONTRACT         "Сократить прикрепленное окно"
+    XT_IDS_TYPE             "Тип"
+    XT_IDS_MODIFIED         "Изменен"
+    XT_IDS_INVALID_VER      "Предупреждение: Этой программе требуется библиотека  comctl32.dll версии 4.72 или выше."
+    XT_IDS_COLOR_AUTO       "Автоматический"
+    XT_IDS_COLOR_CUST       "Настроить..."
+    XT_IDS_SELDIR           "Выберите папку:"
+    XT_IDS_DOCKWND          "Прикрепить окно"
+    XT_IDS_RES_ASSERT       "ОШИБКА: Часть ресурсов, необходимых для Xtreme Toolkit, не была правильно инициализирована.\n\nЕсли ваш проект базируется на классе CDialog , или ваш CMainFrame класс не был унаследован от классов CXTFrameWnd или CXTMDIFrameWnd, вам необходимо вызывать метод""xtAfxData.InitResources();"" для инициализации этих ресурсов.\n\nВы можете поместить вызов ""xtAfxData.InitResources();"" в конструктор класса CMainFrame либо CDialog."
+    XT_IDS_TOOLBAR          "Панель инструментов"
+    XT_IDS_ERROR_BLANK      "Имя панели инструментов не может быть пустым. Введите имя."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_SE_ERR_BAD_FORMAT 
+                            "Неверный exe-файл (не Win32® .exe или ошибка в образе .exe)."
+    XT_IDS_SE_ERR_SHARE     "Ошибка совместного доступа."
+    XT_IDS_SE_ERR_ASSOCINCOMPLETE 
+                            "Ассоциация с именем файла не полная либо испорчена."
+    XT_IDS_SE_ERR_DDETIMEOUT 
+                            "DDE транзакция не выполнена по истечении тайм-аута запроса."
+    XT_IDS_SE_ERR_DDEFAIL   "DDE транзакция не выполнена."
+    XT_IDS_SE_ERR_DDEBUSY   "DDE транзакция не выполнена из-за выполнения других DDE транзакций."
+    XT_IDS_SE_ERR_NOASSOC   "Ни одна из программ не связана с данным расширением имени файла."
+    XT_IDS_SE_ERR_DLLNOTFOUND 
+                            "Указанная загружаемая библиотека(dll) не найдена."
+    XT_IDS_SE_ERR_UNKOWN    "Неизвестная ошибка %d."
+    XT_IDS_CLOSE            "Закрыть"
+    XT_IDS_CLR_BLACK        "Черный"
+    XT_IDS_CLR_BROWN        "Коричневый"
+    XT_IDS_CLR_OLIVE_GREEN  "Оливково-зеленый"
+    XT_IDS_CLR_DARK_GREEN   "Темно-зеленый"
+    XT_IDS_CLR_DARK_TEAL    "Темно-чайный"
+    XT_IDS_CLR_DARK_BLUE    "Темно-синий"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_CLR_VIOLET       "Фиолетовый"
+    XT_IDS_CLR_GRAY40       "Серый-40%"
+    XT_IDS_CLR_PINK         "Розовый"
+    XT_IDS_CLR_GOLD         "Золотой"
+    XT_IDS_CLR_YELLOW       "Желтый"
+    XT_IDS_CLR_BRIGHT_GREEN "Ярко-зеленый"
+    XT_IDS_CLR_TURQUOISE    "Бирюзовый"
+    XT_IDS_CLR_SKY_BLUE     "Небесно-голубой"
+    XT_IDS_CLR_PLUM         "Сливовый"
+    XT_IDS_CLR_GRAY25       "Серый-25%"
+    XT_IDS_CLR_ROSE         "Розовый"
+    XT_IDS_CLR_TAN          "Желто-коричневый"
+    XT_IDS_CLR_LIGHT_YELLOW "Светло-желтый"
+    XT_IDS_CLR_LIGHT_GREEN  "Светло-серый"
+    XT_IDS_CLR_LIGHT_TURQUOISE "Светло-бирюзовый"
+    XT_IDS_CLR_PALE_BLUE    "Бледно-голубой"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_TIPTEXT          "Подсказка"
+    XT_IDS_DIDYOUKNOW       "Знаете ли вы..."
+    XT_IDS_FILE_ABSENT      "Файл с подсказками не найден"
+    XT_IDS_FILE_CORRUPT     "Ошибка чтения файла подсказок"
+    XT_IDS_MENUBAR          "Меню"
+    XT_IDS_CONTROLBAR       "Панель управления"
+    XT_IDS_CUSTOMIZE        "Настройки"
+    XT_IDS_COLOR_CAPTION    "Палитра"
+    XT_IDS_NEW              "Новый"
+    XT_IDS_CURRENT          "Текущий"
+    XT_IDS_DIRECTORIES      " Папки:"
+    XT_IDS_FILES            " Файлы:"
+    XT_IDS_RESTORE          "Панель инструментов сбрасывается в первоначальное состояние, продолжать операцию?"
+    XT_IDS_WINDOWS          "Все окошки..."
+    XT_IDS_MANAGEKEYBRD     "Работать с клавишами быстрого доступа"
+    XT_IDS_COMMAND          "Команда"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDC_BTN_CLOSE        "Спрятать прикрепленное окно"
+    XT_IDC_BTN_EXPAND       "Расширить прикрепленное окно"
+    XT_IDC_BTN_NEW          "Создать (Insert)"
+    XT_IDC_BTN_DELETE       "Удалить (Delete)"
+    XT_IDC_BTN_UP           "Переместить элемент вверх (Alt+Стрелка вверх)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDC_BTN_DOWN         "Переместить элемент вниз (Alt+Стрелка вниз)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDC_SORTASC          "Сортировать выбранный столбец по возрастанию\nСортировка по возрастанию"
+    XT_IDC_SORTDSC          "Сортировать выбранный столбец по убыванию\nСортировка по убыванию"
+    XT_IDC_ALIGNLEFT        "Выровнять содержимое выбранного столбца по левому краю\nВыровнять по левому краю"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDC_ALIGNCENTER      "Выровнять содержимое выбранного столбца по центру\nВыровнять по центру"
+    XT_IDC_ALIGNRIGHT       "Выровнять содержимое выбранного столбца по правому краю\nВыровнять по правому краю"
+    XT_IDC_LARGEICON        "Показывать крупные значки\nКрупные значки"
+    XT_IDC_SMALLICON        "Показывать крупные значки\nМелкие значки"
+    XT_IDC_REMOVEITEM       "Удалить из панели Outlook "
+    XT_IDC_RENAMEITEM       "Переименовать ссылку"
+    XT_IDC_CUSTOMIZE        "Учитывать настройку панели инструментов\nНастроить панель инструментов"
+    XT_IDC_CHEVRON          "Показывать меню целиком"
+    XT_IDC_REMOVEGROUP      "Удалить группу"
+    XT_IDC_RENAMEGROUP      "Переименовать группу"
+    XT_IDC_SORT_CATEGORIZED "Categorized\nCategorized"
+    XT_IDC_SORT_ALPHABETIC  "Alphabetic\nAlphabetic"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_ID_PREVIEW_CLOSE    "Закрыть окно предварительного просмотра\nЗакрыть окно предварительного просмотра"
+    AFX_ID_PREVIEW_NUMPAGE  "Показывать одностраничное или двухстраничное представление\n1 страница / 2 страницы"
+    AFX_ID_PREVIEW_NEXT     "Перейти на следующую страницу\nСледующая страница"
+    AFX_ID_PREVIEW_PREV     "Перейти на предыдущую страницу\nПредыдущая страница"
+    AFX_ID_PREVIEW_PRINT    "Распечатать просмотренный элемент\nПечать"
+    AFX_ID_PREVIEW_ZOOMIN   "Увеличить страницу предварительного просмотра\nПриблизить"
+    AFX_ID_PREVIEW_ZOOMOUT  "Уменьшить страницу предварительного просмотра\nОтдалить "
+END
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+XT_IDB_BTN_BAR          BITMAP  DISCARDABLE     "res\\btn_bar.bmp"
+XT_IDB_BTN_OUT          BITMAP  DISCARDABLE     "res\\btn_out.bmp"
+XT_IDB_LIGHTBULB        BITMAP  FIXED IMPURE    "res\\lightbulb.bmp"
+XT_IDB_LISTEDIT         BITMAP  DISCARDABLE     "res\\btn_listedit.bmp"
+XT_IDB_FONTTYPE         BITMAP  DISCARDABLE     "res\\font.bmp"
+XT_IDB_SCROLL_ARW       BITMAP  DISCARDABLE     "res\\scroll.bmp"
+XT_IDB_BTN_PRINT        BITMAP  DISCARDABLE     "res\\btn_print.bmp"
+XT_IDB_CHECKLISTBOX     BITMAP  FIXED IMPURE    "res\\checklist.bmp"
+XT_IDB_BTN_FRAME        BITMAP  DISCARDABLE     "res\\btn_frame.bmp"
+XT_IDB_CHECKLISTBOX_3D  BITMAP  FIXED IMPURE    "res\\checklist_3d.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+XT_IDC_DRAGMOVE         CURSOR  DISCARDABLE     "res\\dragmove.cur"
+XT_IDC_HAND             CURSOR  DISCARDABLE     "res\\hand.cur"
+XT_IDC_HSPLITBAR        CURSOR  DISCARDABLE     "res\\splith.cur"
+XT_IDC_DRAGNONE         CURSOR  DISCARDABLE     "res\\dragnone.cur"
+XT_IDC_HANDNONE         CURSOR  DISCARDABLE     "res\\handnone.cur"
+XT_IDC_VSPLITBAR        CURSOR  DISCARDABLE     "res\\splitv.cur"
+XT_IDC_DRAGCOPY         CURSOR  DISCARDABLE     "res\\dragcopy.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+XT_IDI_XTREME           ICON    DISCARDABLE     "res\\xtreme.ico"
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "XTResource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

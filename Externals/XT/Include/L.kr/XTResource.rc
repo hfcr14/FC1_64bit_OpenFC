@@ -1,0 +1,800 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "XTResource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Korean resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+XT_IDR_TBAR_HDR         BITMAP  DISCARDABLE     "res\\tbar_hdr.bmp"
+XT_IDR_TBAR_OUT         BITMAP  MOVEABLE PURE   "res\\tbar_out.bmp"
+XT_IDR_TBAR_BLANK       BITMAP  DISCARDABLE     "res\\tbar_blank.bmp"
+XT_IDR_TBAR_HEXEDIT     BITMAP  DISCARDABLE     "res\\tbar_hex.bmp"
+XT_IDR_PREVIEW_TOOLBAR  BITMAP  DISCARDABLE     "res\\tbar_preview.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+XT_IDR_TBAR_HDR TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      XT_IDC_SORTASC
+    BUTTON      XT_IDC_SORTDSC
+    SEPARATOR
+    BUTTON      XT_IDC_ALIGNLEFT
+    BUTTON      XT_IDC_ALIGNCENTER
+    BUTTON      XT_IDC_ALIGNRIGHT
+END
+
+XT_IDR_TBAR_OUT TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      XT_IDC_LARGEICON
+    BUTTON      XT_IDC_SMALLICON
+END
+
+XT_IDR_TBAR_BLANK TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      XT_IDC_BLANK
+END
+
+XT_IDR_TBAR_HEXEDIT TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_EDIT_UNDO
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_EDIT_CLEAR
+END
+
+XT_IDR_PREVIEW_TOOLBAR TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      AFX_ID_PREVIEW_PRINT
+    BUTTON      AFX_ID_PREVIEW_NEXT
+    BUTTON      AFX_ID_PREVIEW_PREV
+    BUTTON      AFX_ID_PREVIEW_NUMPAGE
+    BUTTON      AFX_ID_PREVIEW_ZOOMIN
+    BUTTON      AFX_ID_PREVIEW_ZOOMOUT
+    BUTTON      AFX_ID_PREVIEW_CLOSE
+    BUTTON      XT_IDC_BLANK
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+XT_IDD_TIPOFTHEDAY DIALOGEX 0, 0, 279, 157
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "오늘의 팁"
+FONT 9, "굴림", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "닫기(&C)",IDOK,221,136,50,14
+    CONTROL         "시작할 때 팁 보여주기(&S)",XT_IDC_CHK_DAYTIP_SHOW,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,140,113,10
+    PUSHBUTTON      "다음 팁(&N)",XT_IDC_BTN_DAYTIP_NEXT,162,136,50,14
+    CONTROL         "",XT_IDC_BTN_DAYTIP_BORDER,"Static",SS_GRAYFRAME | NOT 
+                    WS_VISIBLE,8,7,263,123
+END
+
+XT_IDD_NEWTOOLBAR DIALOG DISCARDABLE  0, 0, 186, 60
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "새 툴바"
+FONT 9, "굴림"
+BEGIN
+    DEFPUSHBUTTON   "확인",IDOK,73,39,50,14
+    PUSHBUTTON      "취소",IDCANCEL,129,39,50,14
+    EDITTEXT        XT_IDC_EDIT_TOOLBAR,7,18,172,14,ES_AUTOHSCROLL
+    LTEXT           "툴바이름(&T):",IDC_STATIC,7,7,40,8
+END
+
+XT_IDD_CUSTPAGE1 DIALOG DISCARDABLE  0, 0, 230, 150
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "툴바(&B)"
+FONT 9, "굴림"
+BEGIN
+    LTEXT           "툴바(&A):",XT_IDC_TXT_TOOLBARS,4,5,28,8
+    LISTBOX         XT_IDC_LBOX_CHECK,4,15,150,131,LBS_SORT | 
+                    LBS_OWNERDRAWVARIABLE | LBS_HASSTRINGS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "새로 만들기(&N)...",XT_IDC_BTN_NEW,158,15,70,14,
+                    BS_CENTER | BS_VCENTER
+    PUSHBUTTON      "이름 바꾸기(&E)...",XT_IDC_BTN_RENAME,158,33,70,14,
+                    BS_CENTER | BS_VCENTER | WS_DISABLED
+    PUSHBUTTON      "삭제(&D)",XT_IDC_BTN_DELETE,158,51,70,14,BS_CENTER | 
+                    BS_VCENTER | WS_DISABLED
+    PUSHBUTTON      "설정(&R)...",XT_IDC_BTN_RESET,158,69,70,14,BS_CENTER | 
+                    BS_VCENTER
+END
+
+XT_IDD_CUSTPAGE2 DIALOG DISCARDABLE  0, 0, 230, 150
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "명령(&C)"
+FONT 9, "굴림"
+BEGIN
+    LISTBOX         XT_IDC_LBOX_CATEGORIES,2,14,81,84,LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LISTBOX         XT_IDC_LBOX_COMMANDS,88,14,140,84,LBS_OWNERDRAWVARIABLE | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "구분(&G):",XT_IDC_TXT_CATEGORIES,3,5,38,8
+    LTEXT           "명령(&D):",XT_IDC_TXT_COMMANDS,89,5,24,8,WS_TABSTOP
+    LTEXT           "선택된 명령:",XT_IDC_TXT_SELECTED,3,103,44,8
+    PUSHBUTTON      "설명",XT_IDC_BTN_DESCRIPTION,11,115,81,14,BS_CENTER | 
+                    BS_VCENTER
+END
+
+XT_IDD_CUSTPAGE5 DIALOG DISCARDABLE  0, 0, 230, 150
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "옵션(&O)"
+FONT 9, "굴림"
+BEGIN
+    LTEXT           "메뉴 && 툴바 설정 ",XT_IDC_TXT_PERSONALIZED,7,5,110,8
+    CONTROL         "",XT_IDC_SEP_PERSONALIZED,"Static",SS_ETCHEDHORZ,122,9,
+                    101,1
+    CONTROL         "메뉴에 그림자 표시",XT_IDC_CHK_MENUSHADOWS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,20,87,10
+    CONTROL         "메뉴에 최근 명령을 먼저표시(&n)",XT_IDC_CHK_RECENTMENU,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,32,151,10
+    CONTROL         "전체메뉴 표시(&u)",XT_IDC_CHK_SHOWFULL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,25,44,127,10
+    PUSHBUTTON      "&사용 데이타 기록 지우기(&R)",XT_IDC_BTN_RESET,7,61,98,
+                    14,BS_CENTER | BS_VCENTER
+    LTEXT           "기타",XT_IDC_TXT_OTHER,7,81,20,8
+    CONTROL         "",XT_IDC_SEP_OTHER,"Static",SS_ETCHEDHORZ,30,85,193,1
+    CONTROL         "드래깅 동안 툴바 내용보기",XT_IDC_CHK_VISUALIZE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,95,136,10
+    CONTROL         "툴바 팁보기",XT_IDC_CHK_SCREENTIPS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,107,111,10
+    CONTROL         "팁 내용에 단축키 포함",XT_IDC_CHK_SHOWSHORTCUTKEYS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,25,119,125,10
+    LTEXT           "메뉴 에니매이션(&M)",IDC_STATIC,7,134,53,8
+    COMBOBOX        XT_IDC_COMBO_ANIMATION,63,131,79,65,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+XT_IDD_PREVIEW_TOOLBAR DIALOG DISCARDABLE  0, 0, 406, 20
+STYLE WS_CHILD
+FONT 9, "굴림"
+BEGIN
+    CONTROL         "인쇄(&P)...",AFX_ID_PREVIEW_PRINT,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,3,3,55,14
+    CONTROL         "다음 장(&N)",AFX_ID_PREVIEW_NEXT,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,60,3,55,14
+    CONTROL         "이전 장(&P)",AFX_ID_PREVIEW_PREV,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,117,3,55,14
+    CONTROL         "두 페이지(&T)",AFX_ID_PREVIEW_NUMPAGE,"Button",
+                    BS_OWNERDRAW | WS_TABSTOP,174,3,55,14
+    CONTROL         "확대(&I)",AFX_ID_PREVIEW_ZOOMIN,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,231,3,55,14
+    CONTROL         "축소(&O)",AFX_ID_PREVIEW_ZOOMOUT,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,288,3,55,14
+    CONTROL         "닫기(&C)",AFX_ID_PREVIEW_CLOSE,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,345,3,55,14
+END
+
+XT_IDD_COLORCUSTOM DIALOG DISCARDABLE  0, 0, 147, 161
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "사용자 정의"
+FONT 9, "굴림"
+BEGIN
+    LTEXT           "색(&C):",XT_IDC_TXT_COLORS,2,4,43,10
+    CONTROL         "",XT_IDC_CLR_WND,"Static",SS_BLACKFRAME | WS_TABSTOP,3,
+                    15,119,86
+    CONTROL         "",XT_IDC_CLR_LUM,"Static",SS_BLACKFRAME | WS_TABSTOP,
+                    126,15,20,86
+    LTEXT           "색상(&H):",XT_IDC_TXT_HUE,6,108,27,8
+    EDITTEXT        XT_IDC_EDIT_HUE,35,106,33,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",XT_IDC_SPIN_HUE,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,59,105,
+                    10,14
+    LTEXT           "채도(&S):",XT_IDC_TXT_SAT,5,125,28,8
+    EDITTEXT        XT_IDC_EDIT_SAT,35,122,33,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin2",XT_IDC_SPIN_SAT,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,59,122,
+                    10,14
+    LTEXT           "밝기(&L):",XT_IDC_TXT_LUM,8,140,25,8
+    EDITTEXT        XT_IDC_EDIT_LUM,35,138,33,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin3",XT_IDC_SPIN_LUM,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,59,137,
+                    10,14
+    LTEXT           "빨강(&R):",XT_IDC_TXT_RED,82,108,22,8
+    EDITTEXT        XT_IDC_EDIT_RED,106,106,33,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",XT_IDC_SPIN_RED,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,130,105,
+                    11,14
+    LTEXT           "초록(&G):",XT_IDC_TXT_GREEN,79,125,25,8
+    EDITTEXT        XT_IDC_EDIT_GREEN,106,122,33,13,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin2",XT_IDC_SPIN_GREEN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,130,122,
+                    11,14
+    LTEXT           "파랑(&B):",XT_IDC_TXT_BLUE,74,140,30,8
+    EDITTEXT        XT_IDC_EDIT_BLUE,106,138,33,13,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin3",XT_IDC_SPIN_BLUE,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,130,137,
+                    11,14
+END
+
+XT_IDD_COLORSTANDARD DIALOG DISCARDABLE  0, 0, 147, 161
+STYLE WS_CHILD | WS_DISABLED | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | 
+    WS_CAPTION
+CAPTION "표준"
+FONT 9, "굴림"
+BEGIN
+    LTEXT           "색(&C):",XT_IDC_TXT_COLORS,2,4,43,10
+    CONTROL         "",XT_IDC_CLR_HEX,"Static",SS_BLACKFRAME | WS_TABSTOP,0,
+                    15,147,145
+END
+
+XT_IDD_WINDOWLIST DIALOG DISCARDABLE  0, 0, 301, 164
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "창"
+FONT 9, "굴림"
+BEGIN
+    LTEXT           "창 목록( &w):",IDC_STATIC,7,7,147,8
+    LISTBOX         XT_IDC_LBOX_WINDOWS,7,17,216,140,LBS_SORT | 
+                    LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | 
+                    LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | 
+                    WS_HSCROLL | WS_TABSTOP
+    PUSHBUTTON      "활성화(&A)",XT_IDC_BTN_ACTIVATE,233,7,62,14
+    PUSHBUTTON      "확인(&O)",IDOK,233,24,62,14
+    PUSHBUTTON      "저장(&S)",XT_IDC_BTN_SAVE,233,41,62,14
+    PUSHBUTTON      "창 닫기(&C)",XT_IDC_BTN_CLOSEWINDOWS,233,58,62,14
+    PUSHBUTTON      "계단식(&d)",XT_IDC_BTN_CASCADE,233,75,62,14
+    PUSHBUTTON      "수평 배열(&H)",XT_IDC_BTN_TILEHORZ,233,92,62,14
+    PUSHBUTTON      "수직 배열(&V)",XT_IDC_BTN_TILEVERT,233,109,62,14
+    PUSHBUTTON      "최소화(&z)",XT_IDC_BTN_MINIMIZE,233,126,62,14
+END
+
+XT_IDD_CUSTPAGE3 DIALOGEX 0, 0, 230, 150
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "키보드"
+FONT 9, "굴림", 0, 0, 0x1
+BEGIN
+    LTEXT           "명령:",XT_IDC_TXT_COMMANDS,2,28,38,8
+    LISTBOX         XT_IDC_LBOX_ACCEL_COMMANDS,2,39,93,74,LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "현재 단축키:",XT_IDC_TXT_ASSIGNMENTS,100,28,79,8
+    LISTBOX         XT_IDC_LBOX_KEYS,100,38,75,49,LBS_SORT | 
+                    LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "새 단축키 누르기:",XT_IDC_TXT_NEWKEY,100,91,76,8
+    EDITTEXT        XT_IDC_EDIT_SHORTCUTKEY,100,101,75,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "할당(&A)",XT_IDC_BTN_ASSIGN,179,39,49,14
+    PUSHBUTTON      "제거(&R)",XT_IDC_BTN_REMOVE,179,56,49,14
+    PUSHBUTTON      "모두새로(&S)",XT_IDC_BTN_ACCEL_RESET,179,73,49,14
+    LTEXT           "설명:",XT_IDC_TXT_DESC_TITLE,2,119,38,8
+    LTEXT           "",XT_IDC_TXT_DESC_OVERVIEW,2,129,173,19,0,
+                    WS_EX_STATICEDGE
+    LTEXT           "유형:",IDC_STATIC,2,5,31,8
+    COMBOBOX        XT_IDC_COMBO_CATEGORY,2,13,93,147,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "",XT_IDC_TXT_FRAMETITLE,100,15,128,12
+END
+
+XT_IDD_CUSTPAGE4 DIALOG DISCARDABLE  0, 0, 230, 150
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "도구"
+FONT 9, "굴림"
+BEGIN
+    LISTBOX         XT_IDC_LBOX_TOOLSLIST,2,5,226,93,LBS_OWNERDRAWVARIABLE | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "명령(&C):",XT_IDC_TXT_TOOLSCMD,2,104,60,8
+    RTEXT           "인수(&A):",XT_IDC_TXT_TOOLSARG,2,119,60,8
+    RTEXT           "디렉토리(&I):",XT_IDC_TXT_TOOLSDIR,2,134,60,8
+    EDITTEXT        XT_IDC_EDIT_TOOLSCMD,73,101,155,14,ES_AUTOHSCROLL
+    EDITTEXT        XT_IDC_EDIT_TOOLSARG,73,116,155,14,ES_AUTOHSCROLL
+    EDITTEXT        XT_IDC_EDIT_TOOLSDIR,73,131,155,14,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+XT_IDM_POPUP MENU DISCARDABLE 
+BEGIN
+    POPUP "RClickOutlookBar"
+    BEGIN
+        MENUITEM "작은 아이콘(&M)",             XT_IDC_SMALLICON
+        MENUITEM "큰 아이콘(&G)",               XT_IDC_LARGEICON
+    END
+    POPUP "RClickHexEdit"
+    BEGIN
+        MENUITEM "취소(&U)",                    ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "잘라내기(&T)",                ID_EDIT_CUT
+        MENUITEM "복사(&C)",                    ID_EDIT_COPY
+        MENUITEM "붙여넣기(&P)",                ID_EDIT_PASTE
+        MENUITEM "삭제(&D)",                    ID_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "모두 선택(&A)",               ID_EDIT_SELECT_ALL
+    END
+    POPUP "RClickHeader"
+    BEGIN
+        MENUITEM "오름차순 정렬",               XT_IDC_SORTASC
+        MENUITEM "내림차순 정렬",               XT_IDC_SORTDSC
+        MENUITEM SEPARATOR
+        POPUP "정렬"
+        BEGIN
+            MENUITEM "왼쪽 정렬",                   XT_IDC_ALIGNLEFT
+            MENUITEM "가운데 정렬",                 XT_IDC_ALIGNCENTER
+            MENUITEM "오른쪽 정렬",                 XT_IDC_ALIGNRIGHT
+        END
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    XT_IDD_NEWTOOLBAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 53
+    END
+
+    XT_IDD_CUSTPAGE1, DIALOG
+    BEGIN
+        TOPMARGIN, 5
+    END
+
+    XT_IDD_CUSTPAGE2, DIALOG
+    BEGIN
+        RIGHTMARGIN, 228
+        VERTGUIDE, 2
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 142
+    END
+
+    XT_IDD_CUSTPAGE5, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 223
+        VERTGUIDE, 25
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 142
+        HORZGUIDE, 25
+        HORZGUIDE, 37
+        HORZGUIDE, 49
+        HORZGUIDE, 100
+        HORZGUIDE, 112
+        HORZGUIDE, 124
+    END
+
+    XT_IDD_PREVIEW_TOOLBAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 403
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 17
+    END
+
+    XT_IDD_COLORCUSTOM, DIALOG
+    BEGIN
+        VERTGUIDE, 25
+        VERTGUIDE, 58
+        VERTGUIDE, 65
+        VERTGUIDE, 89
+        VERTGUIDE, 122
+        VERTGUIDE, 127
+    END
+
+    XT_IDD_WINDOWLIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 295
+        VERTGUIDE, 223
+        VERTGUIDE, 233
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 157
+        HORZGUIDE, 82
+        HORZGUIDE, 99
+        HORZGUIDE, 116
+        HORZGUIDE, 133
+    END
+
+    XT_IDD_CUSTPAGE3, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 228
+        VERTGUIDE, 85
+        VERTGUIDE, 95
+        VERTGUIDE, 100
+        VERTGUIDE, 175
+        VERTGUIDE, 179
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 148
+        HORZGUIDE, 39
+        HORZGUIDE, 87
+        HORZGUIDE, 113
+    END
+
+    XT_IDD_CUSTPAGE4, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 228
+        VERTGUIDE, 73
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 145
+        HORZGUIDE, 98
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_REG_KEY          "Software\\%s\\%s\\Settings"
+    XT_IDS_REG_WINPOS       "%u,%u,%d,%d,%d,%d,%d,%d,%d,%d"
+    XT_IDS_REG_BARID        "BarID"
+    XT_IDS_REG_SETTINGS     "Settings"
+    XT_IDS_REG_BARPOS       "Bar Position"
+    XT_IDS_REG_WNDPOS       "Window Position"
+    XT_IDS_REG_RECENTLIST   "Recent Item List"
+    XT_IDS_REG_ITEMID       "Item%d"
+    XT_IDS_REG_CBARID       "%s-Bar%d"
+    XT_IDS_REG_COLINFO      "Column Info"
+    XT_IDS_NAME             "이름"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_SE_ERR_BAD_FORMAT 
+                            "지정된 실행파일 .exe 가 올바르지 않습니다 (Win32?.exe가 아니거나  .exe의 이미지에 에러가 있습니다)."
+    XT_IDS_SE_ERR_SHARE     "공유 위반이 발생했습니다."
+    XT_IDS_SE_ERR_ASSOCINCOMPLETE 
+                            "파일명 연결이 완전하지 못하거나 올바르지 않습니다."
+    XT_IDS_SE_ERR_DDETIMEOUT "시간 초과로 DDE 수행이 중단되었습니다."
+    XT_IDS_SE_ERR_DDEFAIL   "DDE 수행이 실패했습니다."
+    XT_IDS_SE_ERR_DDEBUSY   "다른 DDE 수행으로 인해 DDE 수행이 중단되었습니다."
+    XT_IDS_SE_ERR_NOASSOC   "주어진 파일의 확장명과 연결된 응용 프로그램이 없습니다."
+    XT_IDS_SE_ERR_DLLNOTFOUND 
+                            "지정된 동적 연결 라이브러리를 찾을 수 없습니다."
+    XT_IDS_SE_ERR_UNKOWN    "알 수 없는 에러 %d가 발생했습니다."
+    XT_IDS_CLOSE            "닫기"
+    XT_IDS_CLR_BLACK        "검정"
+    XT_IDS_CLR_BROWN        "갈색"
+    XT_IDS_CLR_OLIVE_GREEN  "연한 녹색"
+    XT_IDS_CLR_DARK_GREEN   "짙은 녹색"
+    XT_IDS_CLR_DARK_TEAL    "짙은 청록"
+    XT_IDS_CLR_DARK_BLUE    "짙은 파랑"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_TIPTEXT          "팁 문장"
+    XT_IDS_DIDYOUKNOW       "알고 계세요..."
+    XT_IDS_FILE_ABSENT      "팁 파일이 지정된 디렉토리에 없습니다."
+    XT_IDS_FILE_CORRUPT     "팁 파일을 읽는 중 오류"
+    XT_IDS_MENUBAR          "메뉴 바"
+    XT_IDS_CONTROLBAR       "콘트롤 바"
+    XT_IDS_CUSTOMIZE        "사용자 정의"
+    XT_IDS_COLOR_CAPTION    "색"
+    XT_IDS_NEW              "새로 만들기"
+    XT_IDS_CURRENT          "현재"
+    XT_IDS_DIRECTORIES      " 디렉토리:"
+    XT_IDS_FILES            " 파일:"
+    XT_IDS_RESTORE          "툴바를 원래 상태로 복귀시킵니다.  계속할까요?"
+    XT_IDS_WINDOWS          "더 많은 창..."
+    XT_IDS_MANAGEKEYBRD     "키보드 단축키 설정"
+    XT_IDS_COMMAND          "명령"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_CLR_LAVENDER     "연보라"
+    XT_IDS_CLR_WHITE        "백색"
+    XT_IDS_CLR_GRAY         "회색"
+    XT_IDS_CLR_MAROON       "적갈색"
+    XT_IDS_CLR_OLIVE        "올리브"
+    XT_IDS_CLR_NAVY         "해군색"
+    XT_IDS_CLR_PURPLE       "자주"
+    XT_IDS_CLR_SILVER       "은색"
+    XT_IDS_CLR_FUCHSIA      "자홍색"
+    XT_IDS_CLR_NOFILL       "빈 칸"
+    XT_IDS_CLR_NOFILL_TIP   "무색"
+    XT_IDS_AUTOMATIC        "자동"
+    XT_IDS_AUTOMATIC_TIP    "자동 색"
+    XT_IDS_MORE_COLORS      "다른 색..."
+    XT_IDS_MORE_COLORS_TIP  "다른 색"
+    XT_IDS_STD_COLORS       "표준 색"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_KEYS             "키"
+    XT_IDS_DESCRIPTION      "설명"
+    XT_IDS_ALLCOMMANDS      "[모든 명령]"
+    XT_IDS_REASSIGN         "이 단축키는 명령에 할당되어 있습니다.: %s\n\n다시 재 할당 할까요?"
+    XT_IDS_WIND_MINIMIZE    "창 최소화"
+    XT_IDS_WIND_RESTORE     "창 복귀"
+    XT_IDS_WIND_CLOSE       "창 닫기"
+    XT_IDS_TOOLBAR_OPTS     "툴바 옵션"
+    XT_IDS_TOOLS            "도구(&T)"
+    XT_IDS_PATH_INVALID     "잘못된 경로입니다."
+    XT_IDS_AREYOUSURE       "정말로 키 할당을  지울까요?  다음 단계에서 모든 사용자 키 할당을 제거할 것입니다."
+    XT_IDS_AREYOUSURE_2     "사용된 명령의 기록을 지우고 메모와 툴바를 기본 값으로 설정할 것입니다.  그리고 어떠한 설정도 원상태로 복귀되지 않을것입니다. 정말로 원하십니까 ?"
+    XT_IDS_BROWSE           "검색"
+    XT_IDS_BROWSE_FILTER    "실행파일 (*.exe)|*.exe|명령파일 (*.com)|*.com|바로가기파일[*.pif)|*.pif|배치파일 (*.bat;*.cmd)|*.bat; *.cmd|모든파일 (*.*)|*.*||"
+    XT_IDS_MENU_CONTENTS    "메뉴 내용( &M):"
+    XT_IDS_HEX              "Hex"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_ANIM_SYSDEF      "(시스템 기본값)"
+    XT_IDS_ANIM_RANDOM      "임의로"
+    XT_IDS_ANIM_UNFOLD      "펼치기"
+    XT_IDS_ANIM_SLIDE       "슬라이드"
+    XT_IDS_ANIM_FADE        "흐리게"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_SIZE             "크기"
+    XT_IDS_CONTRACT         "도킹 창 축소"
+    XT_IDS_TYPE             "타입"
+    XT_IDS_MODIFIED         "수정"
+    XT_IDS_INVALID_VER      "경고: 이 프로그램은 comctl32.dll 버전 4.72 또는 그 이상을 필요로 합니다."
+    XT_IDS_COLOR_AUTO       "자동"
+    XT_IDS_COLOR_CUST       "사용자 정의..."
+    XT_IDS_SELDIR           "Select Directory:"
+    XT_IDS_DOCKWND          "도킹 창"
+    XT_IDS_RES_ASSERT       "에러: Xtreme Toolkit이 필요로 하는 모든 자원이 올바르게 초기화되지 않았습니다.\n\n만약 당신의 프로젝트가 CDialog 응용 프로그램이거나, 또는 당신의 CMainFrame 클래스가 CXTFrameWnd 또는 CXTMDIFrameWnd로부터 상속받지 않았다면 이 자원을 활성화하고 이 에러에 따른 assertion을 제거하기 위해서 ""xtAfxData.InitResources();""를 호출해야 합니다.\n\nCMainFrame 또는 CDialog의 생성자에 ""xtAfxData.InitResources();""를 넣으면 됩니다."
+    XT_IDS_TOOLBAR          "툴바"
+    XT_IDS_ERROR_BLANK      "툴바 이름은 공란일 수 없습니다. 이름을 넣으세요."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_STATUSBAR        "상태 창"
+    XT_IDS_ERROR_EXISTS     "이름이 '%s'인 툴바가 이미 존재합니다. 새로 이름을 넣으세요."
+    XT_IDS_ERROR_LIMIT      "죄송하지만 한계에 도달했습니다."
+    XT_IDS_CUSTOM_BAR       "사용자 정의 %d"
+    XT_IDS_CUSTOM_CONFIRM   "정말 툴바'%s'를 삭제하시겠습니까?"
+    XT_IDS_DOT              "..."
+    XT_IDS_NOHELPTOPIC      "이 항목은 도움말이 없습니다.\nCommand ID %d"
+    XT_IDS_DEFEXT           "*.*"
+    XT_IDS_DEFFILT          "All Files (*.*)|*.*||"
+    XT_IDS_DEFTITLE         "디렉토리 이름을 입력하세요:"
+    XT_IDS_CLICKKEEPOPEN    "열려 있도록 핀을 클릭하세요"
+    XT_IDS_SE_0             "이 시스템은 메모리 또는 자원이 부족합니다."
+    XT_IDS_SE_ERR_FNF       "지정된 파일을 찾을 수 없습니다."
+    XT_IDS_SE_ERR_PNF       "지정된 경로를 찾을 수 없습니다."
+    XT_IDS_SE_ERR_ACCESSDENIED "지정된 파일을 접근할 수 없습니다."
+    XT_IDS_SE_ERR_OOM       "메모리가 부족하여 작업을 수행할 수 없습니다."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_CLR_INDIGO       "짙은 남색"
+    XT_IDS_CLR_GRAY80       "80% 회색"
+    XT_IDS_CLR_DARK_RED     "짙은 빨강"
+    XT_IDS_CLR_ORANGE       "주황"
+    XT_IDS_CLR_DARK_YELLOW  "짙은 노랑"
+    XT_IDS_CLR_GREEN        "초록"
+    XT_IDS_CLR_TEAL         "청록"
+    XT_IDS_CLR_BLUE         "파랑"
+    XT_IDS_CLR_BLUEGRAY     "푸른 회색"
+    XT_IDS_CLR_GRAY50       "50% 회색"
+    XT_IDS_CLR_RED          "빨강"
+    XT_IDS_CLR_LIGHTORANGE  "연한 주황"
+    XT_IDS_CLR_LIME         "연한 노랑"
+    XT_IDS_CLR_SEA_GREEN    "연한 청록"
+    XT_IDS_CLR_AQUA         "바다색"
+    XT_IDS_CLR_LIGHT_BLUE   "연한 파랑"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_CLR_VIOLET       "자주색"
+    XT_IDS_CLR_GRAY40       "40% 회색"
+    XT_IDS_CLR_PINK         "분홍"
+    XT_IDS_CLR_GOLD         "황금색"
+    XT_IDS_CLR_YELLOW       "노랑"
+    XT_IDS_CLR_BRIGHT_GREEN "밝은 초록"
+    XT_IDS_CLR_TURQUOISE    "옥색"
+    XT_IDS_CLR_SKY_BLUE     "하늘색"
+    XT_IDS_CLR_PLUM         "짙은 보라"
+    XT_IDS_CLR_GRAY25       "25% 회색"
+    XT_IDS_CLR_ROSE         "장미"
+    XT_IDS_CLR_TAN          "황갈색"
+    XT_IDS_CLR_LIGHT_YELLOW "가벼운 노랑"
+    XT_IDS_CLR_LIGHT_GREEN  "가벼운 초록"
+    XT_IDS_CLR_LIGHT_TURQUOISE "가벼운 옥색"
+    XT_IDS_CLR_PALE_BLUE    "탁한 파랑"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDC_BTN_CLOSE        "도킹 창 숨기기"
+    XT_IDC_BTN_EXPAND       "도킹 창 확대"
+    XT_IDC_BTN_NEW          "새로 만들기 (Insert)"
+    XT_IDC_BTN_DELETE       "삭제 (Delete)"
+    XT_IDC_BTN_UP           "항목 위로 이동 (Alt+Up Arrow)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDC_BTN_DOWN         "항목 아래로 이동 (Alt+Down Arrow)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDC_SORTASC          "선택된 열을 오름차순으로 정렬하기\n오름차순 정렬"
+    XT_IDC_SORTDSC          "선택된 열을 내림차순으로 정력하기\n내림차순 정렬"
+    XT_IDC_ALIGNLEFT        "선택된 열의 내용을 왼쪽으로 정렬\n왼쪽으로 정렬"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDC_ALIGNCENTER      "선택된 열의 내용을 가운데로 정렬\n가운데로 정렬"
+    XT_IDC_ALIGNRIGHT       "선택된 열의 내용을 오른쪽으로 정렬\n오른쪽으로 정렬"
+    XT_IDC_LARGEICON        "큰 아이콘 보여주기\n큰 아이콘"
+    XT_IDC_SMALLICON        "작은 아이콘 보여주기\n작은 아이콘"
+    XT_IDC_REMOVEITEM       "Outlook 바에서 제거"
+    XT_IDC_RENAMEITEM       "바로가기 이름 바꾸기"
+    XT_IDC_CUSTOMIZE        "툴바 사용자 정의 허용\n툴바 사용자 정의"
+    XT_IDC_CHEVRON          "모든 항목 표시"
+    XT_IDC_REMOVEGROUP      "그룹 제거"
+    XT_IDC_RENAMEGROUP      "그룹 이름바꾸기"
+    XT_IDC_SORT_CATEGORIZED "유형별\n유형별"
+    XT_IDC_SORT_ALPHABETIC  "알파벳순\n알파벳순"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_ID_PREVIEW_CLOSE    "미리 보기 닫기\n미리 보기 닫기"
+    AFX_ID_PREVIEW_NUMPAGE  "한 페이지 또는 두 페이지 보기\n1 Page / 2 Page"
+    AFX_ID_PREVIEW_NEXT     "다음 장으로 이동\n다음 장"
+    AFX_ID_PREVIEW_PREV     "이전 장으로 이동\n이전 장"
+    AFX_ID_PREVIEW_PRINT    "미리 보기 항목을 인쇄\n인쇄"
+    AFX_ID_PREVIEW_ZOOMIN   "미리 보기 배율 확대\n확대"
+    AFX_ID_PREVIEW_ZOOMOUT  "미리 보기 배율 축소\n축소"
+END
+
+#endif    // Korean resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+XT_IDB_BTN_BAR          BITMAP  DISCARDABLE     "res\\btn_bar.bmp"
+XT_IDB_BTN_OUT          BITMAP  DISCARDABLE     "res\\btn_out.bmp"
+XT_IDB_LIGHTBULB        BITMAP  FIXED IMPURE    "res\\lightbulb.bmp"
+XT_IDB_LISTEDIT         BITMAP  DISCARDABLE     "res\\btn_listedit.bmp"
+XT_IDB_FONTTYPE         BITMAP  DISCARDABLE     "res\\font.bmp"
+XT_IDB_SCROLL_ARW       BITMAP  DISCARDABLE     "res\\scroll.bmp"
+XT_IDB_BTN_PRINT        BITMAP  DISCARDABLE     "res\\btn_print.bmp"
+XT_IDB_CHECKLISTBOX     BITMAP  FIXED IMPURE    "res\\checklist.bmp"
+XT_IDB_BTN_FRAME        BITMAP  DISCARDABLE     "res\\btn_frame.bmp"
+XT_IDB_CHECKLISTBOX_3D  BITMAP  FIXED IMPURE    "res\\checklist_3d.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+XT_IDC_DRAGMOVE         CURSOR  DISCARDABLE     "res\\dragmove.cur"
+XT_IDC_HAND             CURSOR  DISCARDABLE     "res\\hand.cur"
+XT_IDC_HSPLITBAR        CURSOR  DISCARDABLE     "res\\splith.cur"
+XT_IDC_DRAGNONE         CURSOR  DISCARDABLE     "res\\dragnone.cur"
+XT_IDC_HANDNONE         CURSOR  DISCARDABLE     "res\\handnone.cur"
+XT_IDC_VSPLITBAR        CURSOR  DISCARDABLE     "res\\splitv.cur"
+XT_IDC_DRAGCOPY         CURSOR  DISCARDABLE     "res\\dragcopy.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+XT_IDI_XTREME           ICON    DISCARDABLE     "res\\xtreme.ico"
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "XTResource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

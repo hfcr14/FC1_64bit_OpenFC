@@ -1,0 +1,9 @@
+.vs
+*.user
+bin
+build
+Debug
+Debug_XBox
+Release
+build
+cmake-build-*

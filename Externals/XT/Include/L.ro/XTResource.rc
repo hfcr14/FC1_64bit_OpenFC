@@ -1,0 +1,812 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "XTResource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Romanian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ROM)
+#ifdef _WIN32
+LANGUAGE LANG_ROMANIAN, SUBLANG_DEFAULT
+#pragma code_page(1250)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+XT_IDR_TBAR_HDR         BITMAP  DISCARDABLE     "res\\tbar_hdr.bmp"
+XT_IDR_TBAR_OUT         BITMAP  MOVEABLE PURE   "res\\tbar_out.bmp"
+XT_IDR_TBAR_BLANK       BITMAP  DISCARDABLE     "res\\tbar_blank.bmp"
+XT_IDR_TBAR_HEXEDIT     BITMAP  DISCARDABLE     "res\\tbar_hex.bmp"
+XT_IDR_PREVIEW_TOOLBAR  BITMAP  DISCARDABLE     "res\\tbar_preview.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+XT_IDR_TBAR_HDR TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      XT_IDC_SORTASC
+    BUTTON      XT_IDC_SORTDSC
+    SEPARATOR
+    BUTTON      XT_IDC_ALIGNLEFT
+    BUTTON      XT_IDC_ALIGNCENTER
+    BUTTON      XT_IDC_ALIGNRIGHT
+END
+
+XT_IDR_TBAR_OUT TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      XT_IDC_LARGEICON
+    BUTTON      XT_IDC_SMALLICON
+END
+
+XT_IDR_TBAR_BLANK TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      XT_IDC_BLANK
+END
+
+XT_IDR_TBAR_HEXEDIT TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_EDIT_UNDO
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_EDIT_CLEAR
+END
+
+XT_IDR_PREVIEW_TOOLBAR TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      AFX_ID_PREVIEW_PRINT
+    BUTTON      AFX_ID_PREVIEW_NEXT
+    BUTTON      AFX_ID_PREVIEW_PREV
+    BUTTON      AFX_ID_PREVIEW_NUMPAGE
+    BUTTON      AFX_ID_PREVIEW_ZOOMIN
+    BUTTON      AFX_ID_PREVIEW_ZOOMOUT
+    BUTTON      AFX_ID_PREVIEW_CLOSE
+    BUTTON      XT_IDC_BLANK
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+XT_IDD_TIPOFTHEDAY DIALOG DISCARDABLE  0, 0, 279, 157
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Sugestia zilei"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Inchide",IDOK,221,136,50,14
+    CONTROL         "&Afisare sugestii la pornire",XT_IDC_CHK_DAYTIP_SHOW,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,140,93,10
+    PUSHBUTTON      "&Urmatoarea sugestie",XT_IDC_BTN_DAYTIP_NEXT,137,136,75,
+                    14
+    CONTROL         "",XT_IDC_BTN_DAYTIP_BORDER,"Static",SS_GRAYFRAME | NOT 
+                    WS_VISIBLE,8,7,263,123
+END
+
+XT_IDD_NEWTOOLBAR DIALOG DISCARDABLE  0, 0, 186, 60
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Bara de unelte noua"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,73,39,50,14
+    PUSHBUTTON      "Renunta",IDCANCEL,129,39,50,14
+    EDITTEXT        XT_IDC_EDIT_TOOLBAR,7,18,172,14,ES_AUTOHSCROLL
+    LTEXT           "&Nume bara de unelte:",IDC_STATIC,7,7,69,8
+END
+
+XT_IDD_CUSTPAGE1 DIALOG DISCARDABLE  0, 0, 230, 150
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "&Bare de unelte"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Bare de unelte:",XT_IDC_TXT_TOOLBARS,4,5,49,8
+    LISTBOX         XT_IDC_LBOX_CHECK,4,15,150,131,LBS_SORT | 
+                    LBS_OWNERDRAWVARIABLE | LBS_HASSTRINGS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Nou...",XT_IDC_BTN_NEW,158,15,70,14,BS_CENTER | 
+                    BS_VCENTER
+    PUSHBUTTON      "Redenumeste...",XT_IDC_BTN_RENAME,158,33,70,14,
+                    BS_CENTER | BS_VCENTER | WS_DISABLED
+    PUSHBUTTON      "Sterge",XT_IDC_BTN_DELETE,158,51,70,14,BS_CENTER | 
+                    BS_VCENTER | WS_DISABLED
+    PUSHBUTTON      "&Initializeaza...",XT_IDC_BTN_RESET,158,69,70,14,
+                    BS_CENTER | BS_VCENTER
+END
+
+XT_IDD_CUSTPAGE2 DIALOG DISCARDABLE  0, 0, 230, 150
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "&Comenzi"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         XT_IDC_LBOX_CATEGORIES,2,14,81,84,LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LISTBOX         XT_IDC_LBOX_COMMANDS,88,14,140,84,LBS_OWNERDRAWVARIABLE | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Cate&gorii:",XT_IDC_TXT_CATEGORIES,3,5,38,8
+    LTEXT           "Co&menzi:",XT_IDC_TXT_COMMANDS,89,5,30,8,WS_TABSTOP
+    LTEXT           "Comanda selectata:",XT_IDC_TXT_SELECTED,3,103,64,8
+    PUSHBUTTON      "Descriere",XT_IDC_BTN_DESCRIPTION,11,115,81,14,
+                    BS_CENTER | BS_VCENTER
+END
+
+XT_IDD_CUSTPAGE5 DIALOG DISCARDABLE  0, 0, 230, 150
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "&Optiuni"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Meniuri si bare de unelte personalizate ",
+                    XT_IDC_TXT_PERSONALIZED,7,5,123,8
+    CONTROL         "",XT_IDC_SEP_PERSONALIZED,"Static",SS_ETCHEDHORZ,122,9,
+                    101,1
+    CONTROL         "Meniurile au umbre.",XT_IDC_CHK_MENUSHADOWS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,20,77,10
+    CONTROL         "Me&niurile afiseaza cele mai recent utilizate comenzi.",
+                    XT_IDC_CHK_RECENTMENU,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,32,177,10
+    CONTROL         "Afiseaza meni&urile intregi dupa o scurta pauza.",
+                    XT_IDC_CHK_SHOWFULL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,25,44,161,10
+    PUSHBUTTON      "&Initializare date",XT_IDC_BTN_RESET,7,61,80,14,
+                    BS_CENTER | BS_VCENTER
+    LTEXT           "Altele",XT_IDC_TXT_OTHER,7,81,20,8
+    CONTROL         "",XT_IDC_SEP_OTHER,"Static",SS_ETCHEDHORZ,30,85,193,1
+    CONTROL         "Afiseaza continut bara de unelte pe durata mutarii.",
+                    XT_IDC_CHK_VISUALIZE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,95,173,10
+    CONTROL         "Afiseaza Screen&Tips pe barele de unelte.",
+                    XT_IDC_CHK_SCREENTIPS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,107,145,10
+    CONTROL         "Afiseaza scurtaturi in ScreenTips.",
+                    XT_IDC_CHK_SHOWSHORTCUTKEYS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,25,119,121,10
+    LTEXT           "&Menu Animation",IDC_STATIC,7,134,52,8
+    COMBOBOX        XT_IDC_COMBO_ANIMATION,65,131,79,65,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+XT_IDD_PREVIEW_TOOLBAR DIALOG DISCARDABLE  0, 0, 446, 20
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "&Tiparire...",AFX_ID_PREVIEW_PRINT,"Button",
+                    BS_OWNERDRAW | WS_TABSTOP,3,3,62,14
+    CONTROL         "Pagina &urmatoare",AFX_ID_PREVIEW_NEXT,"Button",
+                    BS_OWNERDRAW | WS_TABSTOP,66,3,62,14
+    CONTROL         "Pagina &anterioara",AFX_ID_PREVIEW_PREV,"Button",
+                    BS_OWNERDRAW | WS_TABSTOP,129,3,62,14
+    CONTROL         "&Doua pagini",AFX_ID_PREVIEW_NUMPAGE,"Button",
+                    BS_OWNERDRAW | WS_TABSTOP,192,3,62,14
+    CONTROL         "&Marire",AFX_ID_PREVIEW_ZOOMIN,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,255,3,62,14
+    CONTROL         "Mi&csorare",AFX_ID_PREVIEW_ZOOMOUT,"Button",
+                    BS_OWNERDRAW | WS_TABSTOP,318,3,62,14
+    CONTROL         "&Inchide",AFX_ID_PREVIEW_CLOSE,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,381,3,62,14
+END
+
+XT_IDD_COLORCUSTOM DIALOG DISCARDABLE  0, 0, 147, 161
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Particular"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Culori:",XT_IDC_TXT_COLORS,2,4,43,10
+    CONTROL         "",XT_IDC_CLR_WND,"Static",SS_BLACKFRAME | WS_TABSTOP,3,
+                    15,119,86
+    CONTROL         "",XT_IDC_CLR_LUM,"Static",SS_BLACKFRAME | WS_TABSTOP,
+                    126,15,20,86
+    LTEXT           "&Nuanta:",XT_IDC_TXT_HUE,3,108,26,8
+    EDITTEXT        XT_IDC_EDIT_HUE,30,106,33,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",XT_IDC_SPIN_HUE,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,54,105,
+                    10,14
+    LTEXT           "&Sat:",XT_IDC_TXT_SAT,14,125,14,8
+    EDITTEXT        XT_IDC_EDIT_SAT,30,122,33,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin2",XT_IDC_SPIN_SAT,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,54,122,
+                    10,14
+    LTEXT           "&Lum:",XT_IDC_TXT_LUM,12,140,16,8
+    EDITTEXT        XT_IDC_EDIT_LUM,30,138,33,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin3",XT_IDC_SPIN_LUM,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,54,137,
+                    10,14
+    LTEXT           "&Rosu:",XT_IDC_TXT_RED,78,108,20,8
+    EDITTEXT        XT_IDC_EDIT_RED,99,106,33,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",XT_IDC_SPIN_RED,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,123,105,
+                    11,14
+    LTEXT           "&Verde:",XT_IDC_TXT_GREEN,76,125,22,8
+    EDITTEXT        XT_IDC_EDIT_GREEN,99,122,33,13,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin2",XT_IDC_SPIN_GREEN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,123,122,
+                    11,14
+    LTEXT           "&Albastru:",XT_IDC_TXT_BLUE,70,140,28,8
+    EDITTEXT        XT_IDC_EDIT_BLUE,99,138,33,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin3",XT_IDC_SPIN_BLUE,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,123,137,
+                    11,14
+END
+
+XT_IDD_COLORSTANDARD DIALOG DISCARDABLE  0, 0, 147, 161
+STYLE WS_CHILD | WS_DISABLED | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | 
+    WS_CAPTION
+CAPTION "Standard"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Culori:",XT_IDC_TXT_COLORS,2,4,43,10
+    CONTROL         "",XT_IDC_CLR_HEX,"Static",SS_BLACKFRAME | WS_TABSTOP,0,
+                    15,147,145
+END
+
+XT_IDD_WINDOWLIST DIALOG DISCARDABLE  0, 0, 301, 164
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Windows"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Select &window:",IDC_STATIC,7,7,147,8
+    LISTBOX         XT_IDC_LBOX_WINDOWS,7,17,206,140,LBS_SORT | 
+                    LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | 
+                    LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | 
+                    WS_HSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Activeazã",XT_IDC_BTN_ACTIVATE,223,7,72,14
+    PUSHBUTTON      "&OK",IDOK,223,24,72,14
+    PUSHBUTTON      "&Salveazã",XT_IDC_BTN_SAVE,223,41,72,14
+    PUSHBUTTON      "&Închide fereastrã(e)",XT_IDC_BTN_CLOSEWINDOWS,223,58,
+                    72,14
+    PUSHBUTTON      "&Cascadã",XT_IDC_BTN_CASCADE,223,75,72,14
+    PUSHBUTTON      "A&ranjeazã orizontal",XT_IDC_BTN_TILEHORZ,223,92,72,14
+    PUSHBUTTON      "Aranjeazã &vertical",XT_IDC_BTN_TILEVERT,223,109,72,14
+    PUSHBUTTON      "&Minimizeazã",XT_IDC_BTN_MINIMIZE,223,126,72,14
+END
+
+XT_IDD_CUSTPAGE3 DIALOGEX 0, 0, 230, 150
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Tastatura"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Comenzi:",XT_IDC_TXT_COMMANDS,2,28,30,8
+    LISTBOX         XT_IDC_LBOX_ACCEL_COMMANDS,2,39,93,74,LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Asocieri curente:",XT_IDC_TXT_ASSIGNMENTS,100,28,54,8
+    LISTBOX         XT_IDC_LBOX_KEYS,100,38,58,49,LBS_SORT | 
+                    LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Selectati o noua scurtatura:",XT_IDC_TXT_NEWKEY,100,91,
+                    88,8
+    EDITTEXT        XT_IDC_EDIT_SHORTCUTKEY,100,101,58,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Asociaza",XT_IDC_BTN_ASSIGN,162,39,66,14
+    PUSHBUTTON      "&Sterge",XT_IDC_BTN_REMOVE,162,56,66,14
+    PUSHBUTTON      "I&nitializare globala",XT_IDC_BTN_ACCEL_RESET,162,73,66,
+                    14
+    LTEXT           "Descriere:",XT_IDC_TXT_DESC_TITLE,2,119,33,8
+    LTEXT           "",XT_IDC_TXT_DESC_OVERVIEW,2,129,156,19,0,
+                    WS_EX_STATICEDGE
+    LTEXT           "Categorie:",IDC_STATIC,2,5,33,8
+    COMBOBOX        XT_IDC_COMBO_CATEGORY,2,15,93,147,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "",XT_IDC_TXT_FRAMETITLE,100,15,128,12
+END
+
+XT_IDD_CUSTPAGE4 DIALOG DISCARDABLE  0, 0, 230, 150
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Unelte"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         XT_IDC_LBOX_TOOLSLIST,2,5,226,93,LBS_OWNERDRAWVARIABLE | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "&Comanda:",XT_IDC_TXT_TOOLSCMD,2,104,60,8
+    RTEXT           "&Argumente:",XT_IDC_TXT_TOOLSARG,2,119,60,8
+    RTEXT           "&Director initial:",XT_IDC_TXT_TOOLSDIR,2,134,60,8
+    EDITTEXT        XT_IDC_EDIT_TOOLSCMD,73,101,155,14,ES_AUTOHSCROLL
+    EDITTEXT        XT_IDC_EDIT_TOOLSARG,73,116,155,14,ES_AUTOHSCROLL
+    EDITTEXT        XT_IDC_EDIT_TOOLSDIR,73,131,155,14,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+XT_IDM_POPUP MENU DISCARDABLE 
+BEGIN
+    POPUP "RClickOutlookBar"
+    BEGIN
+        MENUITEM "Icoane mi&ci",                XT_IDC_SMALLICON
+        MENUITEM "Icoane m&ari",                XT_IDC_LARGEICON
+    END
+    POPUP "RClickHexEdit"
+    BEGIN
+        MENUITEM "Anulare &Modificari",         ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "&Extrage",                    ID_EDIT_CUT
+        MENUITEM "&Copiaza",                    ID_EDIT_COPY
+        MENUITEM "&Lipeste",                    ID_EDIT_PASTE
+        MENUITEM "&Sterge",                     ID_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "Selecteaza &Tot",             ID_EDIT_SELECT_ALL
+    END
+    POPUP "RClickHeader"
+    BEGIN
+        MENUITEM "Sorteaza &Crescator",         XT_IDC_SORTASC
+        MENUITEM "Sorteaza &Descrescator",      XT_IDC_SORTDSC
+        MENUITEM SEPARATOR
+        POPUP "Aliniere"
+        BEGIN
+            MENUITEM "Aliniaza stanga",             XT_IDC_ALIGNLEFT
+            MENUITEM "Aliniaza centru",             XT_IDC_ALIGNCENTER
+            MENUITEM "Aliniaza dreapta",            XT_IDC_ALIGNRIGHT
+        END
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    XT_IDD_NEWTOOLBAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 53
+    END
+
+    XT_IDD_CUSTPAGE1, DIALOG
+    BEGIN
+        TOPMARGIN, 5
+    END
+
+    XT_IDD_CUSTPAGE2, DIALOG
+    BEGIN
+        RIGHTMARGIN, 228
+        VERTGUIDE, 2
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 142
+    END
+
+    XT_IDD_CUSTPAGE5, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 223
+        VERTGUIDE, 25
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 142
+        HORZGUIDE, 25
+        HORZGUIDE, 37
+        HORZGUIDE, 49
+        HORZGUIDE, 100
+        HORZGUIDE, 112
+        HORZGUIDE, 124
+    END
+
+    XT_IDD_PREVIEW_TOOLBAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 443
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 17
+    END
+
+    XT_IDD_COLORCUSTOM, DIALOG
+    BEGIN
+        VERTGUIDE, 25
+        VERTGUIDE, 58
+        VERTGUIDE, 65
+        VERTGUIDE, 89
+        VERTGUIDE, 122
+        VERTGUIDE, 127
+    END
+
+    XT_IDD_WINDOWLIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 295
+        VERTGUIDE, 213
+        VERTGUIDE, 223
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 157
+        HORZGUIDE, 82
+        HORZGUIDE, 99
+        HORZGUIDE, 116
+        HORZGUIDE, 133
+    END
+
+    XT_IDD_CUSTPAGE3, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 228
+        VERTGUIDE, 85
+        VERTGUIDE, 95
+        VERTGUIDE, 100
+        VERTGUIDE, 158
+        VERTGUIDE, 162
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 148
+        HORZGUIDE, 39
+        HORZGUIDE, 87
+        HORZGUIDE, 113
+    END
+
+    XT_IDD_CUSTPAGE4, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 228
+        VERTGUIDE, 73
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 145
+        HORZGUIDE, 98
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_REG_KEY          "Software\\%s\\%s\\Settings"
+    XT_IDS_REG_WINPOS       "%u,%u,%d,%d,%d,%d,%d,%d,%d,%d"
+    XT_IDS_REG_BARID        "BarID"
+    XT_IDS_REG_SETTINGS     "Settings"
+    XT_IDS_REG_BARPOS       "Bar Position"
+    XT_IDS_REG_WNDPOS       "Window Position"
+    XT_IDS_REG_RECENTLIST   "Recent Item List"
+    XT_IDS_REG_ITEMID       "Item%d"
+    XT_IDS_REG_CBARID       "%s-Bar%d"
+    XT_IDS_REG_COLINFO      "Column Info"
+    XT_IDS_NAME             "Nume"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_SIZE             "Marime"
+    XT_IDS_CONTRACT         "Micsoreaza fereastra atasata"
+    XT_IDS_TYPE             "Tip"
+    XT_IDS_MODIFIED         "Modificat"
+    XT_IDS_INVALID_VER      "Avertiment: Aceasta aplicatie necesita comctl32.dll versiunea 4.72 sau mai mare."
+    XT_IDS_COLOR_AUTO       "Automatic"
+    XT_IDS_COLOR_CUST       "Particularizeaza..."
+    XT_IDS_SELDIR           "Selecteaza director:"
+    XT_IDS_DOCKWND          "Ataseaza fereastra"
+    XT_IDS_RES_ASSERT       "EROARE: Nu s-au initializat corect toate resursele de care are nevoie Xtreme Toolkit.\n\nDaca proiectul dumneavoastra este o aplicatie bazata pe clasa CDialog, sau clasa principala de fereastra (CMainFrame) nu este derivata din CXTFrameWnd sau CXTMDIFrameWnd, atunci trebuie sa apelati metoda ""xtAfxData.InitResources();"" pentru a initializa aceste resurce si sa eliminati aceasta eroare.\n\n Puteti apela metoda ""xtAfxData.InitResources();"" in constructorul clasei dumneavoastra CMainFrame sau CDialog."
+    XT_IDS_TOOLBAR          "Bara de unelte"
+    XT_IDS_ERROR_BLANK      "Numele barei de unelte nu poate fi vid. Introduceti un nume."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_STATUSBAR        "Bara de stare"
+    XT_IDS_ERROR_EXISTS     "O bara de unelte cu numele '%s' exista deja. Introduceti alt nume."
+    XT_IDS_ERROR_LIMIT      "Ne pare rau, da v-ati atins limita."
+    XT_IDS_CUSTOM_BAR       "Particular %d"
+    XT_IDS_CUSTOM_CONFIRM   "Sunteti sigur ca vreti sa stergeti bara de unelte '%s'?"
+    XT_IDS_DOT              "..."
+    XT_IDS_NOHELPTOPIC      "Nici o pagina de ajutor nu este asociata cu acest articol.\nID Comanda %d"
+    XT_IDS_DEFEXT           "*.*"
+    XT_IDS_DEFFILT          "Toate Fisierele (*.*)|*.*||"
+    XT_IDS_DEFTITLE         "Alegeti un nume de director:"
+    XT_IDS_CLICKKEEPOPEN    "Apasati pe marcaj pentru a ramane deschisa"
+    XT_IDS_SE_0             "Sistemul de operare nu are suficienta memorie sau resurse."
+    XT_IDS_SE_ERR_FNF       "Fisierul specificat nu a fost gasit."
+    XT_IDS_SE_ERR_PNF       "Calea specificata nu a fost gasita."
+    XT_IDS_SE_ERR_ACCESSDENIED 
+                            "Sistemul de operare a interzis accesul la fisierul specificat."
+    XT_IDS_SE_ERR_OOM       "Nu este memorie suficienta pentru finalizarea operatiei."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_TIPTEXT          "Text sugestie"
+    XT_IDS_DIDYOUKNOW       "Stiati ca..."
+    XT_IDS_FILE_ABSENT      "Fisierul cu sugestii nu exista in directorul configurat"
+    XT_IDS_FILE_CORRUPT     "A avut loc o eroare la citirea fisierului de sugestii"
+    XT_IDS_MENUBAR          "Bata de Meniu"
+    XT_IDS_CONTROLBAR       "Bara de Controale"
+    XT_IDS_CUSTOMIZE        "Particularizeaza"
+    XT_IDS_COLOR_CAPTION    "Culori"
+    XT_IDS_NEW              "Nou"
+    XT_IDS_CURRENT          "Curent"
+    XT_IDS_DIRECTORIES      " Directoare:"
+    XT_IDS_FILES            " Fisiere:"
+    XT_IDS_RESTORE          "Aceasta va restaura bara de unelte la starea originala, doriti sa continuati?"
+    XT_IDS_WINDOWS          "Mai multe ferestre..."
+    XT_IDS_MANAGEKEYBRD     "Gestioneaza scurtaturile de tastatura"
+    XT_IDS_COMMAND          "Comanda"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_CLR_INDIGO       "Indigo"
+    XT_IDS_CLR_GRAY80       "Gris-80%"
+    XT_IDS_CLR_DARK_RED     "Rosu inchis"
+    XT_IDS_CLR_ORANGE       "Portocaliu"
+    XT_IDS_CLR_DARK_YELLOW  "Galben Inchis"
+    XT_IDS_CLR_GREEN        "Verde"
+    XT_IDS_CLR_TEAL         "Verde albastrui"
+    XT_IDS_CLR_BLUE         "Albastru"
+    XT_IDS_CLR_BLUEGRAY     "Albastru Gris"
+    XT_IDS_CLR_GRAY50       "Gris-50%"
+    XT_IDS_CLR_RED          "Rosu"
+    XT_IDS_CLR_LIGHTORANGE  "Portocaliu Deschis"
+    XT_IDS_CLR_LIME         "Verde fluorescent"
+    XT_IDS_CLR_SEA_GREEN    "Verde Marin"
+    XT_IDS_CLR_AQUA         "Albastru Marin Deschis"
+    XT_IDS_CLR_LIGHT_BLUE   "Albastru Marin"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_SE_ERR_BAD_FORMAT 
+                            "Fisierul .exe nu are formatul corect (non-Win32® .exe sau eroare in imaginea .exe)."
+    XT_IDS_SE_ERR_SHARE     "S-a produs o violare de partajare."
+    XT_IDS_SE_ERR_ASSOCINCOMPLETE 
+                            "Asocierea numelui de fisier este incompleta sau incorecta."
+    XT_IDS_SE_ERR_DDETIMEOUT 
+                            "Tranzactia DDE nu a putut fi finalizata deoarece cererea a expirat."
+    XT_IDS_SE_ERR_DDEFAIL   "Tranzactia DDE a esuat."
+    XT_IDS_SE_ERR_DDEBUSY   "Tranzactia DDE nu a putut fi finalizata deoarece alta tranzactii DDE erau in curs de procesare."
+    XT_IDS_SE_ERR_NOASSOC   "Nu exista nici o aplicatie asociata cu extensia de nume de fisier data."
+    XT_IDS_SE_ERR_DLLNOTFOUND 
+                            "Libraria cu legare dinamica specificata nu a fost gasita."
+    XT_IDS_SE_ERR_UNKOWN    "O eroare necunoscuta cu numarul %d a avut loc."
+    XT_IDS_CLOSE            "Inchide"
+    XT_IDS_CLR_BLACK        "Negru"
+    XT_IDS_CLR_BROWN        "Maro"
+    XT_IDS_CLR_OLIVE_GREEN  "Verde Maslin"
+    XT_IDS_CLR_DARK_GREEN   "Verde Inchis"
+    XT_IDS_CLR_DARK_TEAL    "Verde albastrui inchis"
+    XT_IDS_CLR_DARK_BLUE    "Albastru Inchis"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_CLR_VIOLET       "Violet"
+    XT_IDS_CLR_GRAY40       "Gris-40%"
+    XT_IDS_CLR_PINK         "Roz"
+    XT_IDS_CLR_GOLD         "Auriu"
+    XT_IDS_CLR_YELLOW       "Galben"
+    XT_IDS_CLR_BRIGHT_GREEN "Verde Stralucitor"
+    XT_IDS_CLR_TURQUOISE    "Turcoaz"
+    XT_IDS_CLR_SKY_BLUE     "Albastru Cer"
+    XT_IDS_CLR_PLUM         "Albastru Pruna"
+    XT_IDS_CLR_GRAY25       "Gris-25%"
+    XT_IDS_CLR_ROSE         "Rosu roz"
+    XT_IDS_CLR_TAN          "Tan"
+    XT_IDS_CLR_LIGHT_YELLOW "Galben Deschis"
+    XT_IDS_CLR_LIGHT_GREEN  "Verde Deschis"
+    XT_IDS_CLR_LIGHT_TURQUOISE "Turcoaz Deschis"
+    XT_IDS_CLR_PALE_BLUE    "Albastru Pal"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_CLR_LAVENDER     "Levantica"
+    XT_IDS_CLR_WHITE        "Alb"
+    XT_IDS_CLR_GRAY         "Gris"
+    XT_IDS_CLR_MAROON       "Maro"
+    XT_IDS_CLR_OLIVE        "Verde Maslin"
+    XT_IDS_CLR_NAVY         "Albastru Marin"
+    XT_IDS_CLR_PURPLE       "Purpuriu"
+    XT_IDS_CLR_SILVER       "Argintiu"
+    XT_IDS_CLR_FUCHSIA      "Mov"
+    XT_IDS_CLR_NOFILL       "Fara Umplere"
+    XT_IDS_CLR_NOFILL_TIP   "Fara Culoare"
+    XT_IDS_AUTOMATIC        "Automatic"
+    XT_IDS_AUTOMATIC_TIP    "Culoare Automatic"
+    XT_IDS_MORE_COLORS      "Mai Multe Culori..."
+    XT_IDS_MORE_COLORS_TIP  "Mai Multe Culori"
+    XT_IDS_STD_COLORS       "Culori Standard"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDC_BTN_CLOSE        "Ascunde fereastra atasata"
+    XT_IDC_BTN_EXPAND       "Extinde fereastra atasata"
+    XT_IDC_BTN_NEW          "Nou (Insert)"
+    XT_IDC_BTN_DELETE       "Sterge (Delete)"
+    XT_IDC_BTN_UP           "Muta articolul in sus (Alt+Sageata sus)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDC_BTN_DOWN         "Muta Articolul in Jos (Alt+Sageata Jos)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDC_SORTASC          "Sorteaza coloana selectata in ordine crescatoare\nSorteaza Crescator"
+    XT_IDC_SORTDSC          "Sorteaza coloana selectata in ordine descrescatoare\nSorteaza Descrescator"
+    XT_IDC_ALIGNLEFT        "Aliniaza la stanga continutul coloanei selectate\nAliniere Stanga"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDC_ALIGNCENTER      "Aliniaza centrat continutul coloanei selectate\nAliniere Centru"
+    XT_IDC_ALIGNRIGHT       "Aliniaza la dreapta continutul coloanei selectate\nAliniere Dreapta"
+    XT_IDC_LARGEICON        "Afiseaza icoane mari\nIcoane Mari"
+    XT_IDC_SMALLICON        "Afiseaza icoane mici\nIcoane Mici"
+    XT_IDC_REMOVEITEM       "Scoate din Outlook Bar"
+    XT_IDC_RENAMEITEM       "Redenumeste Scurtatura"
+    XT_IDC_CUSTOMIZE        "Permite particularizarea barei de unelte\nParticularizeaza bara de unelte"
+    XT_IDC_CHEVRON          "Afiseaza meniuri complete"
+    XT_IDC_REMOVEGROUP      "Sterge Grup"
+    XT_IDC_RENAMEGROUP      "Redenumeste GRup"
+    XT_IDC_SORT_CATEGORIZED "Categorized\nCategorized"
+    XT_IDC_SORT_ALPHABETIC  "Alphabetic\nAlphabetic"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_ID_PREVIEW_CLOSE    "Inchide vizualizarea\nInchide vizualizare"
+    AFX_ID_PREVIEW_NUMPAGE  "Afiseaza vedere cu o pagina sau doua pagini\nO pagina / Doua pagini"
+    AFX_ID_PREVIEW_NEXT     "Trece la pagina urmatoare\nPagina Urmatoare"
+    AFX_ID_PREVIEW_PREV     "Trece la pagina anterioara\nPagina Anterioara"
+    AFX_ID_PREVIEW_PRINT    "Tipareste articolul vizualizat\nTiparire"
+    AFX_ID_PREVIEW_ZOOMIN   "Mareste pagina de vizualizare\nMarime"
+    AFX_ID_PREVIEW_ZOOMOUT  "Micsoreaza pagina de vizualizare\nMicsorare"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_KEYS             "Taste"
+    XT_IDS_DESCRIPTION      "Descrieri"
+    XT_IDS_ALLCOMMANDS      "[Toate comenzile]"
+    XT_IDS_REASSIGN         "Aceasta scurtatura este asociata deja cu comanda: %s\n\nDoriti sa reasociati scurtatura?"
+    XT_IDS_WIND_MINIMIZE    "Minimizeaza fereastra"
+    XT_IDS_WIND_RESTORE     "Restaureaza fereastra"
+    XT_IDS_WIND_CLOSE       "Inchide fereastra"
+    XT_IDS_TOOLBAR_OPTS     "Optiuni bare de unelte"
+    XT_IDS_TOOLS            "&Unelte"
+    XT_IDS_PATH_INVALID     "Calea este invalida."
+    XT_IDS_AREYOUSURE       "Sunteti sigur ca doriti sa initializati asocierile de tastatura?  Aceasta actiune va sterge toate asocierile particularizate la nivelul textului."
+    XT_IDS_AREYOUSURE_2     "Aceasta va sterge inregistrarea comenzilor pe care le-ati utilizat in aceasta aplicatie si va restaura setul implicit de comenzi vizibile asociate meniurilor si barelor de unelte.  Nu va reface nici o particularizare explicita. Sunteti sigur ca doriti sa executati aceasta actiune?"
+    XT_IDS_BROWSE           "Rasfoieste"
+    XT_IDS_BROWSE_FILTER    "Executabile (*.exe)|*.exe|Comenzi (*.com)|*.com|Informatii (*.pif)|*.pif|Batch (*.bat;*.cmd)|*.bat; *.cmd|Toate fisierele (*.*)|*.*||"
+    XT_IDS_MENU_CONTENTS    " &Continut meniu:"
+    XT_IDS_HEX              "Hex"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_ANIM_SYSDEF      "(System default)"
+    XT_IDS_ANIM_RANDOM      "Random"
+    XT_IDS_ANIM_UNFOLD      "Unfold"
+    XT_IDS_ANIM_SLIDE       "Slide"
+    XT_IDS_ANIM_FADE        "Fade"
+    XT_IDS_ANIM_NONE        "None"
+END
+
+#endif    // Romanian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+XT_IDB_BTN_BAR          BITMAP  DISCARDABLE     "res\\btn_bar.bmp"
+XT_IDB_BTN_OUT          BITMAP  DISCARDABLE     "res\\btn_out.bmp"
+XT_IDB_LIGHTBULB        BITMAP  FIXED IMPURE    "res\\lightbulb.bmp"
+XT_IDB_LISTEDIT         BITMAP  DISCARDABLE     "res\\btn_listedit.bmp"
+XT_IDB_FONTTYPE         BITMAP  DISCARDABLE     "res\\font.bmp"
+XT_IDB_SCROLL_ARW       BITMAP  DISCARDABLE     "res\\scroll.bmp"
+XT_IDB_BTN_PRINT        BITMAP  DISCARDABLE     "res\\btn_print.bmp"
+XT_IDB_CHECKLISTBOX     BITMAP  FIXED IMPURE    "res\\checklist.bmp"
+XT_IDB_BTN_FRAME        BITMAP  DISCARDABLE     "res\\btn_frame.bmp"
+XT_IDB_CHECKLISTBOX_3D  BITMAP  FIXED IMPURE    "res\\checklist_3d.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+XT_IDC_DRAGMOVE         CURSOR  DISCARDABLE     "res\\dragmove.cur"
+XT_IDC_HAND             CURSOR  DISCARDABLE     "res\\hand.cur"
+XT_IDC_HSPLITBAR        CURSOR  DISCARDABLE     "res\\splith.cur"
+XT_IDC_DRAGNONE         CURSOR  DISCARDABLE     "res\\dragnone.cur"
+XT_IDC_HANDNONE         CURSOR  DISCARDABLE     "res\\handnone.cur"
+XT_IDC_VSPLITBAR        CURSOR  DISCARDABLE     "res\\splitv.cur"
+XT_IDC_DRAGCOPY         CURSOR  DISCARDABLE     "res\\dragcopy.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+XT_IDI_XTREME           ICON    DISCARDABLE     "res\\xtreme.ico"
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "XTResource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

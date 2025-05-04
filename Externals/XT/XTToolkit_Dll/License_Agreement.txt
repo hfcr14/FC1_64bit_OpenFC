@@ -1,0 +1,129 @@
+SINGLE DEVELOPER END-USER SOFTWARE LICENSE AND 
+LIMITED WARRANTY AGREEMENT FOR Xtreme Toolkit™ 
+
+IMPORTANT-READ CAREFULLY. This Xtreme Toolkit™ End-User License Agreement ("EULA") is a legal 
+AGREEMENT between you (either as a registered individual developer or as the registered 
+developer/representative and on behalf of a single entity) and Codejock Software® for the Xtreme 
+Toolkit™ software product identified above, which product includes computer software and may include 
+associated media, printed materials, and "online" or electronic documentation ("SOFTWARE PRODUCT"). 
+By installing, copying, or otherwise using the SOFTWARE PRODUCT, you agree to be bound by the terms 
+of this EULA. If you do not agree to the terms of this EULA, then DO NOT install or use the SOFTWARE 
+PRODUCT; in such event the original purchaser may, however, return it to the place of purchase within 
+thirty days of the date of original purchase for a full refund.
+
+Software Product License
+
+TERMS AND CONDITIONS of an AGREEMENT by and between Codejock Software® and you (either an 
+individual or an entity), the licensee of Codejock proprietary software Xtreme Toolkit™. By installing this 
+software package, or exercising your rights to make and use copies of the Software (as m ay be provided 
+for below), or pressing the 'Yes' button below, you agree to be bound by the terms of this Codejock 
+Software® License Agreement. If you do not agree to the terms of this Agreement, promptly return this 
+package to the place from which you obtained it within 30 days for a full refund. If you would like specific 
+rights not granted in this agreement, please contact Codejock Software® for more information.
+
+The enclosed software, including, but not limited to, one or more of the following: source code, object 
+code, dynamic link libraries, static libraries, header files, sample programs, utility programs, make files 
+and scripts, together with the accompanying documentation (collectively known as the "Software") is 
+owned by Codejock Software® or its suppliers and is protected by U.S. copyright laws and international 
+treaties. Therefore, you must treat the Software like any copyrighted material (e.g., a book or musical 
+recording) except that you may make either (a) one backup copy of the Software solely for backup 
+purposes, or (b) transfer the Software to a hard disk and keep the original copy solely for backup 
+purposes.
+
+CODEJOCK SOFTWARE® GRANTS TO YOU (ONE SOFTWARE PROGRAMMER) THE LIMITED RIGHT TO USE 
+ONLY ONE COPY OF THE SOFTWARE ON A SINGLE COMPUTER (TYPICALLY ONE PERSONAL COMPUTER) IN 
+THE MANNER SET FORTH IN THIS AGREEMENT. EACH SOFTWARE PROGRAMMER MUST HAVE HIS OR HER 
+OWN LICENSE TO USE THE SOFTWARE.
+
+Subject To The Restrictions Contained In This Agreement You May
+
+(i) Incorporate the dynamic link libraries and statically linked libraries into C++ software application 
+products that you develop; (ii) modify (i.e. modify the source code and rebuild) the dynamic link libraries 
+and statically linked libraries and incorporate the modified dynamic link libraries and statically linked 
+libraries into C++ software application products that you develop; (iii) make and distribute copies of the 
+dynamic link libraries and statically linked libraries of the Software as incorporated into C++ software 
+application products that you develop provided that the Software, or other Codejock Software® products, 
+do not constitute a major portion of the value of your product; (iv) solely with the respect to electronic 
+documents, you may make an unlimited number of copies (either in hardcopy or electronic form), 
+provided that such copies shall be used only for internal purposes and are not republished or distributed 
+beyond the licensee's premises; (v) use and modify the source code version of those portions of the 
+Software that are identified in the documentation as the Sample Code ("SAMPLE CODE"), provided you do 
+not distribute the SAMPLE CODE, or any modified version of the SAMPLE CODE, in source code form.
+
+Notwithstanding Any Provisions In This Agreement To The Contrary, You May Not
+
+(i) Distribute in any manner any of the header files, source code, SAMPLE CODE, make files, object 
+modules or independent static libraries of the Software; (ii) use, copy, modify, merge or compile all or any 
+portion of the source code or object code of the Software except as expressly provided in this agreement. 
+(iii) make telecommunication transmittal of the Software; (iv) distribute any portion of the Software or 
+any derivative of any portion of the Software in a software development product or otherwise in 
+competition with Codejock Software's distribution of the Software; (v) decompile, disassemble or reverse 
+engineer any object code form of any portion of the Software; (vi) expose the interfaces of the Software 
+through your application. (e.g. an OCX, DLL, class library, etc..); (vii) rent or lease the Software; (viii) 
+disclose any source codes of the Software to any person or entity; (ix) port the Software to any computer 
+Operating System other than: Windows NT, Windows 95, Windows 98 or Windows 2000.
+
+THE SOURCE CODES OF THE SOFTWARE ARE VALUABLE ASSETS OF CODEJOCK SOFTWARE®. YOU 
+AGREE TO KEEP ALL SOURCE CODES OF THE SOFTWARE IN CONFIDENCE. YOU MAY NOT TRANSFER OR 
+ASSIGN THE SOFTWARE OR YOUR RIGHTS UNDER THIS AGREEMENT.
+
+Limited Warranty
+
+THE SOFTWARE AND ACCOMPANYING WRITTEN MATERIALS (INCLUDING INSTRUCTIONS FOR USE) ARE 
+PROVIDED "AS IS". IF FOR ANY REASON YOU ARE DISSATISFIED WITH THE SOFTWARE, YOU MAY 
+RETURN THIS SOFTWARE FOR A FULL REFUND LESS A 20% RESTOCKING FEE AND LESS ALL SHIPPING 
+COSTS BY RETURNING THE DISK ON WHICH THIS SOFTWARE IS STORED, AND ALL PACKAGING AND 
+DOCUMENTATION FOR THE SOFTWARE, TOGETHER WITH PROOF OF PURCHASE, TO THE PLACE WHERE 
+YOU OBTAINED THE SOFTWARE WITHIN THIRTY (30) DAYS AFTER THE DATE OF PURCHASE THEREOF.
+
+If the disk on which the Software is recorded is defective, return the disk within ninety (90) days from the 
+date of delivery as evidenced by a copy of your receipt for the Software, and the disk will be replaced free 
+of charge. A disk is "defective" if the Software cannot be loaded into memory or virtual memory on your 
+computer in accordance with the grant of rights to you. If such failure of the disk has resulted from 
+accident, abuse, misapplication, or any breach of this Agreement by you, Codejock Software® shall have 
+no responsibility to replace the disk, or otherwise. In the event of replacement of the disk, the 
+replacement disk will be warranted for the remainder of the original warranty period or thirty (30) days, 
+whichever is the longer.
+
+CODEJOCK SOFTWARE® DOES NOT WARRANT, GUARANTEE OR MAKE ANY REPRESENTATIONS 
+REGARDING THE USE, OR THE RESULTS OF USE, OF THE SOFTWARE OR WRITTEN MATERIALS IN TERMS 
+OF CORRECTNESS, ACCURACY, RELIABILITY, CURRENT, OR OTHERWISE. YOU ASSUME THE ENTIRE RISK 
+AS TO THE RESULTS AND PERFORMANCE OF THE SOFTWARE.
+
+Codejock Software® does not warrant that the Software will meet your requirements, that operation of 
+the Software will be uninterrupted or error-free, or that all Software errors will be corrected. Codejock 
+Software® is not responsible for problems caused by changes in the operating characteristics of computer 
+hardware or computer operating systems which are made after the release of the Software nor for 
+problems in the interaction of the Software with non-Codejock Software®. Codejock Software® will have 
+no responsibility to replace or refund the license fee for media damaged by accident, abuse or 
+misapplication.
+
+THIS SOFTWARE IS INTENDED FOR COMMERCIAL, INSTITUTIONAL, AND INDUSTRIAL USERS. THE ABOVE 
+WARRANTIES ARE EXCLUSIVE AND IN LIEU OF ALL OTHER WARRANTIES, WHETHER EXPRESSED OR 
+IMPLIED, INCLUDING THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR 
+PURPOSE AND NON-INFRINGEMENT. NO ORAL OR WRITTEN INFORMATION OR ADVICE GIVEN BY 
+CODEJOCK SOFTWARE®, ITS EMPLOYEES, DISTRIBUTORS, DEALERS OR AGENTS SHALL INCREASE THE 
+SCOPE OF THE ABOVE WARRANTIES OR CREATE ANY NEW WARRANTIES. NEITHER CODEJOCK 
+SOFTWARE® NOR ANYONE ELSE WHO HAS BEEN INVOLVED IN THE CREATION, PRODUCTION OR 
+DELIVERY OF THE SOFTWARE SHALL BE LIABLE FOR ANY DIRECT, INDIRECT, CONSEQUENTIAL OR 
+INCIDENTAL DAMAGES (INCLUDING DAMAGES FOR LOSS OF BUSINESS PROFITS, BUSINESS LOSSES, 
+BUSINESS INTERRUPTION, LOSS OF DATA, AND THE LIKE) ARISING OUT OF THE USE OR INABILITY TO 
+USE THE SOFTWARE, OR ANY OTHER CLAIM BY ANY PARTY EVEN IF CODEJOCK SOFTWARE® HAS BEEN 
+ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. IN THE EVENT CODEJOCK SOFTWARE® IS LIABLE 
+FOR ANY DAMAGES, CODEJOCK SOFTWARE'S LIABILITY FOR DAMAGES SHALL BE LIMITED TO THE 
+AMOUNT PAID FOR THE SOFTWARE UNDER THE TERMS AND CONDITIONS OF THIS AGREEMENT.
+
+U.S. Government Restricted Rights
+
+The SOFTWARE and documentation are provided with RESTRICTED RIGHTS. Use, duplication, or 
+disclosure by the Government is subject to restrictions as set forth in subparagraph (c)(l)(ii) of the Rights 
+in Technical Data and Computer Software clause at DFARS 252.227-7013 or subparagraphs (c)(1) and (2) 
+of the Commercial Computer Software -- Restricted Rights at 48 CFR 52.227-19, as applicable. 
+Contractor/manufacturer is Codejock Software®, 1520 East Main, Suite A , Owosso, Michigan 48867.
+
+The laws of the state of Michigan govern this agreement.
+
+Codejock Software® 
+1520 East Main, Suite A 
+Owosso, Michigan 48867 
+http://www.codejock.com/

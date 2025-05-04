@@ -1,0 +1,797 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "XTResource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Polish resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_PLK)
+#ifdef _WIN32
+LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
+#pragma code_page(1250)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+XT_IDR_TBAR_HDR         BITMAP  DISCARDABLE     "res\\tbar_hdr.bmp"
+XT_IDR_TBAR_OUT         BITMAP  MOVEABLE PURE   "res\\tbar_out.bmp"
+XT_IDR_TBAR_BLANK       BITMAP  DISCARDABLE     "res\\tbar_blank.bmp"
+XT_IDR_TBAR_HEXEDIT     BITMAP  DISCARDABLE     "res\\tbar_hex.bmp"
+XT_IDR_PREVIEW_TOOLBAR  BITMAP  DISCARDABLE     "res\\tbar_preview.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+XT_IDR_TBAR_HDR TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      XT_IDC_SORTASC
+    BUTTON      XT_IDC_SORTDSC
+    SEPARATOR
+    BUTTON      XT_IDC_ALIGNLEFT
+    BUTTON      XT_IDC_ALIGNCENTER
+    BUTTON      XT_IDC_ALIGNRIGHT
+END
+
+XT_IDR_TBAR_OUT TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      XT_IDC_LARGEICON
+    BUTTON      XT_IDC_SMALLICON
+END
+
+XT_IDR_TBAR_BLANK TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      XT_IDC_BLANK
+END
+
+XT_IDR_TBAR_HEXEDIT TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_EDIT_UNDO
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_EDIT_CLEAR
+END
+
+XT_IDR_PREVIEW_TOOLBAR TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      AFX_ID_PREVIEW_PRINT
+    BUTTON      AFX_ID_PREVIEW_NEXT
+    BUTTON      AFX_ID_PREVIEW_PREV
+    BUTTON      AFX_ID_PREVIEW_NUMPAGE
+    BUTTON      AFX_ID_PREVIEW_ZOOMIN
+    BUTTON      AFX_ID_PREVIEW_ZOOMOUT
+    BUTTON      AFX_ID_PREVIEW_CLOSE
+    BUTTON      XT_IDC_BLANK
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+XT_IDD_TIPOFTHEDAY DIALOG DISCARDABLE  0, 0, 279, 157
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Porada dnia"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Zamknij",IDOK,221,136,50,14
+    CONTROL         "&Wyœwietlaj porady przy starcie",XT_IDC_CHK_DAYTIP_SHOW,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,140,109,10
+    PUSHBUTTON      "&Nast. porada",XT_IDC_BTN_DAYTIP_NEXT,162,136,50,14
+    CONTROL         "",XT_IDC_BTN_DAYTIP_BORDER,"Static",SS_GRAYFRAME | NOT 
+                    WS_VISIBLE,8,7,263,123
+END
+
+XT_IDD_NEWTOOLBAR DIALOG DISCARDABLE  0, 0, 186, 60
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Nowy pasek narzêdzi"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,73,39,50,14
+    PUSHBUTTON      "&Anuluj",IDCANCEL,129,39,50,14
+    EDITTEXT        XT_IDC_EDIT_TOOLBAR,7,18,172,14,ES_AUTOHSCROLL
+    LTEXT           "&Nazwa paska:",IDC_STATIC,7,7,46,8
+END
+
+XT_IDD_CUSTPAGE1 DIALOG DISCARDABLE  0, 0, 230, 150
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Paski narzêdzi"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Paski n&arzêdzi:",XT_IDC_TXT_TOOLBARS,4,5,48,8
+    LISTBOX         XT_IDC_LBOX_CHECK,4,15,150,131,LBS_SORT | 
+                    LBS_OWNERDRAWVARIABLE | LBS_HASSTRINGS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Nowy...",XT_IDC_BTN_NEW,158,15,70,14,BS_CENTER | 
+                    BS_VCENTER
+    PUSHBUTTON      "Z&mieñ nazwê...",XT_IDC_BTN_RENAME,158,33,70,14,
+                    BS_CENTER | BS_VCENTER | WS_DISABLED
+    PUSHBUTTON      "&Usuñ",XT_IDC_BTN_DELETE,158,51,70,14,BS_CENTER | 
+                    BS_VCENTER | WS_DISABLED
+    PUSHBUTTON      "&Zresetuj...",XT_IDC_BTN_RESET,158,69,70,14,BS_CENTER | 
+                    BS_VCENTER
+END
+
+XT_IDD_CUSTPAGE2 DIALOG DISCARDABLE  0, 0, 230, 150
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Polecenia"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         XT_IDC_LBOX_CATEGORIES,2,14,81,84,LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LISTBOX         XT_IDC_LBOX_COMMANDS,88,14,140,84,LBS_OWNERDRAWVARIABLE | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Ka&tegorie:",XT_IDC_TXT_CATEGORIES,3,5,33,8
+    LTEXT           "Pol&ecenia:",XT_IDC_TXT_COMMANDS,89,5,34,8,WS_TABSTOP
+    LTEXT           "Wybrane polecenie:",XT_IDC_TXT_SELECTED,3,103,64,8
+    PUSHBUTTON      "Opi&s",XT_IDC_BTN_DESCRIPTION,11,115,81,14,BS_CENTER | 
+                    BS_VCENTER
+END
+
+XT_IDD_CUSTPAGE5 DIALOG DISCARDABLE  0, 0, 230, 150
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Opcje"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Spersonalizowane menu i paski narzêdzi ",
+                    XT_IDC_TXT_PERSONALIZED,7,5,130,8
+    CONTROL         "",XT_IDC_SEP_PERSONALIZED,"Static",SS_ETCHEDHORZ,139,9,
+                    84,1
+    CONTROL         "Wyœwietlaj &cieñ menu",XT_IDC_CHK_MENUSHADOWS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,20,83,10
+    CONTROL         "Pokazuj w &menu najpierw ostatnio u¿ywane polecenia",
+                    XT_IDC_CHK_RECENTMENU,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,32,186,10
+    CONTROL         "Poka¿ pe³ne men&u po krótkim opóŸnieniu",
+                    XT_IDC_CHK_SHOWFULL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,25,44,145,10
+    PUSHBUTTON      "&Resetuj moje dane u¿ywania",XT_IDC_BTN_RESET,7,61,120,
+                    14,BS_CENTER | BS_VCENTER
+    LTEXT           "Inne",XT_IDC_TXT_OTHER,7,81,15,8
+    CONTROL         "",XT_IDC_SEP_OTHER,"Static",SS_ETCHEDHORZ,25,85,198,1
+    CONTROL         "Wyœwietlaj &zawartoœæ pasków narzêdzi podczas przesuwania",
+                    XT_IDC_CHK_VISUALIZE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,95,208,10
+    CONTROL         "Pokazuj &podpowiedzi na paskach narzêdzi",
+                    XT_IDC_CHK_SCREENTIPS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,107,150,10
+    CONTROL         "Pokazuj &klawisze skrótu w podpowiedziach",
+                    XT_IDC_CHK_SHOWSHORTCUTKEYS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,25,119,152,10
+    LTEXT           "&Animacje menu:",IDC_STATIC,7,134,51,8
+    COMBOBOX        XT_IDC_COMBO_ANIMATION,65,131,79,65,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+XT_IDD_PREVIEW_TOOLBAR DIALOG DISCARDABLE  0, 0, 406, 20
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "&Drukuj...",AFX_ID_PREVIEW_PRINT,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,3,3,55,14
+    CONTROL         "&Nast. str.",AFX_ID_PREVIEW_NEXT,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,60,3,55,14
+    CONTROL         "&Poprz. str.",AFX_ID_PREVIEW_PREV,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,117,3,55,14
+    CONTROL         "&Dwie strony",AFX_ID_PREVIEW_NUMPAGE,"Button",
+                    BS_OWNERDRAW | WS_TABSTOP,174,3,55,14
+    CONTROL         "Po&wiêksz",AFX_ID_PREVIEW_ZOOMIN,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,231,3,55,14
+    CONTROL         "Po&wiêksz",AFX_ID_PREVIEW_ZOOMOUT,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,288,3,55,14
+    CONTROL         "&Zamknij",AFX_ID_PREVIEW_CLOSE,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,345,3,55,14
+END
+
+XT_IDD_COLORCUSTOM DIALOG DISCARDABLE  0, 0, 147, 161
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Niestandardowy"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Kolory:",XT_IDC_TXT_COLORS,2,4,22,8
+    CONTROL         "",XT_IDC_CLR_WND,"Static",SS_BLACKFRAME | WS_TABSTOP,3,
+                    15,119,86
+    CONTROL         "",XT_IDC_CLR_LUM,"Static",SS_BLACKFRAME | WS_TABSTOP,
+                    126,15,20,86
+    LTEXT           "O&dcieñ:",XT_IDC_TXT_HUE,20,108,26,8
+    EDITTEXT        XT_IDC_EDIT_HUE,48,106,26,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",XT_IDC_SPIN_HUE,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,64,105,
+                    10,14
+    LTEXT           "&Nasycenie:",XT_IDC_TXT_SAT,10,125,36,8
+    EDITTEXT        XT_IDC_EDIT_SAT,48,122,26,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin2",XT_IDC_SPIN_SAT,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,64,122,
+                    10,14
+    LTEXT           "&Jaskrawoœæ:",XT_IDC_TXT_LUM,4,140,42,8
+    EDITTEXT        XT_IDC_EDIT_LUM,48,138,26,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin3",XT_IDC_SPIN_LUM,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,64,137,
+                    10,14
+    LTEXT           "&Czerwony:",XT_IDC_TXT_RED,81,108,34,8
+    EDITTEXT        XT_IDC_EDIT_RED,115,106,26,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",XT_IDC_SPIN_RED,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,132,105,
+                    11,14
+    LTEXT           "&Zielony:",XT_IDC_TXT_GREEN,89,125,26,8
+    EDITTEXT        XT_IDC_EDIT_GREEN,115,122,26,13,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin2",XT_IDC_SPIN_GREEN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,132,122,
+                    11,14
+    LTEXT           "&Niebieski:",XT_IDC_TXT_BLUE,83,140,32,8
+    EDITTEXT        XT_IDC_EDIT_BLUE,115,138,26,13,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin3",XT_IDC_SPIN_BLUE,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,132,137,
+                    11,14
+END
+
+XT_IDD_COLORSTANDARD DIALOG DISCARDABLE  0, 0, 147, 161
+STYLE WS_CHILD | WS_DISABLED | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | 
+    WS_CAPTION
+CAPTION "Standardowe"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Kolory:",XT_IDC_TXT_COLORS,2,4,22,8
+    CONTROL         "",XT_IDC_CLR_HEX,"Static",SS_BLACKFRAME | WS_TABSTOP,0,
+                    15,147,145
+END
+
+XT_IDD_WINDOWLIST DIALOG DISCARDABLE  0, 0, 301, 164
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Okna"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Wybierz okno:",IDC_STATIC,7,7,46,8
+    LISTBOX         XT_IDC_LBOX_WINDOWS,7,17,216,140,LBS_SORT | 
+                    LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | 
+                    LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | 
+                    WS_HSCROLL | WS_TABSTOP
+    PUSHBUTTON      "U&aktywnij",XT_IDC_BTN_ACTIVATE,233,7,62,14
+    PUSHBUTTON      "&OK",IDOK,233,24,62,14
+    PUSHBUTTON      "Zapi&sz",XT_IDC_BTN_SAVE,233,41,62,14
+    PUSHBUTTON      "&Zamknij okno(a)",XT_IDC_BTN_CLOSEWINDOWS,233,58,62,14
+    PUSHBUTTON      "&Kaskada",XT_IDC_BTN_CASCADE,233,75,62,14
+    PUSHBUTTON      "Pozio&mo",XT_IDC_BTN_TILEHORZ,233,92,62,14
+    PUSHBUTTON      "&Pionowo",XT_IDC_BTN_TILEVERT,233,109,62,14
+    PUSHBUTTON      "&Minimalizuj",XT_IDC_BTN_MINIMIZE,233,126,62,14
+END
+
+XT_IDD_CUSTPAGE3 DIALOGEX 0, 0, 230, 150
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Klawisze"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "&Polecenia:",XT_IDC_TXT_COMMANDS,2,28,34,8
+    LISTBOX         XT_IDC_LBOX_ACCEL_COMMANDS,2,39,93,74,LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Aktualne przypisania:",XT_IDC_TXT_ASSIGNMENTS,100,28,68,
+                    8
+    LISTBOX         XT_IDC_LBOX_KEYS,100,38,75,49,LBS_SORT | 
+                    LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Naciœnij klawisz skrótu:",XT_IDC_TXT_NEWKEY,100,91,72,8
+    EDITTEXT        XT_IDC_EDIT_SHORTCUTKEY,100,101,75,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Przypisz",XT_IDC_BTN_ASSIGN,179,39,49,14
+    PUSHBUTTON      "&Usuñ",XT_IDC_BTN_REMOVE,179,56,49,14
+    PUSHBUTTON      "&Zresetuj",XT_IDC_BTN_ACCEL_RESET,179,73,49,14
+    LTEXT           "Opis:",XT_IDC_TXT_DESC_TITLE,2,119,17,8
+    LTEXT           "",XT_IDC_TXT_DESC_OVERVIEW,2,129,173,19,0,
+                    WS_EX_STATICEDGE
+    LTEXT           "Kategoria:",IDC_STATIC,2,5,33,8
+    COMBOBOX        XT_IDC_COMBO_CATEGORY,2,15,93,147,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "",XT_IDC_TXT_FRAMETITLE,100,15,128,12
+END
+
+XT_IDD_CUSTPAGE4 DIALOG DISCARDABLE  0, 0, 230, 150
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Narzêdzia"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         XT_IDC_LBOX_TOOLSLIST,2,5,226,93,LBS_OWNERDRAWVARIABLE | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "&Polecenie:",XT_IDC_TXT_TOOLSCMD,2,104,60,8
+    RTEXT           "&Argumenty:",XT_IDC_TXT_TOOLSARG,2,119,60,8
+    RTEXT           "&Folder startowy:",XT_IDC_TXT_TOOLSDIR,2,134,60,8
+    EDITTEXT        XT_IDC_EDIT_TOOLSCMD,73,101,155,14,ES_AUTOHSCROLL
+    EDITTEXT        XT_IDC_EDIT_TOOLSARG,73,116,155,14,ES_AUTOHSCROLL
+    EDITTEXT        XT_IDC_EDIT_TOOLSDIR,73,131,155,14,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+XT_IDM_POPUP MENU DISCARDABLE 
+BEGIN
+    POPUP "RClickOutlookBar"
+    BEGIN
+        MENUITEM "&Ma³e ikony",                 XT_IDC_SMALLICON
+        MENUITEM "&Du¿e ikony",                 XT_IDC_LARGEICON
+    END
+    POPUP "RClickHexEdit"
+    BEGIN
+        MENUITEM "C&ofnij",                     ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Wyt&nij",                     ID_EDIT_CUT
+        MENUITEM "&Kopiuj",                     ID_EDIT_COPY
+        MENUITEM "Wkl&ej",                      ID_EDIT_PASTE
+        MENUITEM "&Usuñ",                       ID_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "Z&aznasz wszystko",           ID_EDIT_SELECT_ALL
+    END
+    POPUP "RClickHeader"
+    BEGIN
+        MENUITEM "Sortuj &rosn¹co",             XT_IDC_SORTASC
+        MENUITEM "Sortuj &malej¹co",            XT_IDC_SORTDSC
+        MENUITEM SEPARATOR
+        POPUP "&Wyrównanie"
+        BEGIN
+            MENUITEM "Do &lewej",                   XT_IDC_ALIGNLEFT
+            MENUITEM "Do œ&rodka",                  XT_IDC_ALIGNCENTER
+            MENUITEM "Do &prawej",                  XT_IDC_ALIGNRIGHT
+        END
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    XT_IDD_NEWTOOLBAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 53
+    END
+
+    XT_IDD_CUSTPAGE1, DIALOG
+    BEGIN
+        TOPMARGIN, 5
+    END
+
+    XT_IDD_CUSTPAGE2, DIALOG
+    BEGIN
+        RIGHTMARGIN, 228
+        VERTGUIDE, 2
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 142
+    END
+
+    XT_IDD_CUSTPAGE5, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 223
+        VERTGUIDE, 25
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 142
+        HORZGUIDE, 25
+        HORZGUIDE, 37
+        HORZGUIDE, 49
+        HORZGUIDE, 100
+        HORZGUIDE, 112
+        HORZGUIDE, 124
+    END
+
+    XT_IDD_PREVIEW_TOOLBAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 403
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 17
+    END
+
+    XT_IDD_COLORCUSTOM, DIALOG
+    BEGIN
+        VERTGUIDE, 4
+        VERTGUIDE, 48
+        VERTGUIDE, 58
+        VERTGUIDE, 78
+        VERTGUIDE, 122
+        VERTGUIDE, 127
+    END
+
+    XT_IDD_WINDOWLIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 295
+        VERTGUIDE, 223
+        VERTGUIDE, 233
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 157
+        HORZGUIDE, 82
+        HORZGUIDE, 99
+        HORZGUIDE, 116
+        HORZGUIDE, 133
+    END
+
+    XT_IDD_CUSTPAGE3, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 228
+        VERTGUIDE, 85
+        VERTGUIDE, 95
+        VERTGUIDE, 100
+        VERTGUIDE, 175
+        VERTGUIDE, 179
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 148
+        HORZGUIDE, 39
+        HORZGUIDE, 87
+        HORZGUIDE, 113
+    END
+
+    XT_IDD_CUSTPAGE4, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 228
+        VERTGUIDE, 73
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 145
+        HORZGUIDE, 98
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "XTResource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDC_BTN_CLOSE        "Schowaj okno"
+    XT_IDC_BTN_EXPAND       "Powiêksz okno"
+    XT_IDC_BTN_NEW          "Nowy (Insert)"
+    XT_IDC_BTN_DELETE       "Usuñ (Delete)"
+    XT_IDC_BTN_UP           "Przesuñ w górê (Alt+Góra)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_REG_KEY          "Software\\%s\\%s\\Settings"
+    XT_IDS_REG_WINPOS       "%u,%u,%d,%d,%d,%d,%d,%d,%d,%d"
+    XT_IDS_REG_BARID        "BarID"
+    XT_IDS_REG_SETTINGS     "Settings"
+    XT_IDS_REG_BARPOS       "Bar Position"
+    XT_IDS_REG_WNDPOS       "Window Position"
+    XT_IDS_REG_RECENTLIST   "Recent Item List"
+    XT_IDS_REG_ITEMID       "Item%d"
+    XT_IDS_REG_CBARID       "%s-Bar%d"
+    XT_IDS_REG_COLINFO      "Column Info"
+    XT_IDS_NAME             "Nazwa"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_SIZE             "Rozmiar"
+    XT_IDS_CONTRACT         "Zmniejsz okno"
+    XT_IDS_TYPE             "Typ"
+    XT_IDS_MODIFIED         "Zmodyfikowany"
+    XT_IDS_INVALID_VER      "Uwaga: Ten program wymaga comctl32.dll w wersji 4.72 lub nowszej."
+    XT_IDS_COLOR_AUTO       "Automatyczne"
+    XT_IDS_COLOR_CUST       "Dostosuj..."
+    XT_IDS_SELDIR           "Wybierz folder:"
+    XT_IDS_DOCKWND          "Zaczep okno"
+    XT_IDS_RES_ASSERT       "B£¥D: Nie wszystkie zasoby wymagane przez Xtreme Toolkit zosta³y prawid³owo zainicjalizowane.\n\nJeœli projekt oparty jest na CDialog, lub klasa CMainFrame nie dziedziczy z CXTFrameWnd ani CXTMDIFrameWnd nale¿y wywo³aæ ""xtAfxData.InitResources();"" aby unikn¹æ tego i kolejnych b³êdów.\n\nWywo³anie ""xtAfxData.InitResources();"" mo¿na umieœciæ w konstruktorze klasy CMainFrame lub CDialog."
+    XT_IDS_TOOLBAR          "Toolbar"
+    XT_IDS_ERROR_BLANK      "Nazwa paska narzêdzi nie mo¿y byæ pusta. Podaj nazwê."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_STATUSBAR        "Status Bar"
+    XT_IDS_ERROR_EXISTS     "Pasek narzêdzi '%s' ju¿ istnieje. Podaj inn¹ nazwê."
+    XT_IDS_ERROR_LIMIT      "Niestety, limit zosta³ przekroczony."
+    XT_IDS_CUSTOM_BAR       "W³asny %d"
+    XT_IDS_CUSTOM_CONFIRM   "Czy na pewno chcesz usun¹æ pasek narzêdzi '%s' ?"
+    XT_IDS_DOT              "..."
+    XT_IDS_NOHELPTOPIC      "Brak tematu pomocy skojarzonego z tym elementem.\nIdentyfikator %d"
+    XT_IDS_DEFEXT           "*.*"
+    XT_IDS_DEFFILT          "Wszystkie pliki (*.*)|*.*||"
+    XT_IDS_DEFTITLE         "Wybierz folder:"
+    XT_IDS_CLICKKEEPOPEN    "Naciœnij pinezkê, aby okno pozosta³o otwarte"
+    XT_IDS_SE_0             "Brak pamiêci lub zasobów dla systemu operacyjnego."
+    XT_IDS_SE_ERR_FNF       "Nie znaleziono podanego pliku."
+    XT_IDS_SE_ERR_PNF       "Nie znaleziono podanej œcie¿ki."
+    XT_IDS_SE_ERR_ACCESSDENIED "Brak dostêpu do podanego pliku."
+    XT_IDS_SE_ERR_OOM       "Brak pamiêci do wykonania tej operacji."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_SE_ERR_BAD_FORMAT 
+                            "Plik .exe jest nieprawid³owy (plik nie jest w formacie Win32® lub b³¹d w pliku)."
+    XT_IDS_SE_ERR_SHARE     "B³¹d naruszenia wspó³dzielenia."
+    XT_IDS_SE_ERR_ASSOCINCOMPLETE 
+                            "Skojarzenie pliku jest niepe³ne lub nieprawid³owe."
+    XT_IDS_SE_ERR_DDETIMEOUT 
+                            "Transakcja DDE nie zosta³a zakoñczona poniewa¿ przekroczono czas oczekiwania."
+    XT_IDS_SE_ERR_DDEFAIL   "Transakcja DDE nieudana."
+    XT_IDS_SE_ERR_DDEBUSY   "Transakcja DDE nie zosta³a zakoñczona, poniewa¿ inne transakcje DDE s¹ aktywne."
+    XT_IDS_SE_ERR_NOASSOC   "Z tym rozszerzeniem nie skojarzono ¿adnej aplikacji."
+    XT_IDS_SE_ERR_DLLNOTFOUND 
+                            "Podana biblioteka dynamiczna nie zosta³a znaleziona."
+    XT_IDS_SE_ERR_UNKOWN    "Wyst¹pi³ nieznany b³¹d numer %d."
+    XT_IDS_CLOSE            "Zamknij"
+    XT_IDS_CLR_BLACK        "Czarny"
+    XT_IDS_CLR_BROWN        "Br¹zowy"
+    XT_IDS_CLR_OLIVE_GREEN  "Oliwkowozielony"
+    XT_IDS_CLR_DARK_GREEN   "Ciemnozielony"
+    XT_IDS_CLR_DARK_TEAL    "Ciemnoseledynowy"
+    XT_IDS_CLR_DARK_BLUE    "Ciemnoniebieski"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDC_SORTASC          "Sortuje wybran¹ kolumnê w porz¹dku rosn¹cym\nSortuj rosn¹co"
+    XT_IDC_SORTDSC          "Sortuje wybran¹ kolumnê w porz¹dku malej¹cym\nSortuj malej¹co"
+    XT_IDC_ALIGNLEFT        "Wyrównuje zawartoœæ wybranej kolumny do lewej stronyn\nWyrównaj do lewej"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDC_ALIGNCENTER      "Wyrównuje zawartoœæ wybranej kolumny do œrodka\nWyrównaj do œrodka"
+    XT_IDC_ALIGNRIGHT       "Wyrównuje zawartoœæ wybranej kolumny do prawej strony\nWyrównaj do prawej"
+    XT_IDC_LARGEICON        "Wyœwietlaj du¿e ikony\nDu¿e ikony"
+    XT_IDC_SMALLICON        "Wyœwietlaj ma³e ikony\nMa³e ikony"
+    XT_IDC_REMOVEITEM       "Usuñ element z paska"
+    XT_IDC_RENAMEITEM       "Zmieñ nazwê"
+    XT_IDC_CUSTOMIZE        "Dostosowanie paska narzêdzi\nDostosuj"
+    XT_IDC_CHEVRON          "Poka¿ ca³e menu"
+    XT_IDC_REMOVEGROUP      "Usuñ grupê"
+    XT_IDC_RENAMEGROUP      "Zmieñ nazwê grupy"
+    XT_IDC_SORT_CATEGORIZED "Kategoriami\nKategoriami"
+    XT_IDC_SORT_ALPHABETIC  "Alfabetycznie\nAlfabetycznie"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_TIPTEXT          "Treœæ porady"
+    XT_IDS_DIDYOUKNOW       "Czy wiesz, ¿e..."
+    XT_IDS_FILE_ABSENT      "Nie znaleziono pliku z poradami w podanym katalogu"
+    XT_IDS_FILE_CORRUPT     "B³¹d przy odczycie pliku z poradami"
+    XT_IDS_MENUBAR          "Pasek menu"
+    XT_IDS_CONTROLBAR       "Pasek kontrolny"
+    XT_IDS_CUSTOMIZE        "Dostosuj"
+    XT_IDS_COLOR_CAPTION    "Kolory"
+    XT_IDS_NEW              "Nowy"
+    XT_IDS_CURRENT          "Bie¿¹cy"
+    XT_IDS_DIRECTORIES      " Foldery:"
+    XT_IDS_FILES            " Pliki:"
+    XT_IDS_RESTORE          "Ustawienia paska narzêdzi zostan¹ przywrócone do warotœci standardowych, czy kontynuowaæ?"
+    XT_IDS_WINDOWS          "Wiêcej okien..."
+    XT_IDS_MANAGEKEYBRD     "Skróty klawiszowe"
+    XT_IDS_COMMAND          "Polecenie"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_CLR_INDIGO       "Indygo"
+    XT_IDS_CLR_GRAY80       "Szary-80%"
+    XT_IDS_CLR_DARK_RED     "Ciemnoczerwony"
+    XT_IDS_CLR_ORANGE       "Pomarañczowy"
+    XT_IDS_CLR_DARK_YELLOW  "Ciemno¿ó³ty"
+    XT_IDS_CLR_GREEN        "Zielony"
+    XT_IDS_CLR_TEAL         "Seledynowy"
+    XT_IDS_CLR_BLUE         "Niebieski"
+    XT_IDS_CLR_BLUEGRAY     "Szaroniebieski"
+    XT_IDS_CLR_GRAY50       "Szary-50%"
+    XT_IDS_CLR_RED          "Czerwony"
+    XT_IDS_CLR_LIGHTORANGE  "Jasnopomarañczowy"
+    XT_IDS_CLR_LIME         "¯ó³tozielony"
+    XT_IDS_CLR_SEA_GREEN    "Zieleñ morska"
+    XT_IDS_CLR_AQUA         "Woda morska"
+    XT_IDS_CLR_LIGHT_BLUE   "Jasnoniebieski"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_CLR_VIOLET       "Fioletowy"
+    XT_IDS_CLR_GRAY40       "Szary-40%"
+    XT_IDS_CLR_PINK         "Ró¿owy"
+    XT_IDS_CLR_GOLD         "Z³oty"
+    XT_IDS_CLR_YELLOW       "¯ó³ty"
+    XT_IDS_CLR_BRIGHT_GREEN "Jasnozielony"
+    XT_IDS_CLR_TURQUOISE    "Turkusowy"
+    XT_IDS_CLR_SKY_BLUE     "B³êkitny"
+    XT_IDS_CLR_PLUM         "Œliwkowy"
+    XT_IDS_CLR_GRAY25       "Szary-25%"
+    XT_IDS_CLR_ROSE         "Bladoró¿owy"
+    XT_IDS_CLR_TAN          "Jasnobr¹zowy"
+    XT_IDS_CLR_LIGHT_YELLOW "Jasno¿ó³ty"
+    XT_IDS_CLR_LIGHT_GREEN  "Bladozielony"
+    XT_IDS_CLR_LIGHT_TURQUOISE "Jasnoturkusowy"
+    XT_IDS_CLR_PALE_BLUE    "Bladoniebieski"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_CLR_LAVENDER     "Lawendowy"
+    XT_IDS_CLR_WHITE        "Bia³y"
+    XT_IDS_CLR_GRAY         "Szary"
+    XT_IDS_CLR_MAROON       "Bordowy"
+    XT_IDS_CLR_OLIVE        "Oliwkowy"
+    XT_IDS_CLR_NAVY         "Granatowy"
+    XT_IDS_CLR_PURPLE       "Purpurowy"
+    XT_IDS_CLR_SILVER       "Srebrny"
+    XT_IDS_CLR_FUCHSIA      "Fuksja"
+    XT_IDS_CLR_NOFILL       "Brak wype³nienia"
+    XT_IDS_CLR_NOFILL_TIP   "Brak koloru"
+    XT_IDS_AUTOMATIC        "Automatyczny"
+    XT_IDS_AUTOMATIC_TIP    "Automatyczny kolor"
+    XT_IDS_MORE_COLORS      "Wiêcej kolorów..."
+    XT_IDS_MORE_COLORS_TIP  "Wiêcej kolorów"
+    XT_IDS_STD_COLORS       "Kolory standardowe"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDC_BTN_DOWN         "Przesuñ w dó³ (Alt+Dó³)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_ID_PREVIEW_CLOSE    "Zamknij podgl¹d wydruku\nZamknij podgl¹d"
+    AFX_ID_PREVIEW_NUMPAGE  "Wyœwietlaj strony pojedynczo lub podwójnie\n1 strona / 2 strony"
+    AFX_ID_PREVIEW_NEXT     "PrzejdŸ do nastêpnej strony\nNastêpna strona"
+    AFX_ID_PREVIEW_PREV     "PrzejdŸ do poprzedniej strony\nPoprzednia strona"
+    AFX_ID_PREVIEW_PRINT    "Drukuj podgl¹dany element\nDrukuj"
+    AFX_ID_PREVIEW_ZOOMIN   "Zwiêksz powiêkszenie podgl¹du\nPowiêksz"
+    AFX_ID_PREVIEW_ZOOMOUT  "Zmniejsz powiêkszenie podgl¹du\nPomniejsz"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_KEYS             "Klawisze"
+    XT_IDS_DESCRIPTION      "Opis"
+    XT_IDS_ALLCOMMANDS      "[Wszystkie polecenia]"
+    XT_IDS_REASSIGN         "Ten skrót jest aktualnie przypisany do polecenia: %s\n\nCzy chcesz zmieniæ to przypisanie?"
+    XT_IDS_WIND_MINIMIZE    "Minimalizuj okno"
+    XT_IDS_WIND_RESTORE     "Przywróæ okno"
+    XT_IDS_WIND_CLOSE       "Zamknij okno"
+    XT_IDS_TOOLBAR_OPTS     "Opcje paska narzêdzi"
+    XT_IDS_TOOLS            "&Narzêdzia"
+    XT_IDS_PATH_INVALID     "B³êdna œcie¿ka."
+    XT_IDS_AREYOUSURE       "Czy na pewno chcesz skasowaæ przypisania klawiszy? Spowoduje to usuniêcie wszystkich zdefiniowanych powi¹zañ klawiszy."
+    XT_IDS_AREYOUSURE_2     "Spowoduje to usuniêcie historii poleceñ uzywanych w tej aplikacji i przywrócenie domyœlnego zestawu widocznych poleceñ na menu i paskach narzêdzi. Nie spowoduje to cofniêcia ¿adnych jawnych ustawieñ niestandardowych. Czy na pewno chcesz kontynuowaæ?"
+    XT_IDS_BROWSE           "Przegl¹daj"
+    XT_IDS_BROWSE_FILTER    "Programy (*.exe)|*.exe|Polecenia (*.com)|*.com|Informacje (*.pif)|*.pif|Wsadowe (*.bat;*.cmd)|*.bat; *.cmd|Wszystkie pliki (*.*)|*.*||"
+    XT_IDS_MENU_CONTENTS    " &Zawartoœæ menu:"
+    XT_IDS_HEX              "Hex"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    XT_IDS_ANIM_SYSDEF      "(Domyœlne systemu)"
+    XT_IDS_ANIM_RANDOM      "Losowa"
+    XT_IDS_ANIM_UNFOLD      "Rozwiñ"
+    XT_IDS_ANIM_SLIDE       "Slajd"
+    XT_IDS_ANIM_FADE        "Zanikaj"
+    XT_IDS_ANIM_NONE        "None"
+END
+
+#endif    // Polish resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+XT_IDB_BTN_BAR          BITMAP  DISCARDABLE     "res\\btn_bar.bmp"
+XT_IDB_BTN_OUT          BITMAP  DISCARDABLE     "res\\btn_out.bmp"
+XT_IDB_LIGHTBULB        BITMAP  FIXED IMPURE    "res\\lightbulb.bmp"
+XT_IDB_LISTEDIT         BITMAP  DISCARDABLE     "res\\btn_listedit.bmp"
+XT_IDB_FONTTYPE         BITMAP  DISCARDABLE     "res\\font.bmp"
+XT_IDB_SCROLL_ARW       BITMAP  DISCARDABLE     "res\\scroll.bmp"
+XT_IDB_BTN_PRINT        BITMAP  DISCARDABLE     "res\\btn_print.bmp"
+XT_IDB_CHECKLISTBOX     BITMAP  FIXED IMPURE    "res\\checklist.bmp"
+XT_IDB_BTN_FRAME        BITMAP  DISCARDABLE     "res\\btn_frame.bmp"
+XT_IDB_CHECKLISTBOX_3D  BITMAP  FIXED IMPURE    "res\\checklist_3d.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+XT_IDC_DRAGMOVE         CURSOR  DISCARDABLE     "res\\dragmove.cur"
+XT_IDC_HAND             CURSOR  DISCARDABLE     "res\\hand.cur"
+XT_IDC_HSPLITBAR        CURSOR  DISCARDABLE     "res\\splith.cur"
+XT_IDC_DRAGNONE         CURSOR  DISCARDABLE     "res\\dragnone.cur"
+XT_IDC_HANDNONE         CURSOR  DISCARDABLE     "res\\handnone.cur"
+XT_IDC_VSPLITBAR        CURSOR  DISCARDABLE     "res\\splitv.cur"
+XT_IDC_DRAGCOPY         CURSOR  DISCARDABLE     "res\\dragcopy.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+XT_IDI_XTREME           ICON    DISCARDABLE     "res\\xtreme.ico"
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
